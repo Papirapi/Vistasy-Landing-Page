@@ -36,17 +36,17 @@ export default async function RootLayout({
 
         {/*-- Open Graph / Facebook --*/}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.vistasy.clinic/" />
+        <meta property="og:url" content="https://vistasy.clinic/" />
         <meta property="og:title" content="Vistasy – AI Skin Diagnosis & Care" />
         <meta property="og:description" content="AI-powered facial skin diagnosis and personalized product recommendations tailored to your skin type and needs." />
-        <meta property="og:image" content="https://www.vistasy.clinic/og-image.png" />
+        <meta property="og:image" content="https://vistasy.clinic/og-image.png" />
 
         {/*-- X (Twitter) --*/}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.vistasy.clinic/" />
+        <meta property="twitter:url" content="https://vistasy.clinic/" />
         <meta property="twitter:title" content="Vistasy – AI Skin Diagnosis & Care" />
         <meta property="twitter:description" content="AI-powered facial skin diagnosis and personalized product recommendations tailored to your skin type and needs." />
-        <meta property="twitter:image" content="https://www.vistasy.clinic/og-image.png" />
+        <meta property="twitter:image" content="https://vistasy.clinic/og-image.png" />
       </head>
       <body
         className={`${poppins.variable} antialiased`}
