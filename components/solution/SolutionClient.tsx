@@ -31,7 +31,7 @@ export default function SolutionClient() {
         <SolutionCard
           title={t("OnlineStore.online_store")}
           imageSrc={theme === "dark" ? "/solution/modern-workspace-illustration-dark.svg" : "/solution/modern-workspace-illustration.svg"}
-          imageAlt=""
+          imageAlt="Modern workspace with computer showing e-commerce analytics and product recommendations"
           colorClass="bg-c-purple"
           stats={[
             { value: "25%", label: t("OnlineStore.reduction_churn_rate") },
@@ -46,7 +46,7 @@ export default function SolutionClient() {
         <SolutionCard
           title={t("OnsiteStore.onsite_store")}
           imageSrc={theme === "dark" ? "/solution/person-with-mirror-illustraction-dark.svg" : "/solution/person-with-mirror-illustraction.svg"}
-          imageAlt=""
+          imageAlt="Person examining their skin in a mirror with AI-powered analysis interface"
           colorClass="bg-c-blue"
           reverseLayout={true}
           stats={[
