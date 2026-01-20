@@ -29,9 +29,9 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
 
           {/* Logo - hidden on mobile */}
-          <div className="hidden md:block space-y-4">
+          <div className="hidden md:block space-y-4 ">
             <Link href="/" aria-label={t("goHome")} className="block size-fit">
-              <Logo width={120} />
+              <Logo width={250} />
             </Link>
           </div>
 

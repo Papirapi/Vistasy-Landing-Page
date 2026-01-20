@@ -47,7 +47,7 @@ export default function NavBar() {
                                     href="/home"
                                     aria-label="home"
                                     className="flex items-center">
-                                    <Logo />
+                                    <Logo  width={40} height={40}/>
                                 </Link>
                                 <LanguesDropdownMenu />
                             </div>
@@ -78,7 +78,7 @@ export default function NavBar() {
                                                 onClick={() => setMenuState(false)}
                                                 className={`relative block pb-1 font-bold text-muted-foreground hover:text-accent-foreground duration-150
     ${pathWithoutLocale === item.href
-                                                        ? `text-accent-foreground after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-1/2 ${getUnderlineColor(item.href)} after:transition-all after:duration-300`
+                                                        ? `text-accent-foreground after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-1/2 ${getUnderlineColor(item.href)} after:transition-all after:duration-300`
                                                         : ''
                                                     }`}
                                             >
