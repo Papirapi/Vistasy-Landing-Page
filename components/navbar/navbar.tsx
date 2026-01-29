@@ -94,16 +94,16 @@ export default function NavBar() {
                                     asChild
                                     variant="outline"
                                     size="sm">
-                                    <Link href="#">
+                                    <a href="https://dashboard.vistasy.app/auth/login">
                                         <span>Login</span>
-                                    </Link>
+                                    </a>
                                 </Button>
                                 <Button
                                     asChild
                                     size="sm">
-                                    <Link href="#">
+                                    <a href="https://dashboard.vistasy.app/auth/register">
                                         <span>Register</span>
-                                    </Link>
+                                    </a>
                                 </Button>
                             </div>
                         </div>
