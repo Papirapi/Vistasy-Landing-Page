@@ -1,44 +1,16 @@
 "use client";
-
-import React from "react";
-import { MoonIcon, SunIcon } from "lucide-react";
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import { Icon } from "@/components/icon";
 
-export default function ThemeSwitcher() {
-  const [open, setOpen] = React.useState(false);
-  const { theme, setTheme } = useTheme();
-
-  const isDark = theme === 'dark';
-
+export default function ThemeSwitcher({ label }: { label: string }) {
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  const dark = mounted && resolvedTheme === "dark";
   return (
-    <DropdownMenu open={open} onOpenChange={setOpen}>
-      <DropdownMenuTrigger asChild>
-        <Button
-          size="icon"
-          variant="outline"
-          aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-        >
-          {isDark ? <SunIcon /> : <MoonIcon />}
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuItem onSelect={() => setTheme('light')}>
-          <SunIcon /> Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => setTheme('dark')}>
-          <MoonIcon /> Dark
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <button type="button" className="icon-btn" aria-label={label} aria-pressed={dark} onClick={() => setTheme(dark ? "light" : "dark")}>
+      <Icon name={dark ? "i-sun" : "i-moon"} />
+    </button>
   );
 }
-
-

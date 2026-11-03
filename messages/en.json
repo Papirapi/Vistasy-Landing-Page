@@ -1,180 +1,331 @@
 {
-    "Metadata": {
-        "home": {
-            "title": "Vistasy – AI Facial Diagnosis & Care Recommendations",
-            "description": "Discover Vistasy, an AI-powered solution for facial skin analysis and personalized skincare product recommendations."
-        },
-        "benefits": {
-            "title": "Why Choose Vistasy – AI Skin Analysis Benefits",
-            "description": "Explore the benefits of Vistasy’s AI-powered skin analysis and smart recommendations."
-        },
-        "solution": {
-            "title": "Our Solution – Personalized AI Skincare by Vistasy",
-            "description": "See how Vistasy uses AI to analyze your skin and match products to your needs."
-        },
-        "pricing": {
-            "title": "Pricing – Affordable AI Skin Diagnosis Plans | Vistasy",
-            "description": "Choose the Vistasy plan that fits your skin care journey and goals."
-        },
-        "contact": {
-            "title": "Contact Vistasy – Start Your AI Skin Journey",
-            "description": "Get in touch with the Vistasy team to learn more or start your personalized skincare plan."
-        }
+  "Metadata": {
+    "home": {
+      "title": "VISTASY – A clear read of your skin",
+      "description": "One selfie in daylight becomes thirteen skin readings, a routine chosen by ingredient evidence, and a verdict on any product. Never ranked by brand."
     },
-    "NavBar": {
-        "home": "Home",
-        "benefits": "Benefits",
-        "solution": "Solution",
-        "pricing": "Pricing",
-        "contact": "Contact"
+    "howItWorks": {
+      "title": "How it works",
+      "description": "From a selfie in daylight to a routine you can follow: consent, the quality gate, thirteen readings, ingredient evidence, product check and progress."
     },
-    "Footer": {
-        "goHome": "Go home",
-        "linksTitle": "Links",
-        "findUsTitle": "Find Us",
-        "addressTitle": "Address",
-        "address": "Address 012 Street of CANADA, Building B, 4th Floor, E1 Tunis, Tunisia 1002",
-        "hoursTitle": "Hours",
-        "hours": "Monday–Friday: 9:00AM–5:00PM\nSaturday & Sunday: OFF",
-        "copyright": "All rights reserved"
+    "retailers": {
+      "title": "For retailers",
+      "description": "The same skin read inside your product pages, on an in-store tablet or through the API. Your catalogue marks what is in stock; the ranking stays independent."
     },
-    "HomePage": {
-        "partnersTitle": "We work with these partners",
-        "contact": "contact us",
-        "slogan": "redefining skincare & beauty",
-        "feature1": {
-            "title": "Unlock Healthier Skin with Our Personalized diagnosis technology",
-            "description": "Experience Cutting-Edge Diagnosis Technology Designed to Democratize Access To Customized Skincare Solutions. Achieve Better Health Results With Tailored Product Recommendations Just For You."
-        },
-        "feature2": {
-            "title": "Our AI-Powered Skincare Solution",
-            "description": "Our Advanced Solution utilize Image Processing, Computer Vision & Cloud Computing To Analyze Your Facial Features & Skin Conditions. Get Personalized Cosmetic Product Recommendation Tailored To Your Unique Needs."
-        },
-        "feature3": {
-            "title": "In-Depth Skin Diagnosis",
-            "description": "Using Cutting-Edge Technology, We Deliver Personalized Skincare Diagnosis & Optimal Regimens Tailored To Your Unique Needs. Our Simple, User-Friendly Interface Offers Detailed Reports, Putting Your Customized Skincare Plan At Your Fingertips."
-        },
-        "feature4": {
-            "title": "Smart mirror integration",
-            "description": "Enhance Customer Engagement In Physical Stores With Our Smart Mirror. It Provides Personalized Skin Diagnoses & in-Store Product Recommendations, Offering An Immersive & Interactive Experience That Drives Customer Loyalty and Boosts Sales."
-        }
+    "pricing": {
+      "title": "Pricing",
+      "description": "Plans for people and plans for retailers."
     },
-    "BenefitsPage": {
-        "title": "ready experience the difference ?",
-        "cards": {
-            "01": {
-                "title": "walking custom",
-                "description": "Attract more walking customers with our engaging and interactive solution, drawing them into your store or website with compelling experiences."
-            },
-            "02": {
-                "title": "connect & identify",
-                "description": "Boost your online presence and convert visitors into loyal customers with captivating digital experiences."
-            },
-            "03": {
-                "title": "recommend & engage",
-                "description": "Provide tailored recommendations and keep customers engaged by offering personalized product suggestions and interactive experiences."
-            },
-            "04": {
-                "title": "track & retain",
-                "description": "Monitor customer interactions and preferences to effectively track behavior, enhance cross-selling opportunities, and build loyalty through targeted retention strategies."
-            },
-            "05": {
-                "title": "data insights",
-                "description": "Gain valuable insights from customer data to refine your strategies, optimize inventory, and enhance customer satisfaction with smart, targeted marketing."
-            }
-        }
-    },
-    "SolutionPage": {
-        "transform_the_customer_experience": "transform The customer experience !",
-        "OnlineStore": {
-            "online_store": "online store",
-            "reduction_churn_rate": "reduction in churn rate",
-            "increase_on_screen_time": "increase in on-screen time",
-            "boost_customer_retention_engagement": "boost in customer retention & engagement",
-            "improvement_marketing_efficiency": "improvement in marketing efficiency",
-            "higher_ROI_targeted_campaigns": "Higher ROI on targeted campaigns"
-        },
-        "OnsiteStore": {
-            "onsite_store": "onsite store",
-            "reduction_customer_acquisition_costs": "reduction in customer acquisition costs",
-            "ai_expert_staff_training": "AI expert, reducing reliance on staff training",
-            "real_time_tailored_recommendations": "tailored made recommendations based on inventory",
-            "boost_cross_selling_opportunities": "boost in cross selling opportunities",
-            "effective_targeted_marketing": "more effective targeted marketing"
-        },
-        "OnlineOnsiteStores": {
-            "online_onsite_stores": "online & onsite stores",
-            "online_store_solution": "ONLINE Store Solution",
-            "onsite_store_solution": "ONSITE Store Solution",
-            "seamless_omni_channel_experience": "Seamless Omni-Channel Experience",
-            "enhanced_loyalty_program": "Enhanced Customer Loyalty Program"
-        },
-        "primary_button_text":"book a call",
-        "secondary_button_text": "check pricing"
-    },
-    "PricingPage": {
-        "title": "Ready to get started ?",
-        "subtitle": "Check our pricing plans",
-        "cards": {
-            "hardware": {
-                "title": "Hardware As A Service",
-                "subtitle": "Tailor-made",
-                "subtitle_description": "/Mirror Or Tablet",
-                "features": {
-                    "label": "Smart mirror (purchase / rental):",
-                    "list_items": [
-                        "10° (tablet)",
-                        "27",
-                        "32",
-                        "42",
-                        "55"
-                    ]
-                },
-                "button_text": "Book a Call"
-            },
-            "service": {
-                "title": "Pay Per Service",
-                "subtitle": "Tailor-made",
-                "subtitle_description": "/Service",
-                "features": [
-                    "Graphic template & results organization",
-                    "Data handling (management, processing, analysis and refining)",
-                    "Specific feature implementation",
-                    "Technology integration into an existing App, creating a Face Diagnosis & recommendation App from scratch"
-                ],
-                "button_text": "Book a Call"
-            },
-            "software": {
-                "title": "Software As A Service",
-                "subtitle": "Pay As You Go",
-                "subtitle_description": "/Diagnosis Usage",
-                "features": [
-                    "Access powerful modules: Facial Diagnosis, Product Recommendations, Marketing, and Surveys.",
-                    "With Plans starting at 500 uses per module."
-                ],
-                "button_text": "Book a Call"
-            }
-        }
-    },
-    "ContactPage": {
-        "title": "LET'S WORK TOGETHER",
-        "form": {
-            "name_label": "Name",
-            "email_label": "E-mail",
-            "message_label": "Message",
-            "submit_button": "Send",
-            "errors": {
-                "name_required": "Name is required",
-                "email_required": "Email is required",
-                "email_invalid": "Invalid email address",
-                "message_required": "Message is required"
-            }
-        },
-        "contact_paragraph": "Or contact us via this e-mail",
-        "successTitle": "THANK YOU FOR REACHING OUT!",
-        "errorTitle": "OOPS, SOMETHING WENT WRONG!",
-        "successDescription": "Thank you for your email. We will be in touch with you shortly.",
-        "errorDescription": "There was an issue processing your request. Please try again later.",
-        "loading_message":"Sending..."
+    "contact": {
+      "title": "Contact",
+      "description": "Request an invite to the preview, or book a pilot call for your store."
     }
+  },
+  "NavBar": {
+    "skip": "Skip to content",
+    "home": "Home",
+    "howItWorks": "How it works",
+    "retailers": "For retailers",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "cta": "Request an invite",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "theme": "Switch between light and dark",
+    "language": "Language"
+  },
+  "Footer": {
+    "goHome": "Go home",
+    "note": "Cosmetic guidance, not a medical diagnosis.",
+    "linksTitle": "Pages",
+    "appTitle": "The app",
+    "app": "Open the app",
+    "independence": "Independence",
+    "methodology": "Methodology",
+    "addressTitle": "Address",
+    "address": "Address 012 Street of CANADA, Building B, 4th Floor, E1 Tunis, Tunisia 1002",
+    "hoursTitle": "Hours",
+    "hours": "Monday to Friday, 9:00 to 17:00",
+    "copyright": "All rights reserved"
+  },
+  "HomePage": {
+    "hero": {
+      "title": "A clear read of your skin, and products chosen by their ingredients.",
+      "lede": "One selfie in daylight. Thirteen readings with their confidence, a routine built from what each ingredient has been shown to do, and a verdict on any product you hold up to the camera.",
+      "cta": "Request an invite",
+      "ctaNote": "Invite-only while in preview",
+      "secondary": "For retailers",
+      "imageAlt": "A young woman taking a selfie in daylight with a lavender phone.",
+      "agree": "Readings agree",
+      "of100": "of 100",
+      "chips": {
+        "texture": "Texture",
+        "photodamage": "Photodamage",
+        "blemishes": "Blemishes",
+        "darkCircles": "Dark circles"
+      },
+      "labelHead": "Step 2 of 5",
+      "labelWhen": "Evening",
+      "labelFoot": "For you · Dispensed today",
+      "brand": "Demo range",
+      "products": {
+        "texture": {
+          "name": "Glycolic 7 % exfoliating toner",
+          "meta": "Toner · 150 ml",
+          "active": "Glycolic acid",
+          "holds": "Holds about 7 %.",
+          "needs": "Your skin needs 5 to 10 %.",
+          "tag": "Enough",
+          "direction": "Evenings, after cleansing. Start twice a week."
+        },
+        "photodamage": {
+          "name": "Daily defence SPF 50 fluid",
+          "meta": "Sunscreen · 50 ml",
+          "active": "UV filters",
+          "holds": "SPF 50, broad spectrum.",
+          "needs": "Your skin needs SPF 30 or more, every morning.",
+          "tag": "Enough",
+          "direction": "Mornings, last step. Two finger-lengths for the face."
+        },
+        "blemishes": {
+          "name": "Azelaic acid 10 % booster",
+          "meta": "Serum · 30 ml",
+          "active": "Azelaic acid",
+          "holds": "Holds about 10 %.",
+          "needs": "Your skin needs 10 to 20 %.",
+          "tag": "Enough",
+          "direction": "Evenings, before moisturiser."
+        },
+        "darkCircles": {
+          "name": "Caffeine eye serum",
+          "meta": "Eye serum · 15 ml",
+          "active": "Caffeine",
+          "holds": "Holds about 3 %.",
+          "needs": "Your skin needs 1 to 3 %.",
+          "tag": "Enough",
+          "direction": "Mornings, a grain of rice under each eye."
+        }
+      }
+    },
+    "read": {
+      "title": "What one selfie gives you",
+      "readings": {
+        "title": "Thirteen readings, with how much to trust each",
+        "text": "Every concern is scored 0 to 100, three times. You see the score, the overlay on your own face, and whether the readings agree."
+      },
+      "routine": {
+        "title": "A routine that shows its working",
+        "text": "Each product arrives as a dispensing label: how much of an active it holds, against what your skin needs, and when to use it."
+      },
+      "check": {
+        "title": "Any product, checked against your skin",
+        "text": "Scan a barcode or photograph the ingredient list. You get fits, neutral or caution, with the reasons and any conflict with what you already own.",
+        "verdict": "Fits your skin",
+        "verdictText": "Azelaic acid at a useful dose. No fragrance. No conflict with your shelf."
+      }
+    },
+    "independence": {
+      "title": "Ranked by ingredients and evidence. Never by brand.",
+      "text": "A retailer's catalogue only tells us what is in stock. Ranking is never for sale. If a sponsored slot ever exists, it will be labelled, and it will never change the order.",
+      "linkHow": "How we stay independent",
+      "linkMethod": "Methodology"
+    },
+    "partnersTitle": "We work with these partners",
+    "retailers": {
+      "title": "The same read, inside your store",
+      "text": "On your product pages, on an in-store tablet, or through the API. Your catalogue marks what is in stock. The ranking stays independent.",
+      "widget": "Widget on a product page",
+      "store": "In-store tablet",
+      "api": "API",
+      "pilot": "A pilot runs six to eight weeks with the fee waived, an A/B test on your product pages and a public case study.",
+      "cta": "See the retailer offer"
+    },
+    "close": {
+      "title": "Your skin, read in daylight.",
+      "text": "Leave your e-mail and we will send a sign-in link when your turn comes.",
+      "cta": "Request an invite"
+    }
+  },
+  "HowItWorksPage": {
+    "title": "How it works",
+    "lede": "The journey as the app runs it, from the first selfie to a product you can trust.",
+    "steps": {
+      "consent": {
+        "title": "Consent first",
+        "text": "You confirm you are over 18 and choose how long your photo is kept: 30 days, or deleted the moment it is scored.",
+        "tag1": "18+ confirmed",
+        "tag2": "Photo deleted after scoring"
+      },
+      "selfie": {
+        "title": "A selfie in daylight",
+        "text": "A quality gate checks light, pose and focus before anything is analysed. About 30 seconds.",
+        "hint": "Even daylight, no glasses"
+      },
+      "questions": {
+        "title": "A few questions",
+        "text": "Skin type, sensitivities, pregnancy, allergies and what you already use.",
+        "q1": "Combination",
+        "q2": "Sensitive",
+        "q3": "No fragrance",
+        "q4": "Uses retinol"
+      },
+      "readings": {
+        "title": "Thirteen readings",
+        "text": "Each concern scored 0 to 100, three times, with how far the readings agree and an overlay on your own face."
+      },
+      "routine": {
+        "title": "A routine by evidence",
+        "text": "Day, night and weekly steps chosen from graded ingredient evidence, with how much of each active you need."
+      },
+      "check": {
+        "title": "Any product, checked",
+        "text": "Barcode or label photo. Fits, neutral or caution, with reasons and conflicts against what you own.",
+        "verdict": "Caution",
+        "verdictText": "Denatured alcohol high on the list. Your skin reads sensitive."
+      },
+      "progress": {
+        "title": "Progress over scans",
+        "text": "Repeat in 4 to 12 weeks. Changes are shown with measurement noise taken out.",
+        "before": "First scan",
+        "after": "Eight weeks later"
+      }
+    },
+    "safety": {
+      "title": "Cosmetic guidance, not a medical diagnosis.",
+      "referral": "A blemish reading of 70 or more suggests seeing a dermatologist, and the app says so.",
+      "where": "Photos are stored in Frankfurt and read by Google Gemini and by our image models in London.",
+      "delete": "You can delete your photos, or your whole account, at any time.",
+      "sarah": "Sarah, the in-app assistant, says she is an AI and only answers from your own analysis, routine and ingredient notes.",
+      "link": "Read the methodology"
+    },
+    "cta": "Request an invite"
+  },
+  "RetailersPage": {
+    "title": "The same read, inside your store.",
+    "lede": "Shoppers see their skin, a routine and products that fit, on your product pages or in your store. Your catalogue says what is in stock. The ranking stays independent.",
+    "modes": {
+      "widget": {
+        "title": "Widget on a product page",
+        "text": "One script tag. A shopper scans, and the page shows whether this product fits their skin, with the reasons."
+      },
+      "store": {
+        "title": "In-store tablet",
+        "text": "The same read at the counter, with recommendations from your shelves first and a printed or e-mailed routine."
+      },
+      "api": {
+        "title": "API",
+        "text": "Sessions, scans, routines and product verdicts over HTTPS, with your own catalogue imported as an availability overlay."
+      }
+    },
+    "rank": {
+      "title": "Rank first, then stock.",
+      "text": "Every shopper is ranked over the whole catalogue. Your catalogue only marks what is in stock, with your price and your link, and names the best in-stock option when a top pick is missing."
+    },
+    "steps": {
+      "title": "What changes in your store",
+      "s1": { "title": "Attract", "text": "A skin read on the product page draws people in and keeps them there." },
+      "s2": { "title": "Identify", "text": "One session links the read to the shopper, with their consent." },
+      "s3": { "title": "Recommend", "text": "Products that fit their skin, from your shelves first." },
+      "s4": { "title": "Retain", "text": "Follow-up scans bring them back in 4 to 12 weeks." },
+      "s5": { "title": "Learn", "text": "Anonymised, aggregate insights with explicit opt-in. Never individual records." }
+    },
+    "pilot": {
+      "title": "A pilot, not a pitch.",
+      "text": "Six to eight weeks. The platform fee is waived. We run an A/B test on your product pages and publish a case study at the end.",
+      "cta": "Book a pilot call"
+    }
+  },
+  "PricingPage": {
+    "title": "Pricing",
+    "lede": "Plans for people and plans for retailers.",
+    "tabPeople": "People",
+    "tabRetailers": "Retailers",
+    "perMonth": "a month",
+    "people": {
+      "free": {
+        "name": "Free",
+        "price": "0 €",
+        "text": "Scan, routine and product check.",
+        "i1": "Thirteen readings with overlays",
+        "i2": "A routine by ingredient evidence",
+        "i3": "Product check by barcode or label photo",
+        "i4": "Sarah, in context"
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "4.99 €",
+        "per": "a month, or 39 € a year",
+        "text": "Everything in Free, plus progress.",
+        "i1": "Progress with photo comparison",
+        "i2": "Reminders and check-ins",
+        "i3": "An adaptive routine",
+        "i4": "Everything in Free"
+      },
+      "cta": "Request an invite"
+    },
+    "retailers": {
+      "starter": {
+        "name": "Starter",
+        "price": "290 €",
+        "scans": "1,000 scans included, then 0.25 € each",
+        "i1": "Widget and API",
+        "i2": "Basic dashboard",
+        "i3": "E-mail support"
+      },
+      "growth": {
+        "name": "Growth",
+        "price": "990 €",
+        "scans": "5,000 scans included, then 0.18 € each",
+        "i1": "Everything in Starter",
+        "i2": "Webhooks and catalogue import automation",
+        "i3": "White-label report",
+        "i4": "A/B test support"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "On request",
+        "scans": "Custom volume",
+        "i1": "SSO and SLA",
+        "i2": "DPA negotiation",
+        "i3": "In-store mode",
+        "i4": "Dedicated onboarding"
+      },
+      "pilot": "Every plan can start as a pilot: six to eight weeks, fee waived, an A/B test and a public case study.",
+      "cta": "Book a pilot call"
+    }
+  },
+  "ContactPage": {
+    "title": "Let's talk.",
+    "lede": "An invite to the preview for you, or a pilot call for your store.",
+    "people": {
+      "title": "For people",
+      "text": "VISTASY is invite-only while in preview. Leave your e-mail and we will send a sign-in link when your turn comes.",
+      "email": "E-mail",
+      "message": "What would you like to know? Optional.",
+      "submit": "Request an invite"
+    },
+    "retailers": {
+      "title": "For retailers",
+      "text": "Tell us about your store and we will book a 30-minute call.",
+      "name": "Name",
+      "company": "Company",
+      "email": "E-mail",
+      "message": "Message",
+      "submit": "Book a pilot call"
+    },
+    "errors": {
+      "emailRequired": "Enter your e-mail",
+      "emailInvalid": "That e-mail address does not look right",
+      "nameRequired": "Enter your name",
+      "companyRequired": "Enter your company",
+      "messageRequired": "Write a short message"
+    },
+    "sending": "Sending…",
+    "successTitle": "Thank you.",
+    "successText": "We will be in touch shortly.",
+    "errorTitle": "That did not go through.",
+    "errorText": "Please try again in a moment, or write to us directly.",
+    "retry": "Try again",
+    "or": "Or write to"
+  }
 }

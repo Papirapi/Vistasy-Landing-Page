@@ -1,121 +1,51 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import { useTranslations } from "next-intl";
-
-import { Logo } from '../logo';
-import { NavBarItems } from '@/constants/navbar-items-list';
+import { Link } from "@/i18n/navigation";
+import { NavBarItems, APP_URL, CONTACT_EMAIL } from "@/constants/navbar-items-list";
+import { Icon } from "@/components/icon";
 
 export default function Footer() {
   const t = useTranslations("Footer");
-  const tNav = useTranslations("NavBar");
-
+  const n = useTranslations("NavBar");
+  const year = new Date().getFullYear();
   return (
-    <footer className="border-b bg-white pt-20 dark:bg-transparent">
-      <div className="mx-auto max-w-5xl px-6 border-t border-black/20 dark:border-white/20 py-6 space-y-12">
-
-        {/* === Mobile-only image === */}
-        <div className="block md:hidden">
-          <Image
-            src="/footer/facial-skin-features-overview.svg"
-            alt="Overview of 17 available facial skin features"
-            width={800}
-            height={200}
-            className="w-full object-cover rounded-xl"
-            priority
-          />
+    <footer className="on-shell bg-shell text-on-shell">
+      <div className="mx-auto grid max-w-[75rem] gap-10 px-[var(--gutter)] py-16 md:grid-cols-[1.4fr_1fr_1fr_1.4fr] md:gap-8">
+        <div>
+          <Link href="/home" aria-label={t("goHome")} className="wordmark">
+            <Icon name="i-scan-smiley-fill" className="ico h-[22px] w-[22px] text-lav" />
+            VISTASY
+          </Link>
+          <p className="mt-5 max-w-[32ch] text-sm leading-relaxed text-on-shell-2">{t("note")}</p>
+          <a href={`mailto:${CONTACT_EMAIL}`} className="mt-4 inline-block text-sm font-semibold underline underline-offset-4 decoration-on-shell-2 hover:decoration-on-shell">{CONTACT_EMAIL}</a>
         </div>
-
-        {/* === Grid Section === */}
-        <div className="grid gap-12 md:grid-cols-4">
-
-          {/* Logo - hidden on mobile */}
-          <div className="hidden md:block space-y-4 ">
-            <Link href="/" aria-label={t("goHome")} className="block size-fit">
-              <Logo width={250} />
-            </Link>
-          </div>
-
-          {/* Mobile: LINKS & FIND US side-by-side */}
-          <div className="block md:hidden col-span-full">
-            <div className="grid grid-cols-2 gap-6">
-              {/* LINKS */}
-              <div className="space-y-4 text-sm">
-                <span className="block font-medium">{t("linksTitle")}</span>
-                {NavBarItems.map((item) => (
-                  <Link
-                    key={item.title}
-                    href={item.href}
-                    className="text-muted-foreground hover:text-primary block duration-150"
-                  >
-                    <span className="capitalize">{tNav(item.title)}</span>
-                  </Link>
-                ))}
-              </div>
-
-              {/* FIND US */}
-              <div className="space-y-4 text-sm">
-                <span className="block font-medium">{t("findUsTitle")}</span>
-
-                <div className="space-y-1">
-                  <div className="font-medium">{t("addressTitle")}</div>
-                  <p className="text-muted-foreground text-sm">{t("address")}</p>
-                </div>
-
-                <div className="space-y-1">
-                  <div className="font-medium">{t("hoursTitle")}</div>
-                  <p className="text-muted-foreground text-sm">{t("hours")}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Desktop/Tablet: LINKS */}
-          <div className="hidden md:block space-y-4 text-sm">
-            <span className="block font-medium">{t("linksTitle")}</span>
-            {NavBarItems.map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="text-muted-foreground hover:text-primary block duration-150"
-              >
-                <span className="capitalize">{tNav(item.title)}</span>
-              </Link>
+        <div>
+          <h2 className="text-sm font-bold">{t("linksTitle")}</h2>
+          <ul className="mt-4 flex flex-col gap-2 text-sm text-on-shell-2">
+            <li><Link href="/home" className="hover:text-on-shell">{n("home")}</Link></li>
+            {NavBarItems.map((i) => (
+              <li key={i.href}><Link href={i.href} className="hover:text-on-shell">{n(i.title)}</Link></li>
             ))}
-          </div>
-
-          {/* Desktop/Tablet: FIND US */}
-          <div className="hidden md:block space-y-4 text-sm">
-            <span className="block font-medium">{t("findUsTitle")}</span>
-
-            <div className="space-y-1">
-              <div className="font-medium">{t("addressTitle")}</div>
-              <p className="text-muted-foreground text-sm">{t("address")}</p>
-            </div>
-
-            <div className="space-y-1">
-              <div className="font-medium">{t("hoursTitle")}</div>
-              <p className="text-muted-foreground text-sm">{t("hours")}</p>
-            </div>
-          </div>
-
-          {/* Image Section (shown on desktop/tablet only) */}
-          <div className="hidden md:block space-y-4 text-sm">
-            <Image
-              src="/footer/facial-skin-features-count.png"
-              alt="Circular graphic showing 17 facial skin features available."
-              width={200}
-              height={200}
-              className="rounded-xl"
-            />
-          </div>
+          </ul>
         </div>
-
-        {/* Copyright */}
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-6 border-t border-black/20 dark:border-white/20 pt-6">
-          <span className="text-muted-foreground order-last block text-center text-sm md:order-first">
-            © {new Date().getFullYear()} Vistasy, {t("copyright")}
-          </span>
+        <div>
+          <h2 className="text-sm font-bold">{t("appTitle")}</h2>
+          <ul className="mt-4 flex flex-col gap-2 text-sm text-on-shell-2">
+            <li><a href={APP_URL} className="hover:text-on-shell">{t("app")}</a></li>
+            <li><a href={`${APP_URL}/independence.html`} className="hover:text-on-shell">{t("independence")}</a></li>
+            <li><a href={`${APP_URL}/methodology.html`} className="hover:text-on-shell">{t("methodology")}</a></li>
+          </ul>
         </div>
+        <div className="text-sm text-on-shell-2">
+          <h2 className="text-sm font-bold text-on-shell">{t("addressTitle")}</h2>
+          <p className="mt-4 max-w-[36ch] leading-relaxed">{t("address")}</p>
+          <h2 className="mt-6 text-sm font-bold text-on-shell">{t("hoursTitle")}</h2>
+          <p className="mt-2">{t("hours")}</p>
+        </div>
+      </div>
+      <div className="border-t border-on-shell/10">
+        <p className="mx-auto max-w-[75rem] px-[var(--gutter)] py-5 text-xs text-on-shell-2">
+          <span className="num">{year}</span> VISTASY. {t("copyright")}.
+        </p>
       </div>
     </footer>
   );

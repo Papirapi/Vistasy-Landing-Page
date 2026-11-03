@@ -1,115 +1,94 @@
-'use client'
-import { Link } from '@/i18n/navigation';
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+"use client";
+import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
+import { NavBarItems } from "@/constants/navbar-items-list";
+import { Icon } from "@/components/icon";
+import ThemeSwitcher from "@/components/theme/theme-switcher";
+import { LanguageMenu } from "@/components/navbar/language-dropdown-menu";
+import { cn } from "@/lib/utils";
 
-import { Button } from '@/components/ui/button'
-import { Logo } from '@/components/logo'
-import { LanguesDropdownMenu } from '@/components/navbar/language-dropdown-menu'
-import { NavBarItems } from '@/constants/navbar-items-list'
-import ThemeSwitcher from '../theme/theme-switcher'
-import { usePathname } from 'next/navigation'
-import { useTranslations } from 'next-intl';
-
+function Wordmark({ onClick }: { onClick?: () => void }) {
+  return (
+    <Link href="/home" className="wordmark" onClick={onClick}>
+      <Icon name="i-scan-smiley-fill" className="ico h-[22px] w-[22px] text-lav" />
+      VISTASY
+    </Link>
+  );
+}
 
 export default function NavBar() {
-    const [menuState, setMenuState] = useState(false)
-    const pathname = usePathname()
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const t = useTranslations("NavBar");
+  const close = () => setOpen(false);
 
-    // remove first segment if it's a locale (e.g., /en/home → /home)
-    const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '');
-
-    // Map paths to custom underline colors
-    const underlineColors: Record<string, string> = {
-        '/home': 'after:bg-c-blue',
-        '/benefits': 'after:bg-c-orange',
-        '/solution': 'after:bg-c-purple',
-        '/pricing': 'after:bg-c-blue',
-        '/contact': 'after:bg-c-orange',
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && close();
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
     };
+  }, [open]);
 
-    // Fallback color if path not found in mapping
-    const getUnderlineColor = (path: string) =>
-        underlineColors[path] || 'after:bg-c-blue';
+  return (
+    <header className="on-shell sticky top-0 z-40 text-on-shell backdrop-blur-sm" style={{ background: "color-mix(in srgb, var(--shell) 94%, transparent)" }}>
+      <div className="mx-auto flex h-16 max-w-[75rem] items-center justify-between gap-6 px-[var(--gutter)]">
+        <Wordmark />
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
+          {NavBarItems.map((item) => {
+            const active = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={active ? "page" : undefined}
+                className={cn("text-[.95rem] font-semibold transition-colors", active ? "text-on-shell underline underline-offset-[6px] decoration-lav decoration-2" : "text-on-shell-2 hover:text-on-shell")}
+              >
+                {t(item.title)}
+              </Link>
+            );
+          })}
+        </nav>
+        <div className="flex items-center gap-2">
+          <div className="hidden items-center gap-2 lg:flex">
+            <LanguageMenu label={t("language")} />
+            <ThemeSwitcher label={t("theme")} />
+            <Link href="/contact" className="btn btn-lav ml-2">{t("cta")}</Link>
+          </div>
+          <button type="button" className="icon-btn lg:hidden" aria-label={open ? t("close") : t("menu")} aria-expanded={open} onClick={() => setOpen(!open)}>
+            <Icon name={open ? "i-x" : "i-equals"} />
+          </button>
+        </div>
+      </div>
 
-    const t = useTranslations('NavBar');
-
-    return (
-        <header>
-            <nav
-                data-state={menuState && 'active'}
-                className="fixed z-20 w-full border-b border-dashed bg-white backdrop-blur md:relative dark:bg-zinc-950/50 lg:dark:bg-transparent">
-                <div className="m-auto max-w-6xl px-6">
-                    <div className="flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
-                        <div className="flex w-full justify-between lg:w-auto">
-                            <div className='flex'>
-                                <Link
-                                    href="/home"
-                                    aria-label="home"
-                                    className="flex items-center">
-                                    <Logo  width={40} height={40}/>
-                                </Link>
-                                <LanguesDropdownMenu />
-                            </div>
-
-                            <div className="flex items-center gap-4 lg:hidden">
-                                <ThemeSwitcher />
-                                <button
-                                    onClick={() => setMenuState(!menuState)}
-                                    aria-label={menuState ? 'Close Menu' : 'Open Menu'}
-                                    className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5"
-                                >
-                                    <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
-                                    <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
-                            <div className="flex lg:pr-4">
-                                <ul className="space-y-6 text-base lg:flex lg:gap-8 lg:space-y-0 lg:text-sm">
-                                    <li className="hidden lg:block">
-                                        <ThemeSwitcher />
-                                    </li>
-                                    {NavBarItems.map((item, index) => (
-                                        <li className='pt-2' key={index}>
-                                            <Link
-                                                href={item.href}
-                                                onClick={() => setMenuState(false)}
-                                                className={`relative block pb-1 font-bold text-muted-foreground hover:text-accent-foreground duration-150
-    ${pathWithoutLocale === item.href
-                                                        ? `text-accent-foreground after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-1/2 ${getUnderlineColor(item.href)} after:transition-all after:duration-300`
-                                                        : ''
-                                                    }`}
-                                            >
-                                                <span>{t(item.title)}</span>
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-
-                            <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:border-l lg:pl-6">
-                                <Button
-                                    asChild
-                                    variant="outline"
-                                    size="sm">
-                                    <a href="https://dashboard.vistasy.app/auth/login">
-                                        <span>Login</span>
-                                    </a>
-                                </Button>
-                                <Button
-                                    asChild
-                                    size="sm">
-                                    <a href="https://dashboard.vistasy.app/auth/register">
-                                        <span>Register</span>
-                                    </a>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
-    );
+      {open && (
+        <div className="fixed inset-0 z-50 flex flex-col bg-shell px-[var(--gutter)] pt-3 lg:hidden" role="dialog" aria-modal="true" aria-label={t("menu")}>
+          <div className="flex h-16 items-center justify-between">
+            <Wordmark onClick={close} />
+            <button type="button" className="icon-btn" aria-label={t("close")} onClick={close} autoFocus>
+              <Icon name="i-x" />
+            </button>
+          </div>
+          <nav className="mt-6 flex flex-col" aria-label="Primary">
+            {NavBarItems.map((item) => (
+              <Link key={item.href} href={item.href} onClick={close} className="border-b border-on-shell/15 py-4 text-[1.6rem] font-bold tracking-[-.02em]">
+                {t(item.title)}
+              </Link>
+            ))}
+          </nav>
+          <div className="mt-auto flex flex-col gap-4 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
+            <div className="flex items-center gap-3">
+              <LanguageMenu label={t("language")} />
+              <ThemeSwitcher label={t("theme")} />
+            </div>
+            <Link href="/contact" onClick={close} className="btn btn-lav btn-big w-full">{t("cta")}</Link>
+          </div>
+        </div>
+      )}
+    </header>
+  );
 }

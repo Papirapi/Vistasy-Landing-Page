@@ -1,93 +1,39 @@
-import Image from "next/image";
-import { useTranslations } from "next-intl";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { pageMeta } from "@/lib/meta";
+import { Section } from "@/components/section";
+import { Pricing, type Plan } from "@/components/pricing/pricing";
 
-import { PricingCard } from "@/components/pricing/pricing-card";
-import AnimatedHeading from "@/components/animated-heading";
+type Params = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata() {
-  const t = await getTranslations("Metadata.pricing");
-
-  return {
-    title: t("title"),
-    description: t("description"),
-    alternates: {
-      canonical: 'https://www.vistasy.clinic/en/pricing',
-    },
-  };
+export async function generateMetadata({ params }: Params) {
+  const { locale } = await params;
+  return pageMeta(locale, "pricing", "/pricing");
 }
 
-export default function Pricing() {
-  const t = useTranslations("PricingPage");
+export default async function PricingPage({ params }: Params) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("PricingPage");
+
+  const people: Plan[] = [
+    { name: t("people.free.name"), price: t("people.free.price"), text: t("people.free.text"), items: ["i1", "i2", "i3", "i4"].map((i) => t(`people.free.${i}`)) },
+    { name: t("people.premium.name"), price: t("people.premium.price"), per: t("people.premium.per"), text: t("people.premium.text"), items: ["i1", "i2", "i3", "i4"].map((i) => t(`people.premium.${i}`)), featured: true },
+  ];
+  const retailers: Plan[] = [
+    { name: t("retailers.starter.name"), price: t("retailers.starter.price"), per: t("perMonth"), text: t("retailers.starter.scans"), items: ["i1", "i2", "i3"].map((i) => t(`retailers.starter.${i}`)) },
+    { name: t("retailers.growth.name"), price: t("retailers.growth.price"), per: t("perMonth"), text: t("retailers.growth.scans"), items: ["i1", "i2", "i3", "i4"].map((i) => t(`retailers.growth.${i}`)), featured: true },
+    { name: t("retailers.enterprise.name"), price: t("retailers.enterprise.price"), text: t("retailers.enterprise.scans"), items: ["i1", "i2", "i3", "i4"].map((i) => t(`retailers.enterprise.${i}`)) },
+  ];
 
   return (
-    <main className="max-w-6xl mx-auto p-16 lg:p-16">
-      <AnimatedHeading className="uppercase text-2xl text-center lg:text-4xl font-extrabold">
-        {t("title")}
-      </AnimatedHeading>
-      <AnimatedHeading className="uppercase p-8 text-sm text-center lg:text-md font-medium">
-        {t("subtitle")}
-      </AnimatedHeading>
-
-      <div className="mb-6 flex justify-center">
-        <Image
-          src="/features/line-blue.svg"
-          alt="image_alt"
-          width={400}
-          height={16}
-          className="object-contain mb-6"
-        />
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <PricingCard
-          title={t("cards.hardware.title")}
-          subtitle={t("cards.hardware.subtitle")}
-          subtitleDescription={t("cards.hardware.subtitle_description")}
-          icon="monitor"
-          cardColor="#B366FF"
-          features={[
-            {
-              text: t("cards.hardware.features.label"),
-              isList: true,
-              listItems: [
-                t("cards.hardware.features.list_items.0"),
-                t("cards.hardware.features.list_items.1"),
-                t("cards.hardware.features.list_items.2"),
-                t("cards.hardware.features.list_items.3"),
-                t("cards.hardware.features.list_items.4")
-              ]
-            }
-          ]}
-          buttonText={t("cards.hardware.button_text")}
-        />
-        <PricingCard
-          title={t("cards.service.title")}
-          subtitle={t("cards.service.subtitle")}
-          subtitleDescription={t("cards.service.subtitle_description")}
-          icon="briefcase"
-          cardColor="#4DA1FF"
-          features={[
-            t("cards.service.features.0"),
-            t("cards.service.features.1"),
-            t("cards.service.features.2"),
-            t("cards.service.features.3")
-          ]}
-          buttonText={t("cards.service.button_text")}
-        />
-        <PricingCard
-          title={t("cards.software.title")}
-          subtitle={t("cards.software.subtitle")}
-          subtitleDescription={t("cards.software.subtitle_description")}
-          icon="cloud"
-          cardColor="#FFAB65"
-          features={[
-            t("cards.software.features.0"),
-            t("cards.software.features.1")
-          ]}
-          buttonText={t("cards.software.button_text")}
-        />
-      </div>
-    </main>
+    <Section as="h1" title={t("title")} lede={t("lede")}>
+      <Pricing
+        tabs={{ people: t("tabPeople"), retailers: t("tabRetailers") }}
+        people={people}
+        retailers={retailers}
+        ctas={{ people: t("people.cta"), retailers: t("retailers.cta") }}
+        pilot={t("retailers.pilot")}
+      />
+    </Section>
   );
 }

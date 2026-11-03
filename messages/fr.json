@@ -1,181 +1,331 @@
 {
-    "Metadata": {
-        "home": {
-            "title": "Vistasy – Diagnostic Facial et Recommandations de Soins par IA",
-            "description": "Découvrez Vistasy, une solution IA pour l'analyse de la peau et des recommandations de soins personnalisées."
-        },
-        "benefits": {
-            "title": "Pourquoi Choisir Vistasy – Avantages de l'Analyse IA",
-            "description": "Découvrez les avantages de l’analyse de peau par IA proposée par Vistasy."
-        },
-        "solution": {
-            "title": "Notre Solution – Soins de Peau Personnalisés par IA",
-            "description": "Découvrez comment Vistasy utilise l'IA pour analyser votre peau et recommander des soins adaptés."
-        },
-        "pricing": {
-            "title": "Tarifs – Plans Abordables pour le Diagnostic IA | Vistasy",
-            "description": "Choisissez le plan Vistasy qui correspond à votre parcours de soins personnalisés."
-        },
-        "contact": {
-            "title": "Contactez Vistasy – Commencez Votre Parcours de Soin IA",
-            "description": "Contactez l'équipe Vistasy pour en savoir plus ou démarrer votre routine personnalisée."
-        }
+  "Metadata": {
+    "home": {
+      "title": "VISTASY – Une lecture claire de votre peau",
+      "description": "Un selfie à la lumière du jour devient treize lectures de la peau, une routine choisie selon les preuves par ingrédient et un verdict sur n'importe quel produit. Jamais classé par marque."
     },
-    "NavBar": {
-        "home": "Accueil",
-        "benefits": "Avantages",
-        "solution": "Solution",
-        "pricing": "Tarifs",
-        "contact": "Contact"
+    "howItWorks": {
+      "title": "Comment ça marche",
+      "description": "Du selfie à la lumière du jour à une routine que vous pouvez suivre : consentement, contrôle de qualité, treize lectures, preuves par ingrédient, vérification de produit et progrès."
     },
-    "Footer": {
-        "goHome": "Aller à l'accueil",
-        "linksTitle": "Liens",
-        "findUsTitle": "Nous trouver",
-        "addressTitle": "Adresse",
-        "address": "Adresse 012 Rue du CANADA, Bâtiment B, 4ème étage, E1 Tunis, Tunisie 1002",
-        "hoursTitle": "Horaires",
-        "hours": "Lundi–Vendredi : 9h00–17h00\nSamedi & Dimanche : Fermé",
-        "copyright": "Tous droits réservés"
+    "retailers": {
+      "title": "Pour les enseignes",
+      "description": "La même lecture de peau dans vos pages produit, sur une tablette en magasin ou par l'API. Votre catalogue indique ce qui est en stock ; le classement reste indépendant."
     },
-    "HomePage": {
-        "partnersTitle": "Nous travaillons avec ces partenaires",
-        "contact": "contactez-nous",
-        "slogan": "redéfinir les soins et la beauté",
-        "feature1": {
-            "title": "Débloquez une peau plus saine grâce à notre technologie de diagnostic personnalisée",
-            "description": "Découvrez une technologie de diagnostic de pointe conçue pour démocratiser l'accès à des solutions de soins de la peau personnalisées. Obtenez de meilleurs résultats de santé avec des recommandations de produits adaptées rien que pour vous."
-        },
-        "feature2": {
-            "title": "Notre solution de soins de la peau alimentée par l’IA",
-            "description": "Notre solution avancée utilise le traitement d’image, la vision par ordinateur et l’informatique en nuage pour analyser vos traits faciaux et conditions cutanées. Recevez des recommandations cosmétiques personnalisées adaptées à vos besoins uniques."
-        },
-        "feature3": {
-            "title": "Diagnostic cutané approfondi",
-            "description": "Grâce à une technologie de pointe, nous proposons un diagnostic de soins de la peau personnalisé et des régimes optimaux adaptés à vos besoins uniques. Notre interface simple et conviviale offre des rapports détaillés, mettant votre plan de soins personnalisé à portée de main."
-        },
-        "feature4": {
-            "title": "Intégration de miroir intelligent",
-            "description": "Améliorez l’engagement client en magasin avec notre miroir intelligent. Il fournit des diagnostics cutanés personnalisés et des recommandations de produits en magasin, offrant une expérience immersive et interactive qui favorise la fidélité client et augmente les ventes."
-        }
+    "pricing": {
+      "title": "Tarifs",
+      "description": "Des formules pour les personnes et des formules pour les enseignes."
     },
-    "BenefitsPage": {
-        "title": "Prêt à vivre la différence ?",
-        "cards": {
-            "01": {
-                "title": "client de passage",
-                "description": "Attirez davantage de clients de passage grâce à notre solution interactive et engageante, les incitant à entrer dans votre magasin ou à visiter votre site web."
-            },
-            "02": {
-                "title": "connecter & identifier",
-                "description": "Renforcez votre présence en ligne et transformez vos visiteurs en clients fidèles avec des expériences numériques captivantes."
-            },
-            "03": {
-                "title": "recommander & engager",
-                "description": "Proposez des recommandations personnalisées et engagez vos clients avec des suggestions pertinentes et des expériences interactives."
-            },
-            "04": {
-                "title": "suivre & fidéliser",
-                "description": "Surveillez les interactions et préférences clients pour mieux comprendre leur comportement, favoriser les ventes croisées et fidéliser avec des stratégies ciblées."
-            },
-            "05": {
-                "title": "analyse des données",
-                "description": "Obtenez des insights précieux à partir des données clients pour affiner vos stratégies, optimiser les stocks et améliorer la satisfaction grâce à un marketing ciblé."
-            }
-        }
-    },
-    "SolutionPage": {
-        "transform_the_customer_experience": "transformer l'expérience client !",
-        "OnlineStore": {
-            "online_store": "boutique en ligne",
-            "reduction_churn_rate": "réduction du taux d'attrition",
-            "increase_on_screen_time": "augmentation du temps passé à l'écran",
-            "boost_customer_retention_engagement": "amélioration de la rétention et de l'engagement client",
-            "improvement_marketing_efficiency": "meilleure efficacité marketing",
-            "higher_ROI_targeted_campaigns": "retour sur investissement plus élevé pour les campagnes ciblées"
-        },
-        "OnsiteStore": {
-            "onsite_store": "magasin physique",
-            "reduction_customer_acquisition_costs": "réduction des coûts d'acquisition client",
-            "ai_expert_staff_training": "expert IA, réduisant la dépendance à la formation du personnel",
-            "real_time_tailored_recommendations": "recommandations personnalisées en temps réel selon l’inventaire",
-            "boost_cross_selling_opportunities": "augmentation des opportunités de ventes croisées",
-            "effective_targeted_marketing": "marketing ciblé plus efficace"
-        },
-        "OnlineOnsiteStores": {
-            "online_onsite_stores": "magasins en ligne et physiques",
-            "online_store_solution": "Solution Boutique EN LIGNE",
-            "onsite_store_solution": "Solution Magasin PHYSIQUE",
-            "seamless_omni_channel_experience": "Expérience Omnicanale Fluide",
-            "enhanced_loyalty_program": "Programme de Fidélité Amélioré"
-        },
-        "primary_button_text":"réserver un appel",
-        "secondary_button_text": "vérifier les prix"
-    },
-    "PricingPage": {
-        "title": "Prêt à commencer ?",
-        "subtitle": "Découvrez nos offres tarifaires",
-        "image_alt": "Ligne décorative",
-        "cards": {
-            "hardware": {
-                "title": "Matériel en tant que service",
-                "subtitle": "Sur mesure",
-                "subtitle_description": "/Miroir ou Tablette",
-                "features": {
-                    "label": "Miroir intelligent (achat / location) :",
-                    "list_items": [
-                        "10° (tablette)",
-                        "27",
-                        "32",
-                        "42",
-                        "55"
-                    ]
-                },
-                "button_text": "Réserver un appel"
-            },
-            "service": {
-                "title": "Paiement par service",
-                "subtitle": "Sur mesure",
-                "subtitle_description": "/Service",
-                "features": [
-                    "Modèle graphique & organisation des résultats",
-                    "Gestion des données (traitement, analyse, raffinement)",
-                    "Implémentation de fonctionnalités spécifiques",
-                    "Intégration technologique dans une application existante ou création d’une application de diagnostic facial et de recommandations"
-                ],
-                "button_text": "Réserver un appel"
-            },
-            "software": {
-                "title": "Logiciel en tant que service",
-                "subtitle": "Paiement à l'utilisation",
-                "subtitle_description": "/Utilisation du diagnostic",
-                "features": [
-                    "Accès à des modules puissants : Diagnostic Facial, Recommandations Produits, Marketing et Sondages.",
-                    "Avec des forfaits à partir de 500 utilisations par module."
-                ],
-                "button_text": "Réserver un appel"
-            }
-        }
-    },
-    "ContactPage": {
-        "title": "TRAVAILLONS ENSEMBLE",
-        "form": {
-            "name_label": "Nom",
-            "email_label": "E-mail",
-            "message_label": "Message",
-            "submit_button": "Envoyer",
-            "errors": {
-                "name_required": "Le nom est obligatoire",
-                "email_required": "L'email est obligatoire",
-                "email_invalid": "L'email n'est pas valide",
-                "message_required": "Le message est obligatoire"
-            }
-        },
-        "contact_paragraph": "Ou contactez-nous via cet e-mail",
-        "successTitle": "MERCI DE NOUS AVOIR CONTACTÉS !",
-        "errorTitle": "OUPS, UNE ERREUR EST SURVENUE !",
-        "successDescription": "Merci pour votre e-mail. Nous vous contacterons sous peu.",
-        "errorDescription": "Un problème est survenu lors du traitement de votre demande. Veuillez réessayer plus tard.",
-        "loading_message": "Envoi..."
+    "contact": {
+      "title": "Contact",
+      "description": "Demandez une invitation à l'avant-première, ou réservez un appel pilote pour votre magasin."
     }
+  },
+  "NavBar": {
+    "skip": "Aller au contenu",
+    "home": "Accueil",
+    "howItWorks": "Comment ça marche",
+    "retailers": "Pour les enseignes",
+    "pricing": "Tarifs",
+    "contact": "Contact",
+    "cta": "Demander une invitation",
+    "menu": "Ouvrir le menu",
+    "close": "Fermer le menu",
+    "theme": "Passer du clair au sombre",
+    "language": "Langue"
+  },
+  "Footer": {
+    "goHome": "Retour à l'accueil",
+    "note": "Un conseil cosmétique, pas un diagnostic médical.",
+    "linksTitle": "Pages",
+    "appTitle": "L'application",
+    "app": "Ouvrir l'application",
+    "independence": "Indépendance",
+    "methodology": "Méthodologie",
+    "addressTitle": "Adresse",
+    "address": "Adresse 012 Rue du CANADA, Bâtiment B, 4e étage, E1 Tunis, Tunisie 1002",
+    "hoursTitle": "Horaires",
+    "hours": "Du lundi au vendredi, de 9 h à 17 h",
+    "copyright": "Tous droits réservés"
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Une lecture claire de votre peau, et des produits choisis pour leurs ingrédients.",
+      "lede": "Un selfie à la lumière du jour. Treize lectures avec leur niveau de confiance, une routine construite sur ce que chaque ingrédient a démontré, et un verdict sur n'importe quel produit que vous présentez à la caméra.",
+      "cta": "Demander une invitation",
+      "ctaNote": "Sur invitation pendant l'avant-première",
+      "secondary": "Pour les enseignes",
+      "imageAlt": "Une jeune femme prend un selfie à la lumière du jour avec un téléphone lavande.",
+      "agree": "Lectures concordantes",
+      "of100": "sur 100",
+      "chips": {
+        "texture": "Texture",
+        "photodamage": "Photovieillissement",
+        "blemishes": "Imperfections",
+        "darkCircles": "Cernes"
+      },
+      "labelHead": "Étape 2 sur 5",
+      "labelWhen": "Soir",
+      "labelFoot": "Pour vous · Délivré aujourd'hui",
+      "brand": "Gamme de démonstration",
+      "products": {
+        "texture": {
+          "name": "Lotion exfoliante glycolique 7 %",
+          "meta": "Lotion · 150 ml",
+          "active": "Acide glycolique",
+          "holds": "Contient environ 7 %.",
+          "needs": "Votre peau a besoin de 5 à 10 %.",
+          "tag": "Suffisant",
+          "direction": "Le soir, après le nettoyage. Commencez deux fois par semaine."
+        },
+        "photodamage": {
+          "name": "Fluide défense quotidienne SPF 50",
+          "meta": "Écran solaire · 50 ml",
+          "active": "Filtres UV",
+          "holds": "SPF 50, large spectre.",
+          "needs": "Votre peau a besoin d'un SPF 30 ou plus, chaque matin.",
+          "tag": "Suffisant",
+          "direction": "Le matin, en dernière étape. Deux longueurs de doigt pour le visage."
+        },
+        "blemishes": {
+          "name": "Booster acide azélaïque 10 %",
+          "meta": "Sérum · 30 ml",
+          "active": "Acide azélaïque",
+          "holds": "Contient environ 10 %.",
+          "needs": "Votre peau a besoin de 10 à 20 %.",
+          "tag": "Suffisant",
+          "direction": "Le soir, avant la crème hydratante."
+        },
+        "darkCircles": {
+          "name": "Sérum yeux à la caféine",
+          "meta": "Sérum yeux · 15 ml",
+          "active": "Caféine",
+          "holds": "Contient environ 3 %.",
+          "needs": "Votre peau a besoin de 1 à 3 %.",
+          "tag": "Suffisant",
+          "direction": "Le matin, un grain de riz sous chaque œil."
+        }
+      }
+    },
+    "read": {
+      "title": "Ce qu'un selfie vous donne",
+      "readings": {
+        "title": "Treize lectures, et la confiance à accorder à chacune",
+        "text": "Chaque préoccupation est notée de 0 à 100, trois fois. Vous voyez la note, le calque sur votre propre visage, et si les lectures concordent."
+      },
+      "routine": {
+        "title": "Une routine qui montre son raisonnement",
+        "text": "Chaque produit arrive sous forme d'étiquette de délivrance : la quantité d'actif qu'il contient, face à ce dont votre peau a besoin, et quand l'utiliser."
+      },
+      "check": {
+        "title": "N'importe quel produit, vérifié pour votre peau",
+        "text": "Scannez un code-barres ou photographiez la liste d'ingrédients. Vous obtenez convient, neutre ou prudence, avec les raisons et tout conflit avec ce que vous possédez déjà.",
+        "verdict": "Convient à votre peau",
+        "verdictText": "Acide azélaïque à une dose utile. Sans parfum. Aucun conflit avec vos produits."
+      }
+    },
+    "independence": {
+      "title": "Classé par ingrédients et par preuves. Jamais par marque.",
+      "text": "Le catalogue d'une enseigne nous dit seulement ce qui est en stock. Le classement n'est jamais à vendre. Si un emplacement sponsorisé existe un jour, il sera signalé et ne changera jamais l'ordre.",
+      "linkHow": "Comment nous restons indépendants",
+      "linkMethod": "Méthodologie"
+    },
+    "partnersTitle": "Nous travaillons avec ces partenaires",
+    "retailers": {
+      "title": "La même lecture, dans votre magasin",
+      "text": "Sur vos pages produit, sur une tablette en magasin ou par l'API. Votre catalogue indique ce qui est en stock. Le classement reste indépendant.",
+      "widget": "Widget sur une page produit",
+      "store": "Tablette en magasin",
+      "api": "API",
+      "pilot": "Un pilote dure six à huit semaines, sans frais de plateforme, avec un test A/B sur vos pages produit et une étude de cas publique.",
+      "cta": "Voir l'offre enseignes"
+    },
+    "close": {
+      "title": "Votre peau, lue à la lumière du jour.",
+      "text": "Laissez votre e-mail et nous vous enverrons un lien de connexion quand votre tour viendra.",
+      "cta": "Demander une invitation"
+    }
+  },
+  "HowItWorksPage": {
+    "title": "Comment ça marche",
+    "lede": "Le parcours tel que l'application le déroule, du premier selfie à un produit auquel vous pouvez faire confiance.",
+    "steps": {
+      "consent": {
+        "title": "Le consentement d'abord",
+        "text": "Vous confirmez avoir plus de 18 ans et choisissez la durée de conservation de votre photo : 30 jours, ou supprimée dès qu'elle est notée.",
+        "tag1": "18 ans confirmés",
+        "tag2": "Photo supprimée après notation"
+      },
+      "selfie": {
+        "title": "Un selfie à la lumière du jour",
+        "text": "Un contrôle de qualité vérifie la lumière, la pose et la netteté avant toute analyse. Environ 30 secondes.",
+        "hint": "Lumière du jour uniforme, sans lunettes"
+      },
+      "questions": {
+        "title": "Quelques questions",
+        "text": "Type de peau, sensibilités, grossesse, allergies et ce que vous utilisez déjà.",
+        "q1": "Mixte",
+        "q2": "Sensible",
+        "q3": "Sans parfum",
+        "q4": "Utilise du rétinol"
+      },
+      "readings": {
+        "title": "Treize lectures",
+        "text": "Chaque préoccupation notée de 0 à 100, trois fois, avec le degré de concordance des lectures et un calque sur votre propre visage."
+      },
+      "routine": {
+        "title": "Une routine selon les preuves",
+        "text": "Des étapes jour, nuit et hebdomadaires choisies selon des preuves graduées par ingrédient, avec la quantité de chaque actif dont vous avez besoin."
+      },
+      "check": {
+        "title": "N'importe quel produit, vérifié",
+        "text": "Code-barres ou photo de l'étiquette. Convient, neutre ou prudence, avec les raisons et les conflits avec ce que vous possédez.",
+        "verdict": "Prudence",
+        "verdictText": "Alcool dénaturé en haut de la liste. Votre peau se lit comme sensible."
+      },
+      "progress": {
+        "title": "Les progrès d'un scan à l'autre",
+        "text": "Recommencez dans 4 à 12 semaines. Les changements sont montrés une fois le bruit de mesure retiré.",
+        "before": "Premier scan",
+        "after": "Huit semaines plus tard"
+      }
+    },
+    "safety": {
+      "title": "Un conseil cosmétique, pas un diagnostic médical.",
+      "referral": "Une lecture d'imperfections de 70 ou plus suggère de consulter un dermatologue, et l'application le dit.",
+      "where": "Les photos sont stockées à Francfort et lues par Google Gemini et par nos modèles d'image à Londres.",
+      "delete": "Vous pouvez supprimer vos photos, ou votre compte entier, à tout moment.",
+      "sarah": "Sarah, l'assistante intégrée, dit qu'elle est une IA et ne répond qu'à partir de votre propre analyse, de votre routine et de vos notes d'ingrédients.",
+      "link": "Lire la méthodologie"
+    },
+    "cta": "Demander une invitation"
+  },
+  "RetailersPage": {
+    "title": "La même lecture, dans votre magasin.",
+    "lede": "Vos clients voient leur peau, une routine et des produits qui leur conviennent, sur vos pages produit ou en magasin. Votre catalogue dit ce qui est en stock. Le classement reste indépendant.",
+    "modes": {
+      "widget": {
+        "title": "Widget sur une page produit",
+        "text": "Une balise script. Le client scanne, et la page indique si ce produit convient à sa peau, avec les raisons."
+      },
+      "store": {
+        "title": "Tablette en magasin",
+        "text": "La même lecture au comptoir, avec des recommandations issues de vos rayons d'abord et une routine imprimée ou envoyée par e-mail."
+      },
+      "api": {
+        "title": "API",
+        "text": "Sessions, scans, routines et verdicts produit en HTTPS, avec votre propre catalogue importé comme couche de disponibilité."
+      }
+    },
+    "rank": {
+      "title": "Classer d'abord, puis le stock.",
+      "text": "Chaque client est classé sur l'ensemble du catalogue. Votre catalogue indique seulement ce qui est en stock, avec votre prix et votre lien, et nomme la meilleure option disponible quand un premier choix manque."
+    },
+    "steps": {
+      "title": "Ce qui change dans votre magasin",
+      "s1": { "title": "Attirer", "text": "Une lecture de peau sur la page produit attire les gens et les retient." },
+      "s2": { "title": "Identifier", "text": "Une session relie la lecture au client, avec son consentement." },
+      "s3": { "title": "Recommander", "text": "Des produits qui conviennent à sa peau, issus de vos rayons d'abord." },
+      "s4": { "title": "Fidéliser", "text": "Les scans de suivi les font revenir dans 4 à 12 semaines." },
+      "s5": { "title": "Apprendre", "text": "Des informations agrégées et anonymisées, avec consentement explicite. Jamais de données individuelles." }
+    },
+    "pilot": {
+      "title": "Un pilote, pas un argumentaire.",
+      "text": "Six à huit semaines. Les frais de plateforme sont offerts. Nous menons un test A/B sur vos pages produit et publions une étude de cas à la fin.",
+      "cta": "Réserver un appel pilote"
+    }
+  },
+  "PricingPage": {
+    "title": "Tarifs",
+    "lede": "Des formules pour les personnes et des formules pour les enseignes.",
+    "tabPeople": "Personnes",
+    "tabRetailers": "Enseignes",
+    "perMonth": "par mois",
+    "people": {
+      "free": {
+        "name": "Gratuit",
+        "price": "0 €",
+        "text": "Scan, routine et vérification de produit.",
+        "i1": "Treize lectures avec calques",
+        "i2": "Une routine selon les preuves par ingrédient",
+        "i3": "Vérification de produit par code-barres ou photo d'étiquette",
+        "i4": "Sarah, en contexte"
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "4,99 €",
+        "per": "par mois, ou 39 € par an",
+        "text": "Tout le gratuit, plus les progrès.",
+        "i1": "Progrès avec comparaison de photos",
+        "i2": "Rappels et points d'étape",
+        "i3": "Une routine qui s'adapte",
+        "i4": "Tout ce qui est dans Gratuit"
+      },
+      "cta": "Demander une invitation"
+    },
+    "retailers": {
+      "starter": {
+        "name": "Starter",
+        "price": "290 €",
+        "scans": "1 000 scans inclus, puis 0,25 € chacun",
+        "i1": "Widget et API",
+        "i2": "Tableau de bord de base",
+        "i3": "Assistance par e-mail"
+      },
+      "growth": {
+        "name": "Growth",
+        "price": "990 €",
+        "scans": "5 000 scans inclus, puis 0,18 € chacun",
+        "i1": "Tout ce qui est dans Starter",
+        "i2": "Webhooks et import automatique du catalogue",
+        "i3": "Rapport en marque blanche",
+        "i4": "Accompagnement des tests A/B"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Sur demande",
+        "scans": "Volume sur mesure",
+        "i1": "SSO et SLA",
+        "i2": "Négociation du DPA",
+        "i3": "Mode magasin",
+        "i4": "Accompagnement dédié"
+      },
+      "pilot": "Chaque formule peut commencer par un pilote : six à huit semaines, frais offerts, un test A/B et une étude de cas publique.",
+      "cta": "Réserver un appel pilote"
+    }
+  },
+  "ContactPage": {
+    "title": "Parlons-en.",
+    "lede": "Une invitation à l'avant-première pour vous, ou un appel pilote pour votre magasin.",
+    "people": {
+      "title": "Pour les personnes",
+      "text": "VISTASY est sur invitation pendant l'avant-première. Laissez votre e-mail et nous vous enverrons un lien de connexion quand votre tour viendra.",
+      "email": "E-mail",
+      "message": "Que souhaitez-vous savoir ? Facultatif.",
+      "submit": "Demander une invitation"
+    },
+    "retailers": {
+      "title": "Pour les enseignes",
+      "text": "Parlez-nous de votre magasin et nous réserverons un appel de 30 minutes.",
+      "name": "Nom",
+      "company": "Entreprise",
+      "email": "E-mail",
+      "message": "Message",
+      "submit": "Réserver un appel pilote"
+    },
+    "errors": {
+      "emailRequired": "Saisissez votre e-mail",
+      "emailInvalid": "Cette adresse e-mail ne semble pas correcte",
+      "nameRequired": "Saisissez votre nom",
+      "companyRequired": "Saisissez votre entreprise",
+      "messageRequired": "Écrivez un court message"
+    },
+    "sending": "Envoi…",
+    "successTitle": "Merci.",
+    "successText": "Nous revenons vers vous très vite.",
+    "errorTitle": "L'envoi n'a pas abouti.",
+    "errorText": "Réessayez dans un instant, ou écrivez-nous directement.",
+    "retry": "Réessayer",
+    "or": "Ou écrivez à"
+  }
 }

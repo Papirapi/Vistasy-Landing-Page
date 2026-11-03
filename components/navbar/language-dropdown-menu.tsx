@@ -1,85 +1,39 @@
-"use client"
-import * as React from "react"
-import Image from "next/image"
-import { useRouter, usePathname } from "next/navigation"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuLabel,
-    DropdownMenuRadioGroup,
-    DropdownMenuRadioItem,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { ChevronDown } from "lucide-react"
+"use client";
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import Image from "next/image";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
+import { Icon } from "@/components/icon";
 
-import EnglishFlag from "@/public/flags/en.svg"
-import FrenchFlag from "@/public/flags/fr.svg"
+const NAMES: Record<string, string> = { en: "English", fr: "Français" };
 
-export function LanguesDropdownMenu() {
-  const router = useRouter()
-  const pathname = usePathname()
-  const [open, setOpen] = React.useState(false)
-
-  // Determine initial language from the path
-  const currentLocale = pathname.split("/")[1] === "fr" ? "French" : "English"
-  const [lang, setLang] = React.useState(currentLocale)
-
-  // Map languages to flags and locale codes
-  const flagMap: Record<string, string> = {
-    English: EnglishFlag,
-    French: FrenchFlag,
-  }
-  const localeMap: Record<string, string> = {
-    English: "en",
-    French: "fr",
-  }
-
-  function handleLanguageChange(newLang: string) {
-    setLang(newLang)
-    const newLocale = localeMap[newLang]
-
-    // Replace the first segment of the URL with the new locale
-    const segments = pathname.split("/")
-    segments[1] = newLocale
-    router.push(segments.join("/") || "/")
-  }
-
+export function LanguageMenu({ label }: { label: string }) {
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   return (
-    <DropdownMenu open={open} onOpenChange={setOpen}>
-      <DropdownMenuTrigger>
-        <div className="flex ml-4 md:ml-8 self-center cursor-pointer">
-          <Image
-            src={flagMap[lang]}
-            alt={`${lang} flag`}
-            width={20}
-            height={20}
-          />
-          <ChevronDown
-            className={`w-4 h-4 ml-1 transition-transform duration-200 ${
-              open ? "rotate-180" : "rotate-0"
-            }`}
-          />
-        </div>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>Choose Your Language</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuRadioGroup value={lang} onValueChange={handleLanguageChange}>
-          <DropdownMenuRadioItem value="English">
-            <div className="flex items-center gap-2">
-              <Image src={EnglishFlag} alt="English flag" width={20} height={20} />
-              English
-            </div>
-          </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="French">
-            <div className="flex items-center gap-2">
-              <Image src={FrenchFlag} alt="French flag" width={20} height={20} />
-              French
-            </div>
-          </DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  )
+    <DropdownMenu.Root>
+      <DropdownMenu.Trigger asChild>
+        <button type="button" className="icon-btn" aria-label={`${label}: ${NAMES[locale]}`}>
+          <Image src={`/flags/${locale}.svg`} alt="" width={20} height={20} className="h-5 w-5 rounded-full object-cover" />
+        </button>
+      </DropdownMenu.Trigger>
+      <DropdownMenu.Portal>
+        <DropdownMenu.Content className="menu" align="end" sideOffset={8}>
+          <DropdownMenu.RadioGroup value={locale} onValueChange={(v) => router.replace(pathname, { locale: v })}>
+            {routing.locales.map((l) => (
+              <DropdownMenu.RadioItem key={l} value={l} className="menu-item">
+                <Image src={`/flags/${l}.svg`} alt="" width={18} height={18} className="h-[18px] w-[18px] rounded-full object-cover" />
+                {NAMES[l]}
+                <DropdownMenu.ItemIndicator className="ml-auto">
+                  <Icon name="i-check" />
+                </DropdownMenu.ItemIndicator>
+              </DropdownMenu.RadioItem>
+            ))}
+          </DropdownMenu.RadioGroup>
+        </DropdownMenu.Content>
+      </DropdownMenu.Portal>
+    </DropdownMenu.Root>
+  );
 }
