@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Marquee } from "@/components/kit/marquee";
 
 const LOGOS = [
   { src: "/partners/cdc-logo.svg", alt: "Caisse des Dépôts et Consignations" },
@@ -8,30 +9,16 @@ const LOGOS = [
   { src: "/partners/theworldbank-logo.svg", alt: "The World Bank" },
 ];
 
-// A quiet monochrome row; a CSS marquee only on phones, static and wrapped under reduced motion.
+// The partner marks on a slow marquee (Magic UI marquee anatomy); still and centred under reduced motion.
 export default function LogoCloud({ title }: { title: string }) {
-  const row = (prefix: string, hidden = false) =>
-    LOGOS.map((l) => (
-      <Image
-        key={prefix + l.src}
-        src={l.src}
-        alt={hidden ? "" : l.alt}
-        aria-hidden={hidden || undefined}
-        width={140}
-        height={28}
-        className="h-6 w-auto opacity-75 grayscale dark:invert"
-      />
-    ));
   return (
-    <div>
-      <p className="text-sm font-semibold text-ink-3">{title}</p>
-      <div className="mt-6 hidden items-center justify-between gap-10 md:flex">{row("a")}</div>
-      <div className="mt-6 overflow-hidden md:hidden [mask-image:linear-gradient(90deg,transparent,#000_12%,#000_88%,transparent)]">
-        <div className="marquee items-center">
-          {row("b")}
-          {row("c", true)}
-        </div>
-      </div>
+    <div className="flex flex-col items-center gap-8">
+      <p className="text-micro font-medium text-ink-3">{title}</p>
+      <Marquee className="w-full">
+        {LOGOS.map((l) => (
+          <Image key={l.src} src={l.src} alt={l.alt} width={140} height={28} className="h-7 w-auto flex-none opacity-70 grayscale dark:invert" />
+        ))}
+      </Marquee>
     </div>
   );
 }

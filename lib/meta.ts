@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { SITE_URL as BASE } from "@/constants/navbar-items-list";
 
-const BASE = "https://www.vistasy.clinic";
 
 export async function pageMeta(locale: string, key: string, path: string): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: `Metadata.${key}` });

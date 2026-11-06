@@ -15,21 +15,21 @@ export type LabelData = {
   foot?: string;
 };
 
-// The dispensing label: the app's signature component, rebuilt as a server component.
-// `print` runs the line-by-line print animation once on mount (see globals.css).
-export function DispensingLabel({ data, print, className }: { data: LabelData; print?: boolean; className?: string }) {
-  let i = 0;
-  const row = () => ({ "--i": i++ } as React.CSSProperties);
+// The dispensing label: the app's signature component. Each printed line carries data-row so the
+// hero can "print" it line by line with GSAP; without JavaScript it is simply there.
+export function DispensingLabel({ data, className }: { data: LabelData; className?: string }) {
   return (
-    <div className={cn("v-label", print && "print", className)}>
-      <div className="label-head" style={row()}>
+    <div className={cn("v-label", className)}>
+      <div className="label-head" data-row="">
         <span>{data.head}</span>
-        {data.when && <span className="num">{data.when}</span>}
+        {data.when && <span>{data.when}</span>}
       </div>
-      <div className="label-body" style={row()}>
-        <div className="label-img">
-          {data.img ? <Image src={data.img} alt="" width={76} height={76} /> : null}
-        </div>
+      <div className={cn("label-body", !data.img && "!grid-cols-1")} data-row="">
+        {data.img && (
+          <div className="label-img">
+            <Image src={data.img} alt="" width={72} height={72} />
+          </div>
+        )}
         <div className="label-id">
           {data.brand && <span className="brand">{data.brand}</span>}
           <span className="name">{data.name}</span>
@@ -38,25 +38,27 @@ export function DispensingLabel({ data, print, className }: { data: LabelData; p
       </div>
       <dl className="label-fields">
         {data.fields.map((f) => (
-          <div className="lf" key={f.active} style={row()}>
+          <div className="lf" key={f.active} data-row="">
             <dt>{f.active}</dt>
             <dd>
-              <span className="num">{f.holds}</span> {f.needs}
+              <span className="tnum">{f.holds}</span> {f.needs}
             </dd>
-            <span className={cn("v-tag", f.tagKind === "flag" ? "flag" : f.tagKind === "neutral" ? "" : "ok")}>{f.tag}</span>
+            <dd className="lf-tag">
+              <span className={cn("v-tag", f.tagKind === "flag" ? "flag" : f.tagKind === "neutral" ? "" : "ok")}>{f.tag}</span>
+            </dd>
           </div>
         ))}
       </dl>
       {data.direction && (
-        <div className="label-dir" style={row()}>
+        <div className="label-dir" data-row="">
           <Icon name="i-sun-horizon" />
           <span>{data.direction}</span>
         </div>
       )}
       {data.foot && (
-        <div className="label-foot" style={row()}>
+        <div className="label-foot" data-row="">
           <span className="who">{data.foot}</span>
-          <Icon name="i-seal-check" className="ico text-cross-ink" />
+          <Icon name="i-seal-check" className="ico text-ink-3" />
         </div>
       )}
     </div>

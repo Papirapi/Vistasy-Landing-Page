@@ -1,165 +1,366 @@
 {
   "Metadata": {
     "home": {
-      "title": "VISTASY – A clear read of your skin",
+      "title": "Free skin analysis from one selfie",
       "description": "One selfie in daylight becomes thirteen skin readings, a routine chosen by ingredient evidence, and a verdict on any product. Never ranked by brand."
     },
     "howItWorks": {
-      "title": "How it works",
-      "description": "From a selfie in daylight to a routine you can follow: consent, the quality gate, thirteen readings, ingredient evidence, product check and progress."
+      "title": "How the skin analysis works",
+      "description": "From a selfie in daylight to a routine you can follow: consent, the quality gate, thirteen readings, ingredient evidence, the product check and progress."
     },
     "retailers": {
-      "title": "For retailers",
-      "description": "The same skin read inside your product pages, on an in-store tablet or through the API. Your catalogue marks what is in stock; the ranking stays independent."
+      "title": "Skin analysis for skincare retailers",
+      "description": "Show every shopper what fits their skin, on your product pages, on an in-store tablet or through the API. Start with a pilot, platform fee waived."
     },
     "pricing": {
       "title": "Pricing",
-      "description": "Plans for people and plans for retailers."
+      "description": "Reading your skin is free. Premium tracks your progress for 4.99\u00a0€ a month. Retail plans can start as a six to eight week pilot."
     },
     "contact": {
       "title": "Contact",
       "description": "Request an invite to the preview, or book a pilot call for your store."
+    },
+    "yourData": {
+      "title": "Your data",
+      "description": "Where your photo is stored, who reads it, how long it is kept and how to delete it, in plain words."
     }
   },
   "NavBar": {
     "skip": "Skip to content",
+    "primary": "Primary",
     "home": "Home",
     "howItWorks": "How it works",
     "retailers": "For retailers",
     "pricing": "Pricing",
     "contact": "Contact",
     "cta": "Request an invite",
+    "ctaRetail": "Book a pilot call",
     "menu": "Open menu",
     "close": "Close menu",
     "theme": "Switch between light and dark",
-    "language": "Language"
+    "language": "Language",
+    "ctaShort": "Request an invite",
+    "ctaRetailShort": "Book a pilot call",
+    "ctaDone": "You are on the list"
   },
   "Footer": {
-    "goHome": "Go home",
+    "goHome": "VISTASY home",
+    "tagline": "A clear read of your skin, and products ranked by evidence, never by brand.",
     "note": "Cosmetic guidance, not a medical diagnosis.",
-    "linksTitle": "Pages",
-    "appTitle": "The app",
+    "product": "Product",
+    "trust": "Trust",
+    "visit": "Visit us",
     "app": "Open the app",
     "independence": "Independence",
     "methodology": "Methodology",
-    "addressTitle": "Address",
-    "address": "Address 012 Street of CANADA, Building B, 4th Floor, E1 Tunis, Tunisia 1002",
-    "hoursTitle": "Hours",
-    "hours": "Monday to Friday, 9:00 to 17:00",
+    "yourData": "Your data",
+    "address": "012 Street of Canada, Building B, 4th Floor, E1 Tunis, Tunisia 1002",
+    "hours": "Monday to Friday, 9:00\u00a0to\u00a017:00",
     "copyright": "All rights reserved"
+  },
+  "InviteForm": {
+    "label": "E-mail for your invite",
+    "submit": "Request an invite",
+    "sending": "Sending",
+    "required": "Enter your e-mail",
+    "invalid": "Enter a full address, like name@example.com",
+    "success": "You are on the list. We will send a sign-in link to {email} when your turn comes.",
+    "failed": "That did not go through.",
+    "retry": "Try again"
   },
   "HomePage": {
     "hero": {
-      "title": "A clear read of your skin, and products chosen by their ingredients.",
-      "lede": "One selfie in daylight. Thirteen readings with their confidence, a routine built from what each ingredient has been shown to do, and a verdict on any product you hold up to the camera.",
-      "cta": "Request an invite",
-      "ctaNote": "Invite-only while in preview",
-      "secondary": "For retailers",
-      "imageAlt": "A young woman taking a selfie in daylight with a lavender phone.",
-      "agree": "Readings agree",
-      "of100": "of 100",
+      "title": "Know what your skin needs.",
+      "lede": "One daylight selfie gives you thirteen skin readings, a routine chosen by ingredient evidence, and a verdict on any product before you buy it. Never ranked by brand.",
+      "note": "Free, not a trial. Your photo can be deleted right after it is scored.",
+      "eyebrow": "Invite-only preview",
       "chips": {
+        "free": "Free, not a trial",
+        "photo": "Delete your photo right after scoring"
+      },
+      "phone": {
+        "selfie": "Selfie",
+        "product": "Product",
+        "gate": "Hold still, checking light",
+        "shutter": "Take the photo"
+      },
+      "cards": {
+        "check": "Check",
+        "save": "Save",
+        "saved": "Saved",
+        "next": "Next reading",
+        "monthly": "Monthly",
+        "yearly": "Yearly",
+        "yearPrice": "39 €",
+        "perYear": "a year",
+        "ask": "Ask Sarah",
+        "consent": "Your photo",
+        "premium": "Premium",
+        "grades": "Evidence grades",
+        "again": "Scan again",
+        "compare": "Compare the first scan with eight weeks later",
+        "deck": "Sample products to check",
+        "nextProduct": "Next product"
+      }
+    },
+    "sheet": {
+      "title": "Sample read",
+      "meta": "Daylight, front camera",
+      "quality": "Quality gate passed",
+      "group": "Readings, choose one to see its product",
+      "hint": "Choose a reading to see the product it calls for.",
+      "of100": "/100",
+      "agree": "Readings agree",
+      "shown": "4 of 13 readings shown. Sample values.",
+      "showing": "Showing the product for",
+      "faceAlt": "Sample selfie used for this read",
+      "concerns": {
         "texture": "Texture",
         "photodamage": "Photodamage",
         "blemishes": "Blemishes",
         "darkCircles": "Dark circles"
       },
-      "labelHead": "Step 2 of 5",
-      "labelWhen": "Evening",
-      "labelFoot": "For you · Dispensed today",
-      "brand": "Demo range",
+      "scale": "Scores run 0\u00a0to\u00a0100. Higher means more visible.",
+      "range": "Three reads: {lo} to {hi}.",
+      "band": "The shaded band spans the three reads."
+    },
+    "label": {
+      "brand": "Sample range",
+      "foot": "For you, dispensed today",
       "products": {
         "texture": {
-          "name": "Glycolic 7 % exfoliating toner",
-          "meta": "Toner · 150 ml",
+          "head": "Step 2 of 5",
+          "when": "Evening",
+          "name": "Glycolic 7% exfoliating toner",
+          "meta": "Toner, 150\u00a0ml",
           "active": "Glycolic acid",
-          "holds": "Holds about 7 %.",
-          "needs": "Your skin needs 5 to 10 %.",
+          "holds": "Holds about 7%.",
+          "needs": "Your skin needs 5\u00a0to\u00a010%.",
           "tag": "Enough",
           "direction": "Evenings, after cleansing. Start twice a week."
         },
         "photodamage": {
-          "name": "Daily defence SPF 50 fluid",
-          "meta": "Sunscreen · 50 ml",
+          "head": "Step 5 of 5",
+          "when": "Morning",
+          "name": "Daily defence SPF\u00a050 fluid",
+          "meta": "Sunscreen, 50\u00a0ml",
           "active": "UV filters",
-          "holds": "SPF 50, broad spectrum.",
-          "needs": "Your skin needs SPF 30 or more, every morning.",
+          "holds": "SPF\u00a050, broad spectrum.",
+          "needs": "Your skin needs SPF\u00a030 or more, every morning.",
           "tag": "Enough",
           "direction": "Mornings, last step. Two finger-lengths for the face."
         },
         "blemishes": {
-          "name": "Azelaic acid 10 % booster",
-          "meta": "Serum · 30 ml",
+          "head": "Step 3 of 5",
+          "when": "Evening",
+          "name": "Azelaic acid 10% booster",
+          "meta": "Serum, 30\u00a0ml",
           "active": "Azelaic acid",
-          "holds": "Holds about 10 %.",
-          "needs": "Your skin needs 10 to 20 %.",
-          "tag": "Enough",
+          "holds": "Holds about 10%.",
+          "needs": "Your skin needs 10\u00a0to\u00a020%.",
+          "tag": "May be enough",
           "direction": "Evenings, before moisturiser."
         },
         "darkCircles": {
+          "head": "Step 3 of 5",
+          "when": "Morning",
           "name": "Caffeine eye serum",
-          "meta": "Eye serum · 15 ml",
+          "meta": "Eye serum, 15\u00a0ml",
           "active": "Caffeine",
-          "holds": "Holds about 3 %.",
-          "needs": "Your skin needs 1 to 3 %.",
+          "holds": "Holds about 3%.",
+          "needs": "Your skin needs 1\u00a0to\u00a03%.",
           "tag": "Enough",
           "direction": "Mornings, a grain of rice under each eye."
         }
       }
     },
-    "read": {
-      "title": "What one selfie gives you",
-      "readings": {
-        "title": "Thirteen readings, with how much to trust each",
-        "text": "Every concern is scored 0 to 100, three times. You see the score, the overlay on your own face, and whether the readings agree."
+    "partnersTitle": "We work with these partners",
+    "plan": {
+      "title": "From one selfie to a product you can trust.",
+      "more": "See every step",
+      "steps": {
+        "selfie": {
+          "title": "A selfie in daylight",
+          "text": "One photo in even daylight, checked for light, pose and focus before it is read. About 30\u00a0seconds."
+        },
+        "readings": {
+          "title": "Thirteen readings",
+          "text": "Thirteen concerns, each scored three times, so you can see how far to trust each one."
+        },
+        "routine": {
+          "title": "A routine by evidence",
+          "text": "Products chosen for what their ingredients have been shown to do, at the dose your skin needs."
+        },
+        "check": {
+          "title": "Any product, checked",
+          "text": "Barcode or label photo. Fits, neutral or caution, with reasons and conflicts against what you own."
+        }
       },
-      "routine": {
-        "title": "A routine that shows its working",
-        "text": "Each product arrives as a dispensing label: how much of an active it holds, against what your skin needs, and when to use it."
-      },
-      "check": {
-        "title": "Any product, checked against your skin",
-        "text": "Scan a barcode or photograph the ingredient list. You get fits, neutral or caution, with the reasons and any conflict with what you already own.",
-        "verdict": "Fits your skin",
-        "verdictText": "Azelaic acid at a useful dose. No fragrance. No conflict with your shelf."
+      "gate": {
+        "light": "Even light",
+        "pose": "Facing the camera",
+        "focus": "Sharp"
+      }
+    },
+    "check": {
+      "title": "Any product, checked against your skin.",
+      "text": "Scan a barcode or photograph the ingredient list, in the shop or at home. You get fits, neutral or caution, with the reasons and any conflict with what you already own.",
+      "group": "Pick a scanned product",
+      "how": "Barcode or label photo. Sample verdicts.",
+      "items": {
+        "a": {
+          "name": "Gentle gel cleanser",
+          "meta": "Cleanser",
+          "title": "Caution",
+          "text": "Denatured alcohol high on the list. Your skin reads sensitive."
+        },
+        "b": {
+          "name": "Azelaic acid 10% booster",
+          "meta": "Serum, 30\u00a0ml",
+          "title": "Fits your skin",
+          "text": "Azelaic acid at a useful dose. No fragrance. No conflict with your shelf."
+        },
+        "c": {
+          "name": "Barrier repair cream",
+          "meta": "Moisturiser",
+          "title": "Neutral",
+          "text": "Nothing in it works against your skin, and nothing targets your readings."
+        }
       }
     },
     "independence": {
       "title": "Ranked by ingredients and evidence. Never by brand.",
-      "text": "A retailer's catalogue only tells us what is in stock. Ranking is never for sale. If a sponsored slot ever exists, it will be labelled, and it will never change the order.",
+      "intro": "Four rules keep every recommendation about your skin, and nothing else.",
+      "i1": "Ranking is never for sale. Brands cannot pay us, and there are no ads or affiliate links.",
+      "i2": "A store's catalogue is applied after ranking, only to show what is in stock. Staff cannot reorder results.",
+      "i3": "A caution, a conflict or an evidence grade cannot be removed or softened on request.",
       "linkHow": "How we stay independent",
-      "linkMethod": "Methodology"
+      "linkMethod": "Methodology",
+      "i4": "Each ingredient is graded for each concern: A for randomised trials in people, B for smaller human studies, C for lab or anecdotal evidence."
     },
-    "partnersTitle": "We work with these partners",
-    "retailers": {
-      "title": "The same read, inside your store",
-      "text": "On your product pages, on an in-store tablet, or through the API. Your catalogue marks what is in stock. The ranking stays independent.",
-      "widget": "Widget on a product page",
-      "store": "In-store tablet",
-      "api": "API",
-      "pilot": "A pilot runs six to eight weeks with the fee waived, an A/B test on your product pages and a public case study.",
-      "cta": "See the retailer offer"
+    "trust": {
+      "title": "Your photo, your call.",
+      "note": "Where your photo goes and how long it stays, answered before you scan.",
+      "consent": "You confirm you are over 18 before anything starts.",
+      "keep": "You choose: keep your photo for 30\u00a0days, or have it deleted right after it is scored.",
+      "where": "Photos are stored in Frankfurt and read by Google Gemini and by our image models in London, where copies are deleted once read.",
+      "delete": "You can delete your photos, or your whole account, at any time."
+    },
+    "faq": {
+      "title": "Questions, answered.",
+      "intro": "What people ask before their first scan.",
+      "more": "Something else? Write to",
+      "items": {
+        "q1": {
+          "q": "Is this a medical diagnosis?",
+          "a": "No. VISTASY gives cosmetic guidance. A blemish reading of 70 or more suggests seeing a dermatologist, and the app says so."
+        },
+        "q5": {
+          "q": "How often should I scan again?",
+          "a": "Every 4\u00a0to\u00a012\u00a0weeks. Changes are shown with measurement noise taken out, and Premium adds reminders and photo comparison."
+        },
+        "q6": {
+          "q": "Can I ask questions about my results?",
+          "a": "Yes. Sarah, the in-app assistant, says she is an AI, only answers from your own analysis, routine and ingredient notes, and tells you when she has no data."
+        },
+        "q7": {
+          "q": "What does it cost?",
+          "a": "The readings, the routine and the product check are free. Premium adds progress with photo comparison for 4.99\u00a0€ a month, or 39\u00a0€ a year."
+        },
+        "q8": {
+          "q": "Who can use VISTASY?",
+          "a": "Anyone over 18. VISTASY is invite-only while in preview, and we send a sign-in link when your turn comes."
+        }
+      }
     },
     "close": {
       "title": "Your skin, read in daylight.",
       "text": "Leave your e-mail and we will send a sign-in link when your turn comes.",
-      "cta": "Request an invite"
+      "note": "Free, not a trial. Delete your photos at any time."
+    },
+    "retailers": {
+      "title": "Selling skincare? The same read works in your store.",
+      "text": "On your product pages, on an in-store tablet or through the API, starting with a six to eight week pilot, platform fee waived.",
+      "cta": "See the retailer offer"
+    },
+    "dataLink": "How we handle your data",
+    "bento": {
+      "title": "What one read gives you.",
+      "evidence": {
+        "title": "Evidence, graded",
+        "text": "Each ingredient is graded for each concern by the evidence behind it.",
+        "a": "Randomised trials in people",
+        "b": "Smaller human studies",
+        "c": "Lab or anecdotal"
+      },
+      "sarah": {
+        "title": "Questions, answered from your read",
+        "say": "I answer from your own read, and I say when I have no data."
+      }
+    },
+    "highlight": {
+      "rule": "never for sale",
+      "trust": "your call"
     }
   },
   "HowItWorksPage": {
     "title": "How it works",
-    "lede": "The journey as the app runs it, from the first selfie to a product you can trust.",
+    "lede": "Seven stages, in the order the app runs them, from the first selfie to a product you can trust.",
+    "diagram": {
+      "title": "The VISTASY journey",
+      "label": "Seven stages in three phases. Before: consent, selfie, questions. The read: thirteen readings, then a routine. After: the product check and progress. Progress loops back to a new selfie every 4\u00a0to\u00a012\u00a0weeks.",
+      "before": "Before",
+      "read": "The read",
+      "after": "After",
+      "loop": "4 TO 12 WEEKS",
+      "legendStep": "next stage",
+      "legendLoop": "repeat scan",
+      "nodes": {
+        "consent": {
+          "t": "Consent",
+          "s": "18+, photo rules"
+        },
+        "selfie": {
+          "t": "Selfie",
+          "s": "quality gate"
+        },
+        "questions": {
+          "t": "Questions",
+          "s": "your skin type"
+        },
+        "readings": {
+          "t": "13 readings",
+          "s": "scored 3 times"
+        },
+        "routine": {
+          "t": "Routine",
+          "s": "graded evidence"
+        },
+        "check": {
+          "t": "Product check",
+          "s": "fits or caution"
+        },
+        "progress": {
+          "t": "Progress",
+          "s": "noise taken out"
+        }
+      }
+    },
+    "step": "Step",
     "steps": {
       "consent": {
         "title": "Consent first",
-        "text": "You confirm you are over 18 and choose how long your photo is kept: 30 days, or deleted the moment it is scored.",
+        "text": "You confirm you are over 18 and choose how long your photo is kept: 30\u00a0days, or deleted right after it is scored.",
         "tag1": "18+ confirmed",
-        "tag2": "Photo deleted after scoring"
+        "keep": "Keep for 30\u00a0days",
+        "delete": "Delete once scored",
+        "choice": "How long your photo is kept"
       },
       "selfie": {
-        "title": "A selfie in daylight",
-        "text": "A quality gate checks light, pose and focus before anything is analysed. About 30 seconds.",
-        "hint": "Even daylight, no glasses"
+        "title": "The photo is checked first",
+        "text": "One face, looking at the camera, no glasses, in even light and in focus. If the photo fails, the app asks for another and says why. About 30\u00a0seconds.",
+        "hint": "Even daylight, no glasses",
+        "imageAlt": "A woman taking a selfie in daylight."
       },
       "questions": {
         "title": "A few questions",
@@ -170,26 +371,29 @@
         "q4": "Uses retinol"
       },
       "readings": {
-        "title": "Thirteen readings",
-        "text": "Each concern scored 0 to 100, three times, with how far the readings agree and an overlay on your own face."
+        "title": "Read three times, region by region",
+        "text": "The face is aligned and cut into regions: forehead, under-eye, T-zone and cheeks. Each concern is read three times from its region. The median is the score; the spread shows how far to trust it."
       },
       "routine": {
-        "title": "A routine by evidence",
-        "text": "Day, night and weekly steps chosen from graded ingredient evidence, with how much of each active you need."
+        "title": "Ingredients weighted by evidence",
+        "text": "Your top concerns point to ingredients, weighted by evidence grade: A for randomised trials in people, B for smaller human studies, C for lab or anecdotal evidence. Pregnancy, sensitivity, allergies and EU bans remove ingredients before anything is ranked."
       },
       "check": {
         "title": "Any product, checked",
-        "text": "Barcode or label photo. Fits, neutral or caution, with reasons and conflicts against what you own.",
+        "text": "Barcode or label photo. Fits, neutral or caution, with reasons and conflicts against what you own. Doses are estimated from the label, never measured in a lab.",
         "verdict": "Caution",
         "verdictText": "Denatured alcohol high on the list. Your skin reads sensitive."
       },
       "progress": {
         "title": "Progress over scans",
-        "text": "Repeat in 4 to 12 weeks. Changes are shown with measurement noise taken out.",
+        "text": "Repeat in 4\u00a0to\u00a012\u00a0weeks. Changes are shown with measurement noise taken out.",
         "before": "First scan",
-        "after": "Eight weeks later"
+        "after": "Eight weeks later",
+        "example": "Sample values",
+        "premium": "Premium"
       }
     },
+    "sample": "Sample values",
     "safety": {
       "title": "Cosmetic guidance, not a medical diagnosis.",
       "referral": "A blemish reading of 70 or more suggests seeing a dermatologist, and the app says so.",
@@ -198,84 +402,207 @@
       "sarah": "Sarah, the in-app assistant, says she is an AI and only answers from your own analysis, routine and ingredient notes.",
       "link": "Read the methodology"
     },
-    "cta": "Request an invite"
+    "close": {
+      "title": "See your own read.",
+      "text": "VISTASY is invite-only while in preview. Leave your e-mail and we will send a sign-in link when your turn comes."
+    },
+    "journey": {
+      "title": "Stage by stage."
+    }
   },
   "RetailersPage": {
-    "title": "The same read, inside your store.",
-    "lede": "Shoppers see their skin, a routine and products that fit, on your product pages or in your store. Your catalogue says what is in stock. The ranking stays independent.",
+    "title": "Show every shopper what fits their skin.",
+    "lede": "On your product pages, on an in-store tablet or through the API. Ranked by ingredients and evidence, and never for sale, not even to you. Your catalogue only marks what is in stock.",
+    "risk": "Start with a six to eight week pilot. The platform fee is waived.",
+    "cta": "Book a pilot call",
+    "secondary": "See retail plans",
+    "widget": {
+      "caption": "Widget on a product page",
+      "brand": "Sample range",
+      "product": "Azelaic acid 10% booster",
+      "meta": "Serum, 30\u00a0ml",
+      "verdict": "Fits your skin",
+      "verdictText": "Azelaic acid at a useful dose. No fragrance. No conflict with your shelf.",
+      "note": "Sample verdict. Your product page around it."
+    },
     "modes": {
+      "title": "Three ways in.",
       "widget": {
         "title": "Widget on a product page",
-        "text": "One script tag. A shopper scans, and the page shows whether this product fits their skin, with the reasons."
+        "effort": "One script tag",
+        "text": "A shopper scans, and the page shows whether this product fits their skin, with the reasons.",
+        "group": "Pick a product page",
+        "how": "Sample verdicts, each with its reasons."
       },
       "store": {
         "title": "In-store tablet",
-        "text": "The same read at the counter, with recommendations from your shelves first and a printed or e-mailed routine."
+        "effort": "At the counter",
+        "text": "The same read, with recommendations from your shelves first and a printed or e-mailed routine. Available on the Enterprise plan."
       },
       "api": {
         "title": "API",
-        "text": "Sessions, scans, routines and product verdicts over HTTPS, with your own catalogue imported as an availability overlay."
+        "effort": "Over HTTPS",
+        "text": "Sessions, scans, routines and product verdicts, with your own catalogue imported as an availability overlay."
       }
     },
     "rank": {
       "title": "Rank first, then stock.",
-      "text": "Every shopper is ranked over the whole catalogue. Your catalogue only marks what is in stock, with your price and your link, and names the best in-stock option when a top pick is missing."
+      "text": "For every shopper, every product is ranked first. Then your catalogue marks what you stock, with your price and your link, and names the best in-stock option when a top pick is missing.",
+      "label": "Every product is ranked for the shopper first. Then your stock is marked. If the top pick is in stock it is shown with your price and link; if not, the best in-stock option is named alongside it.",
+      "nodes": {
+        "catalogue": {
+          "t": "Whole catalogue",
+          "s": "ingredients, evidence"
+        },
+        "ranked": {
+          "t": "Ranked for shopper",
+          "s": "fit, never brand"
+        },
+        "stock": {
+          "t": "Your stock marked",
+          "s": "price and link"
+        },
+        "decide": "In stock?",
+        "yes": "YES",
+        "no": "NO",
+        "shown": {
+          "t": "Top pick shown",
+          "s": "with your price"
+        },
+        "alt": {
+          "t": "Best in-stock option",
+          "s": "named alongside"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "Ranked for the shopper first",
+          "text": "Every product is ranked by its ingredients and the evidence behind them. Brand, margin and sponsorship play no part."
+        },
+        "s2": {
+          "title": "Then your stock is marked",
+          "text": "Your catalogue is applied after ranking, only to show what is in stock, with your price and your link."
+        },
+        "s3": {
+          "title": "The top pick, with your price",
+          "text": "If the top pick is in stock, it is shown with your price and your link."
+        },
+        "s4": {
+          "title": "Named even when you do not sell it",
+          "text": "If not, the best match is still shown, and the best in-stock option is named alongside it. Staff cannot reorder results."
+        }
+      }
     },
     "steps": {
-      "title": "What changes in your store",
-      "s1": { "title": "Attract", "text": "A skin read on the product page draws people in and keeps them there." },
-      "s2": { "title": "Identify", "text": "One session links the read to the shopper, with their consent." },
-      "s3": { "title": "Recommend", "text": "Products that fit their skin, from your shelves first." },
-      "s4": { "title": "Retain", "text": "Follow-up scans bring them back in 4 to 12 weeks." },
-      "s5": { "title": "Learn", "text": "Anonymised, aggregate insights with explicit opt-in. Never individual records." }
+      "title": "What changes in your store.",
+      "s1": {
+        "title": "On your product page",
+        "text": "A skin read right where shoppers decide."
+      },
+      "s2": {
+        "title": "With their consent",
+        "text": "One session links the read to the shopper, and only with their consent."
+      },
+      "s3": {
+        "title": "What fits their skin",
+        "text": "Products that fit their skin, from your shelves first."
+      },
+      "s4": {
+        "title": "Every 4\u00a0to\u00a012\u00a0weeks",
+        "text": "A follow-up scan shows what changed, with measurement noise taken out."
+      },
+      "s5": {
+        "title": "Trends, never records",
+        "text": "Reports on what your shoppers' skin needs, only from people who opted in and only for groups of at least 50."
+      },
+      "loop": "Each follow-up scan starts the loop again."
     },
     "pilot": {
       "title": "A pilot, not a pitch.",
-      "text": "Six to eight weeks. The platform fee is waived. We run an A/B test on your product pages and publish a case study at the end.",
-      "cta": "Book a pilot call"
-    }
+      "text": "Six to eight weeks, platform fee waived. An A/B test on your product pages shows what changes with your own shoppers, and we publish a case study at the end.",
+      "head": "Pilot terms",
+      "when": "6\u00a0to\u00a08\u00a0weeks",
+      "name": "Your store, read by VISTASY",
+      "fee": "Platform fee",
+      "feeV": "Waived for the pilot.",
+      "ab": "A/B test",
+      "abV": "On your product pages.",
+      "study": "Case study",
+      "studyV": "Published at the end.",
+      "tagOk": "Included",
+      "direction": "Every retail plan can start this way.",
+      "cta": "Book a pilot call",
+      "tagWaived": "Waived"
+    },
+    "faq": {
+      "title": "Retailer questions.",
+      "items": {
+        "q1": {
+          "q": "Can we pay to rank our products higher?",
+          "a": "No. Nobody can buy a rank. Your catalogue is applied after ranking, only to show what is in stock, and the best match is shown even when you do not sell it."
+        },
+        "q2": {
+          "q": "Can our staff change what shoppers see?",
+          "a": "No. Store staff cannot reorder results, and a caution, a conflict or an evidence grade cannot be removed or softened on request."
+        },
+        "q3": {
+          "q": "Do brands see our shoppers' data?",
+          "a": "No. Trends go only to retailers, never to brands, and only from people who opted in, in groups of at least 50. Individual data is never sold."
+        }
+      }
+    },
+    "close": {
+      "title": "Try it on your own shelves.",
+      "text": "Tell us about your store and we will book a 30\u2011minute call to plan your pilot."
+    },
+    "highlight": "never for sale"
   },
   "PricingPage": {
-    "title": "Pricing",
-    "lede": "Plans for people and plans for retailers.",
-    "tabPeople": "People",
-    "tabRetailers": "Retailers",
+    "title": "What it costs.",
+    "lede": "The readings, the routine and the product check are free, not a trial. Premium tracks your progress for 4.99\u00a0€ a month. Retail plans can start as a pilot.",
+    "tabs": {
+      "label": "Plans for",
+      "people": "People",
+      "retailers": "Retailers"
+    },
     "perMonth": "a month",
+    "monthlyHint": "Or 39\u00a0€ a year, 35% less than monthly",
     "people": {
       "free": {
         "name": "Free",
-        "price": "0 €",
-        "text": "Scan, routine and product check.",
-        "i1": "Thirteen readings with overlays",
+        "price": "0\u00a0€",
+        "text": "Know what your skin needs, and what fits it.",
+        "i1": "Thirteen readings, each scored three times",
         "i2": "A routine by ingredient evidence",
         "i3": "Product check by barcode or label photo",
-        "i4": "Sarah, in context"
+        "i4": "Sarah, an AI assistant that answers from your read"
       },
       "premium": {
         "name": "Premium",
-        "price": "4.99 €",
-        "per": "a month, or 39 € a year",
-        "text": "Everything in Free, plus progress.",
+        "priceMonthly": "4.99\u00a0€",
+        "text": "See whether your routine is working.",
         "i1": "Progress with photo comparison",
         "i2": "Reminders and check-ins",
         "i3": "An adaptive routine",
         "i4": "Everything in Free"
       },
-      "cta": "Request an invite"
+      "note": "Invite-only while in preview.",
+      "inviteTitle": "Start with the free read",
+      "inviteText": "VISTASY is invite-only while in preview. We send a sign-in link when your turn comes."
     },
     "retailers": {
       "starter": {
         "name": "Starter",
-        "price": "290 €",
-        "scans": "1,000 scans included, then 0.25 € each",
+        "price": "290\u00a0€",
+        "scans": "1,000 scans included, then 0.25\u00a0€ each",
         "i1": "Widget and API",
         "i2": "Basic dashboard",
         "i3": "E-mail support"
       },
       "growth": {
         "name": "Growth",
-        "price": "990 €",
-        "scans": "5,000 scans included, then 0.18 € each",
+        "price": "990\u00a0€",
+        "scans": "5,000 scans included, then 0.18\u00a0€ each",
         "i1": "Everything in Starter",
         "i2": "Webhooks and catalogue import automation",
         "i3": "White-label report",
@@ -290,42 +617,128 @@
         "i3": "In-store mode",
         "i4": "Dedicated onboarding"
       },
-      "pilot": "Every plan can start as a pilot: six to eight weeks, fee waived, an A/B test and a public case study.",
-      "cta": "Book a pilot call"
-    }
+      "pilot": "Every plan can start as a pilot: six to eight weeks, platform fee waived, an A/B test on your product pages and a public case study.",
+      "cta": "Book a pilot call",
+      "pilotTitle": "Every plan can start as a pilot.",
+      "pilotTerms": {
+        "weeks": "Six to eight weeks",
+        "fee": "Platform fee waived",
+        "ab": "An A/B test on your product pages",
+        "study": "A public case study"
+      }
+    },
+    "faq": {
+      "title": "Pricing questions.",
+      "items": {
+        "q1": {
+          "q": "Who pays for VISTASY?",
+          "a": "Retailers pay for the skin advisor on their sites and in their stores, and you can pay for Premium. Brands pay nothing: we take no brand money of any kind."
+        },
+        "q2": {
+          "q": "Do you earn anything from what I buy?",
+          "a": "No. There are no ads and no affiliate links, and when a product links to a shop, the link earns us nothing."
+        },
+        "q3": {
+          "q": "What does a retail plan pay for?",
+          "a": "The skin advisor on your site and in your stores, your catalogue shown as in stock, staff mode, and reports on what your customers' skin needs, built only from people who opted in. Never a product's rank."
+        },
+        "q4": {
+          "q": "Where does your revenue come from?",
+          "a": "Retailers and subscriptions. Every year we will publish how much came from retailers, from subscriptions and from brands, and the brand line is 0% by rule."
+        }
+      }
+    },
+    "billing": {
+      "label": "Billing cycle",
+      "save": "35% less"
+    },
+    "yearlyHint": "Or 4.99 € a month"
   },
   "ContactPage": {
-    "title": "Let's talk.",
-    "lede": "An invite to the preview for you, or a pilot call for your store.",
+    "title": "Request an invite, or book a pilot.",
+    "lede": "An invite to the preview for you, or a 30\u2011minute pilot call for your store.",
+    "tabs": {
+      "label": "What can we help with?",
+      "people": "For me",
+      "retailers": "For my store"
+    },
     "people": {
-      "title": "For people",
       "text": "VISTASY is invite-only while in preview. Leave your e-mail and we will send a sign-in link when your turn comes.",
       "email": "E-mail",
-      "message": "What would you like to know? Optional.",
+      "message": "What would you like to know?",
+      "optional": "Optional",
       "submit": "Request an invite"
     },
     "retailers": {
-      "title": "For retailers",
-      "text": "Tell us about your store and we will book a 30-minute call.",
+      "text": "Tell us about your store and we will book a 30\u2011minute call to plan your pilot.",
       "name": "Name",
       "company": "Company",
-      "email": "E-mail",
-      "message": "Message",
+      "email": "Work e-mail",
+      "message": "About your store",
       "submit": "Book a pilot call"
     },
     "errors": {
       "emailRequired": "Enter your e-mail",
-      "emailInvalid": "That e-mail address does not look right",
+      "emailInvalid": "Enter a full address, like name@example.com",
       "nameRequired": "Enter your name",
-      "companyRequired": "Enter your company",
-      "messageRequired": "Write a short message"
+      "companyRequired": "Enter your company"
     },
-    "sending": "Sending…",
-    "successTitle": "Thank you.",
-    "successText": "We will be in touch shortly.",
+    "sending": "Sending",
+    "successTitle": "Request sent.",
+    "successInvite": "You are on the list. We will send a sign-in link to {email} when your turn comes.",
+    "successPilot": "Thank you, {name}. We will write to {email} to book the 30\u2011minute call.",
     "errorTitle": "That did not go through.",
     "errorText": "Please try again in a moment, or write to us directly.",
     "retry": "Try again",
-    "or": "Or write to"
+    "or": "Prefer e-mail? Write to"
+  },
+  "DataPage": {
+    "title": "Your data, in plain words.",
+    "lede": "Where your photo goes, who reads it, how long it stays and how to delete it, in one place.",
+    "rows": {
+      "before": {
+        "title": "Before the scan",
+        "text": "You confirm you are 18 or older and choose how long your photo is kept: 30\u00a0days, so your next scan can be compared with it, or deleted right after your results, within 2\u00a0days at the latest. Your consent is recorded with each scan."
+      },
+      "where": {
+        "title": "Where your photo goes",
+        "text": "Your photo is stored in Frankfurt, Germany. To read it, we send it to Google's Gemini API and to our own image models in London, where copies are deleted as soon as they have been read. Moving every step into the EU is planned."
+      },
+      "control": {
+        "title": "What you can delete",
+        "text": "A single scan, or your whole account and its photos, from the app at any time. Scores and your routine are kept so you can track progress."
+      },
+      "medical": {
+        "title": "Not a medical diagnosis",
+        "text": "Scores are cosmetic observations, not medical findings, and we do not name diseases. A blemish reading of 70 or more suggests seeing a dermatologist, and the app says so."
+      },
+      "sarah": {
+        "title": "Sarah, the AI assistant",
+        "text": "Sarah says she is an AI and only answers from your own analysis, routine and ingredient notes. She cannot invent products or studies, and tells you when she has no data."
+      },
+      "retailers": {
+        "title": "What retailers see",
+        "text": "In a shop, one session links your read to you, with your consent. Anonymised trends come only from people who opted in, only for groups of at least 50, and go only to retailers, never to brands. We never sell individual data."
+      },
+      "email": {
+        "title": "Your e-mail",
+        "text": "We use it to send your sign-in link when your turn comes. Accounts sign in with an e-mail link or, during the preview, a password."
+      }
+    },
+    "contact": "Questions about your data? Write to",
+    "method": "Read the methodology",
+    "map": {
+      "label": "Map of where your photo goes: stored in Frankfurt and read by our own image models in London, where copies are deleted once read. It is also sent to Google's Gemini API to be read.",
+      "frankfurt": "Frankfurt",
+      "stored": "Stored",
+      "london": "London",
+      "read": "Read, copies deleted",
+      "readBy": "By our own image models. Google's Gemini API also reads it."
+    }
+  },
+  "NotFound": {
+    "title": "This page does not exist.",
+    "text": "The link may be old, or the address mistyped.",
+    "home": "Go to the home page"
   }
 }

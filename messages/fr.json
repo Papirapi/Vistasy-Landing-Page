@@ -1,165 +1,366 @@
 {
   "Metadata": {
     "home": {
-      "title": "VISTASY – Une lecture claire de votre peau",
+      "title": "Analyse de peau gratuite à partir d'un selfie",
       "description": "Un selfie à la lumière du jour devient treize lectures de la peau, une routine choisie selon les preuves par ingrédient et un verdict sur n'importe quel produit. Jamais classé par marque."
     },
     "howItWorks": {
-      "title": "Comment ça marche",
-      "description": "Du selfie à la lumière du jour à une routine que vous pouvez suivre : consentement, contrôle de qualité, treize lectures, preuves par ingrédient, vérification de produit et progrès."
+      "title": "Comment fonctionne l'analyse de peau",
+      "description": "Du selfie à la lumière du jour à une routine que vous pouvez suivre\u00a0: consentement, contrôle de qualité, treize lectures, preuves par ingrédient, vérification de produit et progrès."
     },
     "retailers": {
-      "title": "Pour les enseignes",
-      "description": "La même lecture de peau dans vos pages produit, sur une tablette en magasin ou par l'API. Votre catalogue indique ce qui est en stock ; le classement reste indépendant."
+      "title": "Analyse de peau pour les enseignes",
+      "description": "Montrez à chaque client ce qui convient à sa peau, sur vos pages produit, sur une tablette en magasin ou par l'API. Commencez par un pilote, frais de plateforme offerts."
     },
     "pricing": {
       "title": "Tarifs",
-      "description": "Des formules pour les personnes et des formules pour les enseignes."
+      "description": "Lire votre peau est gratuit. Premium suit vos progrès pour 4,99\u00a0€ par mois. Les formules enseignes peuvent commencer par un pilote de six à huit semaines."
     },
     "contact": {
       "title": "Contact",
       "description": "Demandez une invitation à l'avant-première, ou réservez un appel pilote pour votre magasin."
+    },
+    "yourData": {
+      "title": "Vos données",
+      "description": "Où votre photo est stockée, qui la lit, combien de temps elle est gardée et comment la supprimer, en termes simples."
     }
   },
   "NavBar": {
     "skip": "Aller au contenu",
+    "primary": "Principale",
     "home": "Accueil",
     "howItWorks": "Comment ça marche",
     "retailers": "Pour les enseignes",
     "pricing": "Tarifs",
     "contact": "Contact",
     "cta": "Demander une invitation",
+    "ctaRetail": "Réserver un appel pilote",
     "menu": "Ouvrir le menu",
     "close": "Fermer le menu",
     "theme": "Passer du clair au sombre",
-    "language": "Langue"
+    "language": "Langue",
+    "ctaShort": "Demander l'accès",
+    "ctaRetailShort": "Réserver un appel",
+    "ctaDone": "Vous êtes sur la liste"
   },
   "Footer": {
-    "goHome": "Retour à l'accueil",
+    "goHome": "Accueil VISTASY",
+    "tagline": "Une lecture claire de votre peau, et des produits classés selon les preuves, jamais selon la marque.",
     "note": "Un conseil cosmétique, pas un diagnostic médical.",
-    "linksTitle": "Pages",
-    "appTitle": "L'application",
+    "product": "Produit",
+    "trust": "Confiance",
+    "visit": "Nous trouver",
     "app": "Ouvrir l'application",
     "independence": "Indépendance",
     "methodology": "Méthodologie",
-    "addressTitle": "Adresse",
-    "address": "Adresse 012 Rue du CANADA, Bâtiment B, 4e étage, E1 Tunis, Tunisie 1002",
-    "hoursTitle": "Horaires",
-    "hours": "Du lundi au vendredi, de 9 h à 17 h",
+    "yourData": "Vos données",
+    "address": "012 Rue du Canada, Bâtiment B, 4e étage, E1 Tunis, Tunisie 1002",
+    "hours": "Du lundi au vendredi, de 9\u00a0h à 17\u00a0h",
     "copyright": "Tous droits réservés"
+  },
+  "InviteForm": {
+    "label": "E-mail pour votre invitation",
+    "submit": "Demander une invitation",
+    "sending": "Envoi",
+    "required": "Saisissez votre e-mail",
+    "invalid": "Saisissez une adresse complète, comme nom@exemple.com",
+    "success": "Vous êtes sur la liste. Nous enverrons un lien de connexion à {email} quand votre tour viendra.",
+    "failed": "L'envoi n'a pas abouti.",
+    "retry": "Réessayer"
   },
   "HomePage": {
     "hero": {
-      "title": "Une lecture claire de votre peau, et des produits choisis pour leurs ingrédients.",
-      "lede": "Un selfie à la lumière du jour. Treize lectures avec leur niveau de confiance, une routine construite sur ce que chaque ingrédient a démontré, et un verdict sur n'importe quel produit que vous présentez à la caméra.",
-      "cta": "Demander une invitation",
-      "ctaNote": "Sur invitation pendant l'avant-première",
-      "secondary": "Pour les enseignes",
-      "imageAlt": "Une jeune femme prend un selfie à la lumière du jour avec un téléphone lavande.",
-      "agree": "Lectures concordantes",
-      "of100": "sur 100",
+      "title": "Ce dont votre peau a besoin.",
+      "lede": "Un selfie à la lumière du jour vous donne treize lectures de la peau, une routine choisie selon les preuves par ingrédient, et un verdict sur n'importe quel produit avant de l'acheter. Jamais classé par marque.",
+      "note": "Gratuit, pas un essai. Votre photo peut être supprimée juste après sa notation.",
+      "eyebrow": "Avant-première sur invitation",
       "chips": {
+        "free": "Gratuit, pas un essai",
+        "photo": "Supprimez votre photo juste après la notation"
+      },
+      "phone": {
+        "selfie": "Selfie",
+        "product": "Produit",
+        "gate": "Ne bougez pas, contrôle de la lumière",
+        "shutter": "Prendre la photo"
+      },
+      "cards": {
+        "check": "Vérifier",
+        "save": "Garder",
+        "saved": "Gardé",
+        "next": "Lecture suivante",
+        "monthly": "Mensuel",
+        "yearly": "Annuel",
+        "yearPrice": "39\u00a0€",
+        "perYear": "par an",
+        "ask": "Demander à Sarah",
+        "consent": "Votre photo",
+        "premium": "Premium",
+        "grades": "Niveaux de preuve",
+        "again": "Scanner à nouveau",
+        "compare": "Comparer le premier scan avec huit semaines plus tard",
+        "deck": "Produits d'exemple à vérifier",
+        "nextProduct": "Produit suivant"
+      }
+    },
+    "sheet": {
+      "title": "Lecture d'exemple",
+      "meta": "Lumière du jour, caméra avant",
+      "quality": "Contrôle de qualité validé",
+      "group": "Lectures, choisissez-en une pour voir son produit",
+      "hint": "Choisissez une lecture pour voir le produit qu'elle appelle.",
+      "of100": "/100",
+      "agree": "Lectures concordantes",
+      "shown": "4 lectures sur 13 affichées. Valeurs d'exemple.",
+      "showing": "Produit affiché pour",
+      "faceAlt": "Selfie d'exemple utilisé pour cette lecture",
+      "concerns": {
         "texture": "Texture",
         "photodamage": "Photovieillissement",
         "blemishes": "Imperfections",
         "darkCircles": "Cernes"
       },
-      "labelHead": "Étape 2 sur 5",
-      "labelWhen": "Soir",
-      "labelFoot": "Pour vous · Délivré aujourd'hui",
-      "brand": "Gamme de démonstration",
+      "scale": "Les scores vont de 0\u00a0à\u00a0100. Plus le score est haut, plus c'est visible.",
+      "range": "Trois lectures\u00a0: {lo} à {hi}.",
+      "band": "La bande ombrée couvre les trois lectures."
+    },
+    "label": {
+      "brand": "Gamme d'exemple",
+      "foot": "Pour vous, délivré aujourd'hui",
       "products": {
         "texture": {
-          "name": "Lotion exfoliante glycolique 7 %",
-          "meta": "Lotion · 150 ml",
+          "head": "Étape 2 sur 5",
+          "when": "Soir",
+          "name": "Lotion exfoliante glycolique 7\u00a0%",
+          "meta": "Lotion, 150\u00a0ml",
           "active": "Acide glycolique",
-          "holds": "Contient environ 7 %.",
-          "needs": "Votre peau a besoin de 5 à 10 %.",
+          "holds": "Contient environ 7\u00a0%.",
+          "needs": "Votre peau a besoin de 5\u00a0à\u00a010\u00a0%.",
           "tag": "Suffisant",
           "direction": "Le soir, après le nettoyage. Commencez deux fois par semaine."
         },
         "photodamage": {
-          "name": "Fluide défense quotidienne SPF 50",
-          "meta": "Écran solaire · 50 ml",
+          "head": "Étape 5 sur 5",
+          "when": "Matin",
+          "name": "Fluide défense quotidienne SPF\u00a050",
+          "meta": "Écran solaire, 50\u00a0ml",
           "active": "Filtres UV",
-          "holds": "SPF 50, large spectre.",
-          "needs": "Votre peau a besoin d'un SPF 30 ou plus, chaque matin.",
+          "holds": "SPF\u00a050, large spectre.",
+          "needs": "Votre peau a besoin d'un SPF\u00a030 ou plus, chaque matin.",
           "tag": "Suffisant",
           "direction": "Le matin, en dernière étape. Deux longueurs de doigt pour le visage."
         },
         "blemishes": {
-          "name": "Booster acide azélaïque 10 %",
-          "meta": "Sérum · 30 ml",
+          "head": "Étape 3 sur 5",
+          "when": "Soir",
+          "name": "Booster acide azélaïque 10\u00a0%",
+          "meta": "Sérum, 30\u00a0ml",
           "active": "Acide azélaïque",
-          "holds": "Contient environ 10 %.",
-          "needs": "Votre peau a besoin de 10 à 20 %.",
-          "tag": "Suffisant",
+          "holds": "Contient environ 10\u00a0%.",
+          "needs": "Votre peau a besoin de 10\u00a0à\u00a020\u00a0%.",
+          "tag": "Peut suffire",
           "direction": "Le soir, avant la crème hydratante."
         },
         "darkCircles": {
+          "head": "Étape 3 sur 5",
+          "when": "Matin",
           "name": "Sérum yeux à la caféine",
-          "meta": "Sérum yeux · 15 ml",
+          "meta": "Sérum yeux, 15\u00a0ml",
           "active": "Caféine",
-          "holds": "Contient environ 3 %.",
-          "needs": "Votre peau a besoin de 1 à 3 %.",
+          "holds": "Contient environ 3\u00a0%.",
+          "needs": "Votre peau a besoin de 1\u00a0à\u00a03\u00a0%.",
           "tag": "Suffisant",
           "direction": "Le matin, un grain de riz sous chaque œil."
         }
       }
     },
-    "read": {
-      "title": "Ce qu'un selfie vous donne",
-      "readings": {
-        "title": "Treize lectures, et la confiance à accorder à chacune",
-        "text": "Chaque préoccupation est notée de 0 à 100, trois fois. Vous voyez la note, le calque sur votre propre visage, et si les lectures concordent."
+    "partnersTitle": "Nous travaillons avec ces partenaires",
+    "plan": {
+      "title": "D'un selfie à un produit de confiance.",
+      "more": "Voir toutes les étapes",
+      "steps": {
+        "selfie": {
+          "title": "Un selfie à la lumière du jour",
+          "text": "Une photo à la lumière du jour, dont l'éclairage, la pose et la netteté sont vérifiés avant la lecture. Environ 30\u00a0secondes."
+        },
+        "readings": {
+          "title": "Treize lectures",
+          "text": "Treize préoccupations, chacune notée trois fois, pour savoir quelle confiance accorder à chacune."
+        },
+        "routine": {
+          "title": "Une routine selon les preuves",
+          "text": "Des produits choisis pour ce que leurs ingrédients ont démontré, à la dose dont votre peau a besoin."
+        },
+        "check": {
+          "title": "N'importe quel produit, vérifié",
+          "text": "Code-barres ou photo de l'étiquette. Convient, neutre ou prudence, avec les raisons et les conflits avec ce que vous possédez."
+        }
       },
-      "routine": {
-        "title": "Une routine qui montre son raisonnement",
-        "text": "Chaque produit arrive sous forme d'étiquette de délivrance : la quantité d'actif qu'il contient, face à ce dont votre peau a besoin, et quand l'utiliser."
-      },
-      "check": {
-        "title": "N'importe quel produit, vérifié pour votre peau",
-        "text": "Scannez un code-barres ou photographiez la liste d'ingrédients. Vous obtenez convient, neutre ou prudence, avec les raisons et tout conflit avec ce que vous possédez déjà.",
-        "verdict": "Convient à votre peau",
-        "verdictText": "Acide azélaïque à une dose utile. Sans parfum. Aucun conflit avec vos produits."
+      "gate": {
+        "light": "Lumière égale",
+        "pose": "Face à l'objectif",
+        "focus": "Net"
+      }
+    },
+    "check": {
+      "title": "N'importe quel produit, vérifié pour votre peau.",
+      "text": "Scannez un code-barres ou photographiez la liste d'ingrédients, en magasin ou chez vous. Vous obtenez convient, neutre ou prudence, avec les raisons et tout conflit avec ce que vous possédez déjà.",
+      "group": "Choisissez un produit scanné",
+      "how": "Code-barres ou photo de l'étiquette. Verdicts d'exemple.",
+      "items": {
+        "a": {
+          "name": "Gel nettoyant doux",
+          "meta": "Nettoyant",
+          "title": "Prudence",
+          "text": "Alcool dénaturé en haut de la liste. Votre peau se lit comme sensible."
+        },
+        "b": {
+          "name": "Booster acide azélaïque 10\u00a0%",
+          "meta": "Sérum, 30\u00a0ml",
+          "title": "Convient à votre peau",
+          "text": "Acide azélaïque à une dose utile. Sans parfum. Aucun conflit avec vos produits."
+        },
+        "c": {
+          "name": "Crème réparatrice barrière",
+          "meta": "Hydratant",
+          "title": "Neutre",
+          "text": "Rien ne va contre votre peau, et rien ne cible vos lectures."
+        }
       }
     },
     "independence": {
       "title": "Classé par ingrédients et par preuves. Jamais par marque.",
-      "text": "Le catalogue d'une enseigne nous dit seulement ce qui est en stock. Le classement n'est jamais à vendre. Si un emplacement sponsorisé existe un jour, il sera signalé et ne changera jamais l'ordre.",
+      "intro": "Quatre règles gardent chaque recommandation centrée sur votre peau, et rien d'autre.",
+      "i1": "Le classement n'est jamais à vendre. Les marques ne peuvent pas nous payer, et il n'y a ni publicité ni liens affiliés.",
+      "i2": "Le catalogue d'un magasin s'applique après le classement, seulement pour montrer ce qui est en stock. Le personnel ne peut pas réordonner les résultats.",
+      "i3": "Une mise en garde, un conflit ou une note de preuve ne peut être ni retiré ni adouci sur demande.",
       "linkHow": "Comment nous restons indépendants",
-      "linkMethod": "Méthodologie"
+      "linkMethod": "Méthodologie",
+      "i4": "Chaque ingrédient est noté pour chaque préoccupation\u00a0: A pour des essais randomisés chez l'humain, B pour des études humaines plus petites, C pour des preuves de laboratoire ou anecdotiques."
     },
-    "partnersTitle": "Nous travaillons avec ces partenaires",
-    "retailers": {
-      "title": "La même lecture, dans votre magasin",
-      "text": "Sur vos pages produit, sur une tablette en magasin ou par l'API. Votre catalogue indique ce qui est en stock. Le classement reste indépendant.",
-      "widget": "Widget sur une page produit",
-      "store": "Tablette en magasin",
-      "api": "API",
-      "pilot": "Un pilote dure six à huit semaines, sans frais de plateforme, avec un test A/B sur vos pages produit et une étude de cas publique.",
-      "cta": "Voir l'offre enseignes"
+    "trust": {
+      "title": "Votre photo, votre choix.",
+      "note": "Où va votre photo et combien de temps elle est gardée, expliqué avant le scan.",
+      "consent": "Vous confirmez avoir plus de 18 ans avant que quoi que ce soit ne commence.",
+      "keep": "Vous choisissez\u00a0: garder votre photo 30\u00a0jours, ou la faire supprimer juste après sa notation.",
+      "where": "Les photos sont stockées à Francfort et lues par Google Gemini et par nos modèles d'image à Londres, où les copies sont supprimées dès leur lecture.",
+      "delete": "Vous pouvez supprimer vos photos, ou votre compte entier, à tout moment."
+    },
+    "faq": {
+      "title": "Vos questions, nos réponses.",
+      "intro": "Ce que l'on nous demande avant un premier scan.",
+      "more": "Autre chose\u00a0? Écrivez à",
+      "items": {
+        "q1": {
+          "q": "Est-ce un diagnostic médical\u00a0?",
+          "a": "Non. VISTASY donne un conseil cosmétique. Une lecture d'imperfections de 70 ou plus suggère de consulter un dermatologue, et l'application le dit."
+        },
+        "q5": {
+          "q": "À quelle fréquence refaire un scan\u00a0?",
+          "a": "Toutes les 4\u00a0à\u00a012\u00a0semaines. Les changements sont montrés une fois le bruit de mesure retiré, et Premium ajoute des rappels et la comparaison de photos."
+        },
+        "q6": {
+          "q": "Puis-je poser des questions sur mes résultats\u00a0?",
+          "a": "Oui. Sarah, l'assistante intégrée, dit qu'elle est une IA, ne répond qu'à partir de votre propre analyse, de votre routine et de vos notes d'ingrédients, et vous dit quand elle n'a pas de données."
+        },
+        "q7": {
+          "q": "Combien ça coûte\u00a0?",
+          "a": "Les lectures, la routine et la vérification de produit sont gratuites. Premium ajoute les progrès avec comparaison de photos pour 4,99\u00a0€ par mois, ou 39\u00a0€ par an."
+        },
+        "q8": {
+          "q": "Qui peut utiliser VISTASY\u00a0?",
+          "a": "Toute personne de plus de 18 ans. VISTASY est sur invitation pendant l'avant-première, et nous envoyons un lien de connexion quand votre tour vient."
+        }
+      }
     },
     "close": {
       "title": "Votre peau, lue à la lumière du jour.",
       "text": "Laissez votre e-mail et nous vous enverrons un lien de connexion quand votre tour viendra.",
-      "cta": "Demander une invitation"
+      "note": "Gratuit, pas un essai. Supprimez vos photos à tout moment."
+    },
+    "retailers": {
+      "title": "Vous vendez des soins\u00a0? La même lecture fonctionne en magasin.",
+      "text": "Sur vos pages produit, sur une tablette en magasin ou par l'API, en commençant par un pilote de six à huit semaines, frais de plateforme offerts.",
+      "cta": "Voir l'offre enseignes"
+    },
+    "dataLink": "Comment nous traitons vos données",
+    "bento": {
+      "title": "Ce qu'une lecture vous apporte.",
+      "evidence": {
+        "title": "Des preuves notées",
+        "text": "Chaque ingrédient est noté pour chaque préoccupation selon les preuves qui le soutiennent.",
+        "a": "Essais randomisés chez l'humain",
+        "b": "Études humaines plus petites",
+        "c": "Laboratoire ou anecdotique"
+      },
+      "sarah": {
+        "title": "Vos questions, répondues à partir de votre lecture",
+        "say": "Je réponds à partir de votre lecture, et je dis quand je n'ai pas de données."
+      }
+    },
+    "highlight": {
+      "rule": "jamais à vendre",
+      "trust": "votre choix"
     }
   },
   "HowItWorksPage": {
     "title": "Comment ça marche",
-    "lede": "Le parcours tel que l'application le déroule, du premier selfie à un produit auquel vous pouvez faire confiance.",
+    "lede": "Sept étapes, dans l'ordre où l'application les déroule, du premier selfie à un produit auquel vous pouvez faire confiance.",
+    "diagram": {
+      "title": "Le parcours VISTASY",
+      "label": "Sept étapes en trois phases. Avant\u00a0: consentement, selfie, questions. La lecture\u00a0: treize lectures, puis une routine. Après\u00a0: la vérification de produit et les progrès. Les progrès ramènent à un nouveau selfie toutes les 4\u00a0à\u00a012\u00a0semaines.",
+      "before": "Avant",
+      "read": "La lecture",
+      "after": "Après",
+      "loop": "4 À 12 SEMAINES",
+      "legendStep": "étape suivante",
+      "legendLoop": "nouveau scan",
+      "nodes": {
+        "consent": {
+          "t": "Consentement",
+          "s": "18+, vos règles"
+        },
+        "selfie": {
+          "t": "Selfie",
+          "s": "contrôle qualité"
+        },
+        "questions": {
+          "t": "Questions",
+          "s": "type de peau"
+        },
+        "readings": {
+          "t": "13 lectures",
+          "s": "notées 3 fois"
+        },
+        "routine": {
+          "t": "Routine",
+          "s": "preuves graduées"
+        },
+        "check": {
+          "t": "Vérification",
+          "s": "convient ou non"
+        },
+        "progress": {
+          "t": "Progrès",
+          "s": "bruit retiré"
+        }
+      }
+    },
+    "step": "Étape",
     "steps": {
       "consent": {
         "title": "Le consentement d'abord",
-        "text": "Vous confirmez avoir plus de 18 ans et choisissez la durée de conservation de votre photo : 30 jours, ou supprimée dès qu'elle est notée.",
+        "text": "Vous confirmez avoir plus de 18 ans et choisissez la durée de conservation de votre photo\u00a0: 30\u00a0jours, ou supprimée juste après sa notation.",
         "tag1": "18 ans confirmés",
-        "tag2": "Photo supprimée après notation"
+        "keep": "Garder 30\u00a0jours",
+        "delete": "Supprimer après notation",
+        "choice": "Durée de conservation de votre photo"
       },
       "selfie": {
-        "title": "Un selfie à la lumière du jour",
-        "text": "Un contrôle de qualité vérifie la lumière, la pose et la netteté avant toute analyse. Environ 30 secondes.",
-        "hint": "Lumière du jour uniforme, sans lunettes"
+        "title": "La photo est vérifiée d'abord",
+        "text": "Un seul visage, face à l'objectif, sans lunettes, sous une lumière égale et net. Si la photo ne passe pas, l'application en demande une autre et dit pourquoi. Environ 30\u00a0secondes.",
+        "hint": "Lumière du jour uniforme, sans lunettes",
+        "imageAlt": "Une femme prend un selfie à la lumière du jour."
       },
       "questions": {
         "title": "Quelques questions",
@@ -170,26 +371,29 @@
         "q4": "Utilise du rétinol"
       },
       "readings": {
-        "title": "Treize lectures",
-        "text": "Chaque préoccupation notée de 0 à 100, trois fois, avec le degré de concordance des lectures et un calque sur votre propre visage."
+        "title": "Lu trois fois, zone par zone",
+        "text": "Le visage est aligné et découpé en zones\u00a0: front, contour des yeux, zone T et joues. Chaque préoccupation est lue trois fois dans sa zone. La médiane donne la note\u00a0; l'écart montre le degré de confiance."
       },
       "routine": {
-        "title": "Une routine selon les preuves",
-        "text": "Des étapes jour, nuit et hebdomadaires choisies selon des preuves graduées par ingrédient, avec la quantité de chaque actif dont vous avez besoin."
+        "title": "Des ingrédients pondérés par les preuves",
+        "text": "Vos principales préoccupations désignent des ingrédients, pondérés par leur note de preuve\u00a0: A pour des essais randomisés chez l'humain, B pour des études humaines plus petites, C pour des preuves de laboratoire ou anecdotiques. Grossesse, sensibilité, allergies et interdictions européennes retirent des ingrédients avant tout classement."
       },
       "check": {
         "title": "N'importe quel produit, vérifié",
-        "text": "Code-barres ou photo de l'étiquette. Convient, neutre ou prudence, avec les raisons et les conflits avec ce que vous possédez.",
+        "text": "Code-barres ou photo de l'étiquette. Convient, neutre ou prudence, avec les raisons et les conflits avec ce que vous possédez. Les doses sont estimées d'après l'étiquette, jamais mesurées en laboratoire.",
         "verdict": "Prudence",
         "verdictText": "Alcool dénaturé en haut de la liste. Votre peau se lit comme sensible."
       },
       "progress": {
         "title": "Les progrès d'un scan à l'autre",
-        "text": "Recommencez dans 4 à 12 semaines. Les changements sont montrés une fois le bruit de mesure retiré.",
+        "text": "Recommencez dans 4\u00a0à\u00a012\u00a0semaines. Les changements sont montrés une fois le bruit de mesure retiré.",
         "before": "Premier scan",
-        "after": "Huit semaines plus tard"
+        "after": "Huit semaines plus tard",
+        "example": "Valeurs d'exemple",
+        "premium": "Premium"
       }
     },
+    "sample": "Valeurs d'exemple",
     "safety": {
       "title": "Un conseil cosmétique, pas un diagnostic médical.",
       "referral": "Une lecture d'imperfections de 70 ou plus suggère de consulter un dermatologue, et l'application le dit.",
@@ -198,84 +402,207 @@
       "sarah": "Sarah, l'assistante intégrée, dit qu'elle est une IA et ne répond qu'à partir de votre propre analyse, de votre routine et de vos notes d'ingrédients.",
       "link": "Lire la méthodologie"
     },
-    "cta": "Demander une invitation"
+    "close": {
+      "title": "Découvrez votre propre lecture.",
+      "text": "VISTASY est sur invitation pendant l'avant-première. Laissez votre e-mail et nous vous enverrons un lien de connexion quand votre tour viendra."
+    },
+    "journey": {
+      "title": "Étape par étape."
+    }
   },
   "RetailersPage": {
-    "title": "La même lecture, dans votre magasin.",
-    "lede": "Vos clients voient leur peau, une routine et des produits qui leur conviennent, sur vos pages produit ou en magasin. Votre catalogue dit ce qui est en stock. Le classement reste indépendant.",
+    "title": "Montrez à chaque client ce qui convient à sa peau.",
+    "lede": "Sur vos pages produit, sur une tablette en magasin ou par l'API. Classé par ingrédients et par preuves, et jamais à vendre, pas même à vous. Votre catalogue indique seulement ce qui est en stock.",
+    "risk": "Commencez par un pilote de six à huit semaines. Les frais de plateforme sont offerts.",
+    "cta": "Réserver un appel pilote",
+    "secondary": "Voir les formules enseignes",
+    "widget": {
+      "caption": "Widget sur une page produit",
+      "brand": "Gamme d'exemple",
+      "product": "Booster acide azélaïque 10\u00a0%",
+      "meta": "Sérum, 30\u00a0ml",
+      "verdict": "Convient à votre peau",
+      "verdictText": "Acide azélaïque à une dose utile. Sans parfum. Aucun conflit avec vos produits.",
+      "note": "Verdict d'exemple. Votre page produit autour."
+    },
     "modes": {
+      "title": "Trois façons de l'intégrer.",
       "widget": {
         "title": "Widget sur une page produit",
-        "text": "Une balise script. Le client scanne, et la page indique si ce produit convient à sa peau, avec les raisons."
+        "effort": "Une balise script",
+        "text": "Le client scanne, et la page indique si ce produit convient à sa peau, avec les raisons.",
+        "group": "Choisissez une page produit",
+        "how": "Verdicts d'exemple, chacun avec ses raisons."
       },
       "store": {
         "title": "Tablette en magasin",
-        "text": "La même lecture au comptoir, avec des recommandations issues de vos rayons d'abord et une routine imprimée ou envoyée par e-mail."
+        "effort": "Au comptoir",
+        "text": "La même lecture, avec des recommandations issues de vos rayons d'abord et une routine imprimée ou envoyée par e-mail. Disponible avec la formule Enterprise."
       },
       "api": {
         "title": "API",
-        "text": "Sessions, scans, routines et verdicts produit en HTTPS, avec votre propre catalogue importé comme couche de disponibilité."
+        "effort": "En HTTPS",
+        "text": "Sessions, scans, routines et verdicts produit, avec votre propre catalogue importé comme couche de disponibilité."
       }
     },
     "rank": {
       "title": "Classer d'abord, puis le stock.",
-      "text": "Chaque client est classé sur l'ensemble du catalogue. Votre catalogue indique seulement ce qui est en stock, avec votre prix et votre lien, et nomme la meilleure option disponible quand un premier choix manque."
+      "text": "Pour chaque client, chaque produit est d'abord classé. Votre catalogue indique ensuite ce que vous avez en stock, avec votre prix et votre lien, et nomme la meilleure option disponible quand un premier choix manque.",
+      "label": "Chaque produit est d'abord classé pour le client. Puis votre stock est indiqué. Si le premier choix est en stock, il est affiché avec votre prix et votre lien\u00a0; sinon, la meilleure option disponible est nommée à côté.",
+      "nodes": {
+        "catalogue": {
+          "t": "Tout le catalogue",
+          "s": "ingrédients, preuves"
+        },
+        "ranked": {
+          "t": "Classé pour le client",
+          "s": "adéquation, pas marque"
+        },
+        "stock": {
+          "t": "Votre stock indiqué",
+          "s": "prix et lien"
+        },
+        "decide": "En stock\u00a0?",
+        "yes": "OUI",
+        "no": "NON",
+        "shown": {
+          "t": "Premier choix affiché",
+          "s": "avec votre prix"
+        },
+        "alt": {
+          "t": "Meilleure option dispo",
+          "s": "nommée à côté"
+        }
+      },
+      "steps": {
+        "s1": {
+          "title": "D'abord classé pour le client",
+          "text": "Chaque produit est classé selon ses ingrédients et les preuves qui les soutiennent. La marque, la marge et le sponsoring n'y jouent aucun rôle."
+        },
+        "s2": {
+          "title": "Puis votre stock est indiqué",
+          "text": "Votre catalogue s'applique après le classement, seulement pour montrer ce qui est en stock, avec votre prix et votre lien."
+        },
+        "s3": {
+          "title": "Le premier choix, avec votre prix",
+          "text": "Si le premier choix est en stock, il est affiché avec votre prix et votre lien."
+        },
+        "s4": {
+          "title": "Nommé même si vous ne le vendez pas",
+          "text": "Sinon, le meilleur choix s'affiche quand même, et la meilleure option disponible est nommée à côté. Le personnel ne peut pas réordonner les résultats."
+        }
+      }
     },
     "steps": {
-      "title": "Ce qui change dans votre magasin",
-      "s1": { "title": "Attirer", "text": "Une lecture de peau sur la page produit attire les gens et les retient." },
-      "s2": { "title": "Identifier", "text": "Une session relie la lecture au client, avec son consentement." },
-      "s3": { "title": "Recommander", "text": "Des produits qui conviennent à sa peau, issus de vos rayons d'abord." },
-      "s4": { "title": "Fidéliser", "text": "Les scans de suivi les font revenir dans 4 à 12 semaines." },
-      "s5": { "title": "Apprendre", "text": "Des informations agrégées et anonymisées, avec consentement explicite. Jamais de données individuelles." }
+      "title": "Ce qui change dans votre magasin.",
+      "s1": {
+        "title": "Sur votre page produit",
+        "text": "Une lecture de peau là où les clients se décident."
+      },
+      "s2": {
+        "title": "Avec leur accord",
+        "text": "Une session relie la lecture au client, et seulement avec son accord."
+      },
+      "s3": {
+        "title": "Ce qui convient à sa peau",
+        "text": "Des produits qui conviennent à sa peau, issus de vos rayons d'abord."
+      },
+      "s4": {
+        "title": "Toutes les 4\u00a0à\u00a012\u00a0semaines",
+        "text": "Un scan de suivi montre ce qui a changé, sans le bruit de mesure."
+      },
+      "s5": {
+        "title": "Des tendances, jamais des fiches",
+        "text": "Des rapports sur les besoins de peau de vos clients, seulement à partir des personnes qui ont donné leur accord, et seulement par groupes d'au moins 50."
+      },
+      "loop": "Chaque scan de suivi relance la boucle."
     },
     "pilot": {
       "title": "Un pilote, pas un argumentaire.",
-      "text": "Six à huit semaines. Les frais de plateforme sont offerts. Nous menons un test A/B sur vos pages produit et publions une étude de cas à la fin.",
-      "cta": "Réserver un appel pilote"
-    }
+      "text": "Six à huit semaines, frais de plateforme offerts. Un test A/B sur vos pages produit montre ce qui change avec vos propres clients, et nous publions une étude de cas à la fin.",
+      "head": "Conditions du pilote",
+      "when": "6\u00a0à\u00a08\u00a0semaines",
+      "name": "Votre magasin, lu par VISTASY",
+      "fee": "Frais de plateforme",
+      "feeV": "Offerts pendant le pilote.",
+      "ab": "Test A/B",
+      "abV": "Sur vos pages produit.",
+      "study": "Étude de cas",
+      "studyV": "Publiée à la fin.",
+      "tagOk": "Inclus",
+      "direction": "Chaque formule enseigne peut commencer ainsi.",
+      "cta": "Réserver un appel pilote",
+      "tagWaived": "Offerts"
+    },
+    "faq": {
+      "title": "Questions d'enseignes.",
+      "items": {
+        "q1": {
+          "q": "Pouvons-nous payer pour mieux classer nos produits\u00a0?",
+          "a": "Non. Personne ne peut acheter un rang. Votre catalogue s'applique après le classement, seulement pour montrer ce qui est en stock, et le meilleur choix s'affiche même si vous ne le vendez pas."
+        },
+        "q2": {
+          "q": "Notre personnel peut-il changer ce que voient les clients\u00a0?",
+          "a": "Non. Le personnel ne peut pas réordonner les résultats, et une mise en garde, un conflit ou une note de preuve ne peut être ni retiré ni adouci sur demande."
+        },
+        "q3": {
+          "q": "Les marques voient-elles les données de nos clients\u00a0?",
+          "a": "Non. Les tendances vont uniquement aux enseignes, jamais aux marques, et seulement à partir des personnes qui ont donné leur accord, par groupes d'au moins 50. Les données individuelles ne sont jamais vendues."
+        }
+      }
+    },
+    "close": {
+      "title": "Essayez-le sur vos propres rayons.",
+      "text": "Parlez-nous de votre magasin et nous réserverons un appel de 30\u00a0minutes pour préparer votre pilote."
+    },
+    "highlight": "jamais à vendre"
   },
   "PricingPage": {
-    "title": "Tarifs",
-    "lede": "Des formules pour les personnes et des formules pour les enseignes.",
-    "tabPeople": "Personnes",
-    "tabRetailers": "Enseignes",
+    "title": "Ce que ça coûte.",
+    "lede": "Les lectures, la routine et la vérification de produit sont gratuites, et ce n'est pas un essai. Premium suit vos progrès pour 4,99\u00a0€ par mois. Les formules enseignes peuvent commencer par un pilote.",
+    "tabs": {
+      "label": "Formules pour",
+      "people": "Personnes",
+      "retailers": "Enseignes"
+    },
     "perMonth": "par mois",
+    "monthlyHint": "Ou 39\u00a0€ par an, 35\u00a0% de moins qu'au mois",
     "people": {
       "free": {
         "name": "Gratuit",
-        "price": "0 €",
-        "text": "Scan, routine et vérification de produit.",
-        "i1": "Treize lectures avec calques",
+        "price": "0\u00a0€",
+        "text": "Ce dont votre peau a besoin, et ce qui lui convient.",
+        "i1": "Treize lectures, chacune notée trois fois",
         "i2": "Une routine selon les preuves par ingrédient",
         "i3": "Vérification de produit par code-barres ou photo d'étiquette",
-        "i4": "Sarah, en contexte"
+        "i4": "Sarah, une assistante IA qui répond à partir de votre lecture"
       },
       "premium": {
         "name": "Premium",
-        "price": "4,99 €",
-        "per": "par mois, ou 39 € par an",
-        "text": "Tout le gratuit, plus les progrès.",
+        "priceMonthly": "4,99\u00a0€",
+        "text": "Voyez si votre routine fonctionne.",
         "i1": "Progrès avec comparaison de photos",
         "i2": "Rappels et points d'étape",
         "i3": "Une routine qui s'adapte",
         "i4": "Tout ce qui est dans Gratuit"
       },
-      "cta": "Demander une invitation"
+      "note": "Sur invitation pendant l'avant-première.",
+      "inviteTitle": "Commencez par la lecture gratuite",
+      "inviteText": "VISTASY est sur invitation pendant l'avant-première. Nous envoyons un lien de connexion quand votre tour vient."
     },
     "retailers": {
       "starter": {
         "name": "Starter",
-        "price": "290 €",
-        "scans": "1 000 scans inclus, puis 0,25 € chacun",
+        "price": "290\u00a0€",
+        "scans": "1\u00a0000 scans inclus, puis 0,25\u00a0€ chacun",
         "i1": "Widget et API",
         "i2": "Tableau de bord de base",
         "i3": "Assistance par e-mail"
       },
       "growth": {
         "name": "Growth",
-        "price": "990 €",
-        "scans": "5 000 scans inclus, puis 0,18 € chacun",
+        "price": "990\u00a0€",
+        "scans": "5\u00a0000 scans inclus, puis 0,18\u00a0€ chacun",
         "i1": "Tout ce qui est dans Starter",
         "i2": "Webhooks et import automatique du catalogue",
         "i3": "Rapport en marque blanche",
@@ -290,42 +617,128 @@
         "i3": "Mode magasin",
         "i4": "Accompagnement dédié"
       },
-      "pilot": "Chaque formule peut commencer par un pilote : six à huit semaines, frais offerts, un test A/B et une étude de cas publique.",
-      "cta": "Réserver un appel pilote"
-    }
+      "pilot": "Chaque formule peut commencer par un pilote\u00a0: six à huit semaines, frais de plateforme offerts, un test A/B sur vos pages produit et une étude de cas publique.",
+      "cta": "Réserver un appel pilote",
+      "pilotTitle": "Chaque formule peut commencer par un pilote.",
+      "pilotTerms": {
+        "weeks": "Six à huit semaines",
+        "fee": "Frais de plateforme offerts",
+        "ab": "Un test A/B sur vos pages produit",
+        "study": "Une étude de cas publique"
+      }
+    },
+    "faq": {
+      "title": "Questions sur les tarifs.",
+      "items": {
+        "q1": {
+          "q": "Qui paie VISTASY\u00a0?",
+          "a": "Les enseignes paient pour le conseiller peau sur leur site et en magasin, et vous pouvez payer Premium. Les marques ne paient rien\u00a0: nous ne prenons aucun argent de marque."
+        },
+        "q2": {
+          "q": "Gagnez-vous quelque chose sur mes achats\u00a0?",
+          "a": "Non. Pas de publicité ni de liens affiliés, et quand un produit renvoie vers une boutique, ce lien ne nous rapporte rien."
+        },
+        "q3": {
+          "q": "Que paie une formule enseigne\u00a0?",
+          "a": "Le conseiller peau sur votre site et en magasin, votre catalogue affiché comme en stock, le mode vendeur, et des rapports sur les besoins de peau de vos clients, construits uniquement à partir des personnes qui ont donné leur accord. Jamais le rang d'un produit."
+        },
+        "q4": {
+          "q": "D'où vient votre chiffre d'affaires\u00a0?",
+          "a": "Des enseignes et des abonnements. Chaque année, nous publierons la part venant des enseignes, des abonnements et des marques, et la part des marques est de 0\u00a0% par principe."
+        }
+      }
+    },
+    "billing": {
+      "label": "Facturation",
+      "save": "35\u00a0% de moins"
+    },
+    "yearlyHint": "Ou 4,99\u00a0€ par mois"
   },
   "ContactPage": {
-    "title": "Parlons-en.",
-    "lede": "Une invitation à l'avant-première pour vous, ou un appel pilote pour votre magasin.",
+    "title": "Une invitation, ou un appel pilote.",
+    "lede": "Une invitation à l'avant-première pour vous, ou un appel pilote de 30\u00a0minutes pour votre magasin.",
+    "tabs": {
+      "label": "Que pouvons-nous faire pour vous\u00a0?",
+      "people": "Pour moi",
+      "retailers": "Pour mon magasin"
+    },
     "people": {
-      "title": "Pour les personnes",
       "text": "VISTASY est sur invitation pendant l'avant-première. Laissez votre e-mail et nous vous enverrons un lien de connexion quand votre tour viendra.",
       "email": "E-mail",
-      "message": "Que souhaitez-vous savoir ? Facultatif.",
+      "message": "Que souhaitez-vous savoir\u00a0?",
+      "optional": "Facultatif",
       "submit": "Demander une invitation"
     },
     "retailers": {
-      "title": "Pour les enseignes",
-      "text": "Parlez-nous de votre magasin et nous réserverons un appel de 30 minutes.",
+      "text": "Parlez-nous de votre magasin et nous réserverons un appel de 30\u00a0minutes pour préparer votre pilote.",
       "name": "Nom",
       "company": "Entreprise",
-      "email": "E-mail",
-      "message": "Message",
+      "email": "E-mail professionnel",
+      "message": "À propos de votre magasin",
       "submit": "Réserver un appel pilote"
     },
     "errors": {
       "emailRequired": "Saisissez votre e-mail",
-      "emailInvalid": "Cette adresse e-mail ne semble pas correcte",
+      "emailInvalid": "Saisissez une adresse complète, comme nom@exemple.com",
       "nameRequired": "Saisissez votre nom",
-      "companyRequired": "Saisissez votre entreprise",
-      "messageRequired": "Écrivez un court message"
+      "companyRequired": "Saisissez votre entreprise"
     },
-    "sending": "Envoi…",
-    "successTitle": "Merci.",
-    "successText": "Nous revenons vers vous très vite.",
+    "sending": "Envoi",
+    "successTitle": "Demande envoyée.",
+    "successInvite": "Vous êtes sur la liste. Nous enverrons un lien de connexion à {email} quand votre tour viendra.",
+    "successPilot": "Merci, {name}. Nous écrirons à {email} pour réserver l'appel de 30\u00a0minutes.",
     "errorTitle": "L'envoi n'a pas abouti.",
     "errorText": "Réessayez dans un instant, ou écrivez-nous directement.",
     "retry": "Réessayer",
-    "or": "Ou écrivez à"
+    "or": "Vous préférez l'e-mail\u00a0? Écrivez à"
+  },
+  "DataPage": {
+    "title": "Vos données, en clair.",
+    "lede": "Où va votre photo, qui la lit, combien de temps elle reste et comment la supprimer, au même endroit.",
+    "rows": {
+      "before": {
+        "title": "Avant le scan",
+        "text": "Vous confirmez avoir 18 ans ou plus et choisissez la durée de conservation de votre photo\u00a0: 30\u00a0jours, pour comparer votre prochain scan, ou supprimée juste après vos résultats, sous 2\u00a0jours au plus tard. Votre consentement est enregistré à chaque scan."
+      },
+      "where": {
+        "title": "Où va votre photo",
+        "text": "Votre photo est stockée à Francfort, en Allemagne. Pour la lire, nous l'envoyons à l'API Gemini de Google et à nos propres modèles d'image à Londres, où les copies sont supprimées dès leur lecture. Faire tourner chaque étape dans l'UE est prévu."
+      },
+      "control": {
+        "title": "Ce que vous pouvez supprimer",
+        "text": "Un scan, ou votre compte entier et ses photos, depuis l'application, à tout moment. Les notes et votre routine sont conservées pour suivre vos progrès."
+      },
+      "medical": {
+        "title": "Pas un diagnostic médical",
+        "text": "Les notes sont des observations cosmétiques, pas des constats médicaux, et nous ne nommons aucune maladie. Une lecture d'imperfections de 70 ou plus suggère de consulter un dermatologue, et l'application le dit."
+      },
+      "sarah": {
+        "title": "Sarah, l'assistante IA",
+        "text": "Sarah dit qu'elle est une IA et ne répond qu'à partir de votre propre analyse, de votre routine et de vos notes d'ingrédients. Elle ne peut inventer ni produits ni études, et vous dit quand elle n'a pas de données."
+      },
+      "retailers": {
+        "title": "Ce que voient les enseignes",
+        "text": "En magasin, une session relie votre lecture à vous, avec votre consentement. Les tendances anonymisées viennent seulement des personnes qui ont donné leur accord, seulement par groupes d'au moins 50, et vont uniquement aux enseignes, jamais aux marques. Nous ne vendons jamais de données individuelles."
+      },
+      "email": {
+        "title": "Votre e-mail",
+        "text": "Nous l'utilisons pour vous envoyer votre lien de connexion quand votre tour vient. Les comptes se connectent par un lien envoyé par e-mail ou, pendant l'avant-première, par mot de passe."
+      }
+    },
+    "contact": "Une question sur vos données\u00a0? Écrivez à",
+    "method": "Lire la méthodologie",
+    "map": {
+      "label": "Carte du trajet de votre photo\u00a0: stockée à Francfort et lue par nos propres modèles d'image à Londres, où les copies sont supprimées dès leur lecture. Elle est aussi envoyée à l'API Gemini de Google pour être lue.",
+      "frankfurt": "Francfort",
+      "stored": "Stockée",
+      "london": "Londres",
+      "read": "Lue, copies supprimées",
+      "readBy": "Par nos propres modèles d'image. L'API Gemini de Google la lit aussi."
+    }
+  },
+  "NotFound": {
+    "title": "Cette page n'existe pas.",
+    "text": "Le lien est peut-être ancien, ou l'adresse mal saisie.",
+    "home": "Aller à l'accueil"
   }
 }
