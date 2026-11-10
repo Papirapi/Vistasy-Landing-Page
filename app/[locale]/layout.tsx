@@ -9,6 +9,7 @@ import { SITE_URL } from "@/constants/navbar-items-list";
 import NavBar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import { MotionRoot } from "@/components/motion/motion-root";
+import { LazyMotionProvider } from "@/components/motion/lazy-motion";
 import ScrollProgress from "@/components/craftwork/scroll-progress";
 import { Intro } from "@/components/intro/intro";
 import "../globals.css";
@@ -20,7 +21,8 @@ const data = Spline_Sans_Mono({ subsets: ["latin", "latin-ext"], variable: "--fo
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "VISTASY", template: "%s | VISTASY" },
+  // the tab reads VISTASY first on every page; the home tab is the name alone (lib/meta.ts)
+  title: { default: "VISTASY", template: "VISTASY · %s" },
   openGraph: { type: "website", siteName: "VISTASY", images: ["/og-image.png"] },
   twitter: { card: "summary_large_image" },
 };
@@ -42,13 +44,16 @@ const CLIENT_NAMESPACES = ["NavBar", "ContactPage", "InviteForm"];
 // Marks JS before first paint so the hero intro can start hidden; if GSAP has not taken over
 // within 1.2s the fallback class shows everything (see globals.css).
 // The opening (components/intro/intro.tsx) is decided here too, before the first paint: the home page, once per
-// visit, never under reduced motion or for automated browsers (unless ?intro=1). Whatever happens to the
+// visit, never under reduced motion or for automated browsers (unless ?intro=1). Phones (coarse pointer),
+// Save-Data and 2G/3G connections skip it: the curtain held the largest paint back by about 2.8 s there. Whatever happens to the
 // scripts after this, the opening is taken away after 5s, so the page can never stay covered.
 const BOOT = [
   "(function(){var c=document.documentElement.classList;c.add('js');",
   "setTimeout(function(){c.add('motion-fallback')},1200);",
   "try{if(/^\\/(en|fr)(\\/home)?\\/?$/.test(location.pathname)&&!sessionStorage.getItem('vis-intro')",
-  "&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&(!navigator.webdriver||/[?&]intro=1/.test(location.search))){",
+  "&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&!matchMedia('(pointer: coarse)').matches",
+  "&&!(navigator.connection&&(navigator.connection.saveData||/2g|3g/.test(navigator.connection.effectiveType||'')))",
+  "&&(!navigator.webdriver||/[?&]intro=1/.test(location.search))){",
   "c.add('intro-on','intro-hold');setTimeout(function(){c.remove('intro-on','intro-hold')},5000)}}catch(e){}})()",
 ].join("");
 
@@ -68,6 +73,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
       <body className="min-h-dvh bg-ground text-ink">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <NextIntlClientProvider messages={messages}>
+            <LazyMotionProvider>
             <a href="#main" className="skip">
               {t("skip")}
             </a>
@@ -87,6 +93,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
               </div>
             </div>
             <MotionRoot />
+            </LazyMotionProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

@@ -10,7 +10,7 @@
 // property and keyframes renamed (--siri-angle, siri-orb-rotate) so they cannot collide; colours are passed
 // from our tokens by the caller; the simulated envelope's frame loop runs only while the state listens to it,
 // and the orb's loops pause while it is off screen.
-import { type MotionStyle, type MotionValue, motion, type TargetAndTransition, type Transition, useMotionValue, useReducedMotion, useTransform } from "motion/react";
+import { type MotionStyle, type MotionValue, m, type TargetAndTransition, type Transition, useMotionValue, useReducedMotion, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -201,14 +201,14 @@ export function SiriOrb({ size = "192px", className, colors, animationDuration =
 
   return (
     // the gradient disc clips its own overflow, so the bloom lives in a wrapper rather than inside it
-    <motion.div ref={ref} animate={rootAnimate} className={cn("relative", className)} data-paused={offscreen ? "" : undefined} style={{ "--orb-size": size, height: size, width: size } as MotionStyle} transition={rootTransition}>
-      <motion.div
+    <m.div ref={ref} animate={rootAnimate} className={cn("relative", className)} data-paused={offscreen ? "" : undefined} style={{ "--orb-size": size, height: size, width: size } as MotionStyle} transition={rootTransition}>
+      <m.div
         animate={{ opacity: stateMotion.glow * GLOW_MAX_OPACITY }}
         className="absolute rounded-full"
         style={{ background: `radial-gradient(circle at 50% 50%, ${glowColor} 0%, transparent 64%)`, filter: `blur(calc(var(--orb-size) * ${GLOW_BLUR_RATIO}))`, inset: "-12%" }}
         transition={shouldReduceMotion ? { duration: 0 } : SPRING_DEFAULT}
       />
-      <motion.div
+      <m.div
         className="siri-orb"
         style={
           {
@@ -235,7 +235,7 @@ export function SiriOrb({ size = "192px", className, colors, animationDuration =
       >
         <span aria-hidden="true" className="siri-orb-layer siri-orb-sheen" />
         <span aria-hidden="true" className="siri-orb-layer siri-orb-rim" />
-      </motion.div>
-    </motion.div>
+      </m.div>
+    </m.div>
   );
 }

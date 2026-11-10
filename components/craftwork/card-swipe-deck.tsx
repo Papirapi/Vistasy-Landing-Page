@@ -13,7 +13,7 @@
 // caller instead of the fixed English copy; the deck keeps the site's focus ring (the original removed the
 // outline); stamps are set in sentence case at a smaller size with a softer turn so a verdict fits a card
 // in the collage; colours, radius and shadow are our tokens (c-card).
-import { animate, motion, type PanInfo, useMotionValue, useReducedMotion, useTransform } from "motion/react";
+import { animate, m, type PanInfo, useMotionValue, useReducedMotion, useTransform } from "motion/react";
 import { type KeyboardEvent, type ReactNode, type Ref, useCallback, useEffect, useImperativeHandle, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -180,14 +180,14 @@ const DeckCard = ({ disabled, isFront, item, labels, onCommit, onExitComplete, p
   const stamp = "pointer-events-none absolute top-5 whitespace-nowrap rounded-[10px] border-2 px-2.5 py-1 text-[0.9375rem] font-semibold leading-none";
 
   return (
-    <motion.div
+    <m.div
       animate={{ scale: 1 - pos * STACK_SCALE_STEP, y: pos * stackOffset }}
       className="absolute inset-0"
       initial={false}
       style={{ zIndex }}
       transition={shouldReduceMotion ? { duration: 0 } : STACK_TRANSITION}
     >
-      <motion.div
+      <m.div
         animate={
           isExiting
             ? { opacity: 0, transition: shouldReduceMotion ? { duration: 0 } : { delay: FADE_DELAY, duration: FADE_DURATION, ease: FADE_EASE } }
@@ -214,27 +214,27 @@ const DeckCard = ({ disabled, isFront, item, labels, onCommit, onExitComplete, p
         {isFront ? (
           <>
             {/* colour wash: the card itself tints toward the outcome */}
-            <motion.div
+            <m.div
               aria-hidden="true"
               className="pointer-events-none absolute inset-0"
               style={{ opacity: likeWash, background: `linear-gradient(to left, color-mix(in srgb, ${tone} 30%, transparent), color-mix(in srgb, ${tone} 8%, transparent), transparent)` }}
             />
-            <motion.div
+            <m.div
               aria-hidden="true"
               className="pointer-events-none absolute inset-0"
               style={{ opacity: nopeWash, background: `linear-gradient(to right, color-mix(in srgb, ${tone} 30%, transparent), color-mix(in srgb, ${tone} 8%, transparent), transparent)` }}
             />
             {/* stamps: outlined, turned, driven by drag distance */}
-            <motion.div aria-hidden="true" className={cn(stamp, "left-5")} style={{ opacity: likeOpacity, rotate: -STAMP_TURN, scale: likeScale, color: ink, borderColor: ink, background: "color-mix(in srgb, var(--sheet) 86%, transparent)" }}>
+            <m.div aria-hidden="true" className={cn(stamp, "left-5")} style={{ opacity: likeOpacity, rotate: -STAMP_TURN, scale: likeScale, color: ink, borderColor: ink, background: "color-mix(in srgb, var(--sheet) 86%, transparent)" }}>
               {item.labels?.right ?? labels.right}
-            </motion.div>
-            <motion.div aria-hidden="true" className={cn(stamp, "right-5")} style={{ opacity: nopeOpacity, rotate: STAMP_TURN, scale: nopeScale, color: ink, borderColor: ink, background: "color-mix(in srgb, var(--sheet) 86%, transparent)" }}>
+            </m.div>
+            <m.div aria-hidden="true" className={cn(stamp, "right-5")} style={{ opacity: nopeOpacity, rotate: STAMP_TURN, scale: nopeScale, color: ink, borderColor: ink, background: "color-mix(in srgb, var(--sheet) 86%, transparent)" }}>
               {item.labels?.left ?? labels.left}
-            </motion.div>
+            </m.div>
           </>
         ) : null}
-      </motion.div>
-    </motion.div>
+      </m.div>
+    </m.div>
   );
 };
 

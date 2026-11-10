@@ -9,7 +9,6 @@
 // React does not reconcile. HighlightPhrase is a VISTASY helper that marks one phrase inside a message.
 import { useInView, useReducedMotion } from "motion/react";
 import { useLayoutEffect, useRef, type ReactNode } from "react";
-import { annotate } from "rough-notation";
 import type { RoughAnnotation } from "rough-notation/lib/model";
 import { cn } from "@/lib/utils";
 
@@ -49,12 +48,17 @@ export function Highlighter({
   // If isView is false, always show. If isView is true, wait for inView
   const shouldShow = !isView || isInView;
 
+  // rough-notation loads only when a mark is about to be drawn (below the fold on every page), so it stays
+  // out of the first-load script
   useLayoutEffect(() => {
     const element = elementRef.current;
+    if (!shouldShow || !element) return;
+    let cancelled = false;
     let annotation: RoughAnnotation | null = null;
     let resizeObserver: ResizeObserver | null = null;
 
-    if (shouldShow && element) {
+    import("rough-notation").then(({ annotate }) => {
+      if (cancelled) return;
       const currentAnnotation = annotate(element, {
         type: action,
         color,
@@ -72,12 +76,12 @@ export function Highlighter({
         currentAnnotation.hide();
         currentAnnotation.show();
       });
-
       resizeObserver.observe(element);
       resizeObserver.observe(document.body);
-    }
+    });
 
     return () => {
+      cancelled = true;
       annotation?.remove();
       resizeObserver?.disconnect();
     };

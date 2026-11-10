@@ -8,7 +8,7 @@
 // also worked out when the view is controlled from outside; the pill takes the camera ink (--cam-island)
 // instead of pure black; the first view is server-rendered in place, and under reduced motion views swap
 // without the entrance.
-import { motion, useReducedMotion } from "motion/react";
+import { m, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState, type HTMLAttributes, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
@@ -42,13 +42,13 @@ export function DynamicIsland({ views, view = "idle", bounce = {}, className, is
 
   return (
     <div className={cn("flex justify-center", className)} {...props}>
-      <motion.div
+      <m.div
         className={cn("mx-auto w-fit min-w-[100px] overflow-hidden rounded-full bg-[var(--cam-island)] text-white", islandClassName)}
         layout
         style={{ borderRadius: 32 }}
         transition={shouldReduceMotion ? { duration: 0 } : { bounce: springBounce, duration: 0.25, type: "spring" as const }}
       >
-        <motion.div
+        <m.div
           animate={
             shouldReduceMotion
               ? { opacity: 1, scale: 1 }
@@ -76,8 +76,8 @@ export function DynamicIsland({ views, view = "idle", bounce = {}, className, is
           transition={{ bounce: springBounce, type: "spring" as const }}
         >
           {content}
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
     </div>
   );
 }

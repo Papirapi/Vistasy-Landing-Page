@@ -16,7 +16,8 @@ export function LanguageMenu({ label }: { label: string }) {
   return (
     <DropdownMenu.Root modal={false}>
       <DropdownMenu.Trigger asChild>
-        <button type="button" className="icon-btn lang-btn" aria-label={`${label}: ${NAMES[locale]}`}>
+        {/* the visible "EN" must be part of the accessible name (label-content-name-mismatch) */}
+        <button type="button" className="icon-btn lang-btn" aria-label={`${locale.toUpperCase()}, ${label}: ${NAMES[locale]}`}>
           <Icon name="i-globe-hemisphere-west" className="ico h-[18px] w-[18px]" />
           <span aria-hidden="true">{locale.toUpperCase()}</span>
         </button>

@@ -9,7 +9,7 @@
 // busy button is aria-disabled rather than disabled so keyboard focus stays on it; `live="off"` keeps a run
 // the reader did not start from being announced; class hooks for the button and the status line; the glyph
 // on first paint is drawn in place (it shows without JavaScript), later glyphs draw in as in the original.
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, m, useReducedMotion } from "motion/react";
 import type { ReactNode } from "react";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
@@ -120,7 +120,7 @@ type FaceGlyphProps = {
 };
 
 const FaceGlyph = ({ canAnimate, clipId, face, gradientId, isScanning, stroke }: FaceGlyphProps) => (
-  <motion.g
+  <m.g
     animate={{ opacity: 1, scale: 1 }}
     exit={canAnimate ? { opacity: 0, scale: 0.82 } : { opacity: 0, transition: INSTANT }}
     initial={canAnimate ? { opacity: 0, scale: 0.94 } : { opacity: 1, scale: 1 }}
@@ -128,7 +128,7 @@ const FaceGlyph = ({ canAnimate, clipId, face, gradientId, isScanning, stroke }:
     transition={canAnimate ? GLYPH_SPRING : INSTANT}
   >
     {BRACKET_PATHS.map((path, index) => (
-      <motion.path
+      <m.path
         animate={{ pathLength: 1 }}
         d={path}
         fill="none"
@@ -144,7 +144,7 @@ const FaceGlyph = ({ canAnimate, clipId, face, gradientId, isScanning, stroke }:
 
     {face &&
       FACE_PATHS.map((path, index) => (
-        <motion.path
+        <m.path
           animate={{ pathLength: 1 }}
           d={path}
           fill="none"
@@ -160,7 +160,7 @@ const FaceGlyph = ({ canAnimate, clipId, face, gradientId, isScanning, stroke }:
 
     {isScanning && canAnimate ? (
       <g clipPath={`url(#${clipId})`}>
-        <motion.g
+        <m.g
           animate={{ y: SCAN_TRAVEL }}
           initial={{ y: -SCAN_TRAVEL }}
           transition={{ duration: SCAN_SWEEP, ease: EASE_IN_OUT, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
@@ -176,10 +176,10 @@ const FaceGlyph = ({ canAnimate, clipId, face, gradientId, isScanning, stroke }:
             y1={50 + SCAN_BAND_HEIGHT / 2}
             y2={50 + SCAN_BAND_HEIGHT / 2}
           />
-        </motion.g>
+        </m.g>
       </g>
     ) : null}
-  </motion.g>
+  </m.g>
 );
 
 type CheckGlyphProps = {
@@ -187,13 +187,13 @@ type CheckGlyphProps = {
 };
 
 const CheckGlyph = ({ canAnimate }: CheckGlyphProps) => (
-  <motion.g
+  <m.g
     animate={{ opacity: 1, scale: 1 }}
     initial={canAnimate ? { opacity: 0, scale: 0.6 } : { opacity: 1, scale: 1 }}
     style={{ transformOrigin: "50px 50px" }}
     transition={canAnimate ? CHECK_SPRING : INSTANT}
   >
-    <motion.path
+    <m.path
       animate={{ pathLength: 1 }}
       d={CHECK_PATH}
       fill="none"
@@ -204,7 +204,7 @@ const CheckGlyph = ({ canAnimate }: CheckGlyphProps) => (
       strokeWidth={CHECK_STROKE_WIDTH}
       transition={canAnimate ? CHECK_SPRING : INSTANT}
     />
-  </motion.g>
+  </m.g>
 );
 
 /* -------------------------------------------------------------------------- */
@@ -294,7 +294,7 @@ export const UnlockFaceId = ({
         style={{ height: size, width: size }}
         type="button"
       >
-        <motion.svg
+        <m.svg
           animate={{ x: status === "error" && canAnimate ? SHAKE_KEYFRAMES : 0 }}
           aria-hidden="true"
           className="h-full w-full overflow-visible"
@@ -318,7 +318,7 @@ export const UnlockFaceId = ({
               <FaceGlyph canAnimate={canAnimate} clipId={clipId} face={face} gradientId={gradientId} isScanning={isBusy} key="face" stroke={STROKE_BY_STATUS[status]} />
             )}
           </AnimatePresence>
-        </motion.svg>
+        </m.svg>
       </button>
 
       <p
@@ -332,7 +332,7 @@ export const UnlockFaceId = ({
       </p>
 
       {children ? (
-        <motion.div
+        <m.div
           animate={{
             filter: isUnlocked ? "blur(0px)" : "blur(9px)",
             opacity: isUnlocked ? 1 : 0.5,
@@ -342,7 +342,7 @@ export const UnlockFaceId = ({
           transition={canAnimate ? { duration: CONTENT_REVEAL, ease: EASE_OUT } : INSTANT}
         >
           {children}
-        </motion.div>
+        </m.div>
       ) : null}
     </div>
   );

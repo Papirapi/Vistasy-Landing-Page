@@ -5,7 +5,7 @@
 // 1.8s. Ported changes: framer-motion → motion/react; zinc → VISTASY ink (light), white (dark) and a third
 // "accent" theme with a violet sweep for use over a photo; `size` (any CSS length, the rings scale with
 // it); `active` pauses the turn (off screen) and reduced motion holds the sweep still.
-import { motion, useReducedMotion } from "motion/react";
+import { m, useReducedMotion } from "motion/react";
 import { cn } from "@/lib/utils";
 
 type RadarTheme = "light" | "dark" | "accent";
@@ -37,7 +37,7 @@ export const RadarSweep = ({ theme = "light", size = "3rem", active = true, clas
       <div className={cn("absolute size-1.5 rounded-full", e.dot)} />
 
       {/* Sweep hand */}
-      <motion.div
+      <m.div
         className="absolute inset-0 origin-center"
         style={{ background: SWEEP[theme] }}
         initial={false}

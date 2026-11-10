@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence, useInView, useReducedMotion } from "motion/react";
+import { m, AnimatePresence, useInView, useReducedMotion } from "motion/react";
 import { Iphone } from "@/components/craftwork/iphone";
 import { DynamicIsland } from "@/components/craftwork/dynamic-island";
 import { UnlockFaceId, type UnlockStatus } from "@/components/craftwork/unlock-face-id";
@@ -137,21 +137,21 @@ export function Phone({ person, readings, label, check, s }: { person: { src: st
         <span className="cam-backdrop" aria-hidden="true" />
         <AnimatePresence mode="wait" initial={false}>
           {mode === "selfie" ? (
-            <motion.div key="selfie" className="absolute inset-0" initial={{ opacity: 0, scale: 1.04 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.35 }}>
+            <m.div key="selfie" className="absolute inset-0" initial={{ opacity: 0, scale: 1.04 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.35 }}>
               <div className="absolute bottom-[-6%] left-1/2 h-[92%] -translate-x-[42%]" style={{ aspectRatio: "625 / 753" }} data-hero-photo="">
                 <Image src={person.src} alt={person.alt} fill priority sizes="360px" className="object-contain object-bottom" />
                 <span className="scan-frame" aria-hidden="true">
                   <RadarSweep theme="accent" size="74%" active={seen && hero.inView} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                 </span>
               </div>
-            </motion.div>
+            </m.div>
           ) : (
-            <motion.div key="product" className="absolute inset-0 grid place-items-center" initial={{ opacity: 0, scale: 1.04 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.35 }}>
+            <m.div key="product" className="absolute inset-0 grid place-items-center" initial={{ opacity: 0, scale: 1.04 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.35 }}>
               <div className="relative grid h-[46%] w-[62%] place-items-center rounded-[28px] bg-white/80 shadow-[var(--e2)]">
                 <Image src={check.img} alt="" width={150} height={150} className="h-[70%] w-auto object-contain" />
                 <span className="scan-frame !inset-[8%] !h-auto !w-auto" aria-hidden="true" />
               </div>
-            </motion.div>
+            </m.div>
           )}
         </AnimatePresence>
         <div className="absolute inset-x-[7%] top-[9%] flex items-center justify-between" aria-hidden="true">

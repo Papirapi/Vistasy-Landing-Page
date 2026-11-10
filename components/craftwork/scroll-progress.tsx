@@ -8,7 +8,7 @@
 // hidden from assistive tech and skips the per-percent re-render the progressbar role needs.
 import {
   type MotionValue,
-  motion,
+  m,
   useMotionValueEvent,
   useReducedMotion,
   useScroll,
@@ -107,7 +107,7 @@ const SegmentDash = ({ value, index, segments, thickness, color }: SegmentDashPr
 
   return (
     <span className="relative block shrink-0 overflow-hidden rounded-full bg-ink/12" style={{ height: thickness, width: SEGMENT_WIDTH_PX }}>
-      <motion.span
+      <m.span
         className="absolute inset-0 origin-left rounded-full"
         style={{ backgroundColor: color, scaleX: shouldReduceMotion ? fill : springFill }}
       />
@@ -158,7 +158,7 @@ export default function ScrollProgress({
     return (
       <div {...ariaProps} className={cn(POSITION_CLASSES[position], "w-full", className)}>
         <div className="w-full overflow-hidden rounded-full bg-ink/12" style={{ height: Math.max(thickness, TRACK_MIN_THICKNESS) }}>
-          <motion.div
+          <m.div
             className="h-full w-full rounded-full"
             style={{
               backgroundImage: `linear-gradient(90deg, ${color} 0%, ${color} calc(100% - ${LEADING_EDGE_STOP}), color-mix(in oklab, ${color} 40%, white) 100%)`,
@@ -178,7 +178,7 @@ export default function ScrollProgress({
       <div {...ariaProps} className={cn(POSITION_CLASSES[position], "inline-flex shrink-0 items-center justify-center", className)}>
         <svg aria-hidden="true" className="-rotate-90" height={size} viewBox={`0 0 ${size} ${size}`} width={size}>
           <circle className="text-ink/12" cx={size / 2} cy={size / 2} fill="none" r={ringRadius} stroke="currentColor" strokeWidth={thickness} />
-          <motion.circle
+          <m.circle
             cx={size / 2}
             cy={size / 2}
             fill="none"

@@ -678,10 +678,12 @@ a { text-underline-offset: 3px; text-decoration-thickness: 1px; }
   [data-intro] [data-hero-fade="2"] { animation-delay: 0.42s; }
 }
 @keyframes hero-rise { from { transform: translateY(112%); } }
-@keyframes hero-fade { from { opacity: 0; transform: translateY(14px); } }
+/* transform only: the lede is the phone's largest paint, and Chrome ignores content first painted at opacity 0 */
+@keyframes hero-fade { from { transform: translateY(14px); } }
 html:not(.js) .scrolly-panel { position: relative; opacity: 1; transform: none; }
-html.js:not(.motion-ok) [data-intro] :is(.g-card, .g-dot, .hero-gate, .hero-caption) { opacity: 0; }
-html.motion-fallback:not(.motion-ok) [data-intro] :is(.g-card, .g-dot, .hero-gate, .hero-caption) { opacity: 1; transition: opacity 0.4s var(--ease-out); }
+/* the small hero cards used to wait for the motion script (html.motion-ok) before they showed, and nothing
+   animated them once it arrived: that gate only held the hero's paint back until hydration, so it is gone
+   and they are visible from the first frame like the rest of the hero */
 @media (prefers-reduced-motion: reduce) {
   html.js [data-intro] :is(.g-card, .g-dot, .hero-gate, .hero-caption) { opacity: 1 !important; transform: none !important; }
   .btn, .chip, .icon-btn, .reading-btn { transition-duration: 0.12s; }
@@ -983,10 +985,18 @@ html.motion-fallback:not(.motion-ok) [data-intro] :is(.g-card, .g-dot, .hero-gat
 @media (prefers-reduced-motion: reduce) { .cw-gauge .g-val, .cw-gauge .g-spread { transition: none; } }
 
 /* before and after: the knob follows the separator's state (hover, drag, keyboard focus) */
+/* scroll reveal paragraph: the ghost word under the overlay, generated from its attribute at 18% so audits
+   never see a low-contrast text node */
+.srp-ghost::before { content: attr(data-w); opacity: 0.18; }
 .cw-compare-knob { box-shadow: var(--edge), var(--e2); transition: scale 200ms var(--ease-out); }
-.cw-compare:has([data-separator="active"]) .cw-compare-knob { scale: 1.1; }
-@media (hover: hover) and (pointer: fine) { .cw-compare:has([data-separator="hover"]) .cw-compare-knob { scale: 1.06; } }
-.cw-compare:has([data-separator]:focus-visible) .cw-compare-knob { outline: 2px solid var(--cross); outline-offset: 2px; }
+/* the split is a native range input laid over the frame (no panels library): invisible, full size,
+   vertical swipes still scroll the page; the knob mirrors its hover, drag and keyboard-focus states */
+.cw-compare-range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; touch-action: pan-y; -webkit-appearance: none; appearance: none; background: transparent; }
+.cw-compare-range::-webkit-slider-thumb { -webkit-appearance: none; width: 2.5rem; height: 100%; }
+.cw-compare-range::-moz-range-thumb { width: 2.5rem; height: 100%; border: 0; opacity: 0; }
+.cw-compare:has(.cw-compare-range:active) .cw-compare-knob { scale: 1.1; }
+@media (hover: hover) and (pointer: fine) { .cw-compare:has(.cw-compare-range:hover) .cw-compare-knob { scale: 1.06; } }
+.cw-compare:has(.cw-compare-range:focus-visible) .cw-compare-knob { outline: 2px solid var(--cross); outline-offset: 2px; }
 .cw-compare-before .val { color: var(--ink-3); }
 .cw-compare-before .meter i { background: var(--ink-4); }
 .cw-compare-before .meter i::after { content: none; }

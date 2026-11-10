@@ -18,7 +18,7 @@
 //   cards`); the step offsets are centred on the slot instead of the demo's -5vh + 160px;
 // - colours and depth from the site tokens (sheet, stage plate, --e3 shadow); the "scroll to explore" hint is
 //   dropped (the site does not use scroll cues).
-import { motion, type MotionValue, useMotionValue, useMotionValueEvent, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { m, type MotionValue, useMotionValue, useMotionValueEvent, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { type ReactNode, type RefObject, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { cn } from "@/lib/utils";
@@ -60,7 +60,7 @@ function StackCard({
 
   return (
     <li ref={slotRef} className="cw-stack-slot grid w-full place-items-center">
-      <motion.figure
+      <m.figure
         className="relative m-0 origin-top overflow-hidden rounded-[var(--r-sheet)] bg-sheet text-ink shadow-[var(--edge),var(--e3)]"
         style={{
           scale,
@@ -72,7 +72,7 @@ function StackCard({
           <div className="cw-stack-plate flex min-h-[clamp(250px,24vw,292px)] w-[min(82vw,500px)] flex-col rounded-[var(--r-label)] p-6 sm:p-7">{card.content}</div>
         </div>
         <figcaption className="grid min-h-11 place-items-center px-4 py-2.5 text-center text-micro font-medium text-ink-3">{card.title}</figcaption>
-      </motion.figure>
+      </m.figure>
     </li>
   );
 }

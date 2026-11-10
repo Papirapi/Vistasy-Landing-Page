@@ -1,8 +1,8 @@
 "use client";
 // Tilt card, from craftwork.design/components/beui/tilt-card
 // Source: beui by Saura (github.com/starc007/ui-components), MIT licence. Spring-driven tilt toward the
-// pointer with a cursor glare; off for touch and reduced motion, as in the original.
-import { motion, useMotionTemplate, useMotionValue, useReducedMotion, useSpring } from "motion/react";
+// pointer with a cursor glare; off for touch and reduced m, as in the original.
+import { m, useMotionTemplate, useMotionValue, useReducedMotion, useSpring } from "motion/react";
 import { useRef, type ReactNode } from "react";
 import { SPRING_MOUSE } from "@/lib/craftwork/ease";
 import { useHoverCapable } from "@/lib/craftwork/use-hover-capable";
@@ -37,9 +37,9 @@ export function TiltCard({ children, max = 10, glare = true, className }: { chil
   const transform = useMotionTemplate`perspective(1000px) rotateX(${srx}deg) rotateY(${sry}deg)`;
   const glareBg = useMotionTemplate`radial-gradient(circle at ${gx}% ${gy}%, rgba(255,255,255,0.9), transparent 50%)`;
   return (
-    <motion.div ref={ref} onMouseMove={onMove} onMouseLeave={onLeave} style={{ transform, transformStyle: "preserve-3d" }} className={cn("relative overflow-hidden will-change-transform", className)}>
+    <m.div ref={ref} onMouseMove={onMove} onMouseLeave={onLeave} style={{ transform, transformStyle: "preserve-3d" }} className={cn("relative overflow-hidden will-change-transform", className)}>
       {children}
-      {glare && enabled ? <motion.div aria-hidden style={{ background: glareBg }} className="pointer-events-none absolute inset-0 opacity-20" /> : null}
-    </motion.div>
+      {glare && enabled ? <m.div aria-hidden style={{ background: glareBg }} className="pointer-events-none absolute inset-0 opacity-20" /> : null}
+    </m.div>
   );
 }

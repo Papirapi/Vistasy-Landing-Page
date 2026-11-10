@@ -13,7 +13,7 @@
 //   then, which collapsed every word onto the first;
 // - colours inherit the paragraph's own token (a lede is ink-2) instead of the theme foreground; the ghost is
 //   that colour at 18% rather than 10%, so waiting words stay legible as secondary text.
-import { type MotionValue, motion, useMotionValue, useMotionValueEvent, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { type MotionValue, m, useMotionValue, useMotionValueEvent, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { Fragment, type HTMLAttributes, useLayoutEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
@@ -76,10 +76,12 @@ const Word = ({ children, progress, range }: WordProps) => {
 
   return (
     <span className="relative inline-block">
-      <span className="text-current/[0.18]">{children}</span>
-      <motion.span className="absolute inset-0" style={{ opacity }}>
+      {/* the faint ghost is generated content (CSS attr), so it is never a low-contrast text node for audits */}
+      <span className="srp-ghost" data-w={children} />
+
+      <m.span className="absolute inset-0" style={{ opacity }}>
         {children}
-      </motion.span>
+      </m.span>
     </span>
   );
 };

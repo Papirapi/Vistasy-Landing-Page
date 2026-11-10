@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, m, useReducedMotion } from "motion/react";
 import { Icon } from "@/components/icon";
 import { Gauge } from "@/components/kit/gauge";
 import { BeforeAfter } from "@/components/craftwork/before-after";
@@ -49,12 +49,12 @@ const SCALLOP = (() => {
 
 const KIND_TAG: Record<Kind, string> = { fits: "v-tag ok", caution: "v-tag flag", neutral: "v-tag" };
 
-function Press({ children, className, ...rest }: React.ComponentProps<typeof motion.button>) {
+function Press({ children, className, ...rest }: React.ComponentProps<typeof m.button>) {
   const reduce = useReducedMotion();
   return (
-    <motion.button type="button" whileTap={reduce ? undefined : { scale: 0.94 }} transition={SPRING_PRESS} className={className} {...rest}>
+    <m.button type="button" whileTap={reduce ? undefined : { scale: 0.94 }} transition={SPRING_PRESS} className={className} {...rest}>
       {children}
-    </motion.button>
+    </m.button>
   );
 }
 
@@ -72,16 +72,16 @@ function ProductCard({ p, s }: { p: CollageProduct; s: CollageStrings }) {
         <span className="max-w-full truncate text-center text-micro font-medium">{p.name}</span>
         <AnimatePresence mode="wait" initial={false}>
           {checked ? (
-            <motion.span key="v" className={KIND_TAG[p.kind]} initial={{ opacity: 0, y: 6, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0 }} role="status">
+            <m.span key="v" className={KIND_TAG[p.kind]} initial={{ opacity: 0, y: 6, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0 }} role="status">
               {p.title}
-            </motion.span>
+            </m.span>
           ) : (
-            <motion.span key="b" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            <m.span key="b" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               <Press onClick={() => setChecked(true)} className="c-pill bg-shell text-on-shell">
                 <Icon name="i-barcode" className="ico h-4 w-4" />
                 {s.check}
               </Press>
-            </motion.span>
+            </m.span>
           )}
         </AnimatePresence>
       </div>
@@ -171,14 +171,14 @@ function SarahCard({ s }: { s: CollageStrings }) {
       </div>
       <AnimatePresence mode="wait" initial={false}>
         {q !== null && (
-          <motion.p key={q} className="bubble mt-3" data-typing={typing ? "on" : undefined} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} aria-live="polite">
+          <m.p key={q} className="bubble mt-3" data-typing={typing ? "on" : undefined} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} aria-live="polite">
             <span className="bubble-dots" aria-hidden="true">
               <i />
               <i />
               <i />
             </span>
             <span className="bubble-text">{s.faq[q].a}</span>
-          </motion.p>
+          </m.p>
         )}
       </AnimatePresence>
     </div>
@@ -192,9 +192,9 @@ function ConsentCard({ s }: { s: CollageStrings }) {
       <p className="text-micro font-medium text-ink-3">{s.consent}</p>
       <div className="mt-3 flex items-center justify-between gap-3">
         <AnimatePresence mode="wait" initial={false}>
-          <motion.span key={String(del)} className="text-small font-medium" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.2 }}>
+          <m.span key={String(del)} className="text-small font-medium" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.2 }}>
             {del ? s.del : s.keep}
-          </motion.span>
+          </m.span>
         </AnimatePresence>
         <button type="button" role="switch" aria-checked={del} aria-label={s.del} onClick={() => setDel((v) => !v)} className="c-switch" />
       </div>
@@ -208,10 +208,10 @@ function GateCard({ s }: { s: CollageStrings }) {
     <div className="c-card p-5">
       <ul key={run} className="flex flex-col gap-2">
         {s.gate.map((g, k) => (
-          <motion.li key={g} className="flex items-center gap-2 text-small" initial={run ? { opacity: 0, x: -6 } : false} animate={{ opacity: 1, x: 0 }} transition={{ delay: k * 0.25 }}>
+          <m.li key={g} className="flex items-center gap-2 text-small" initial={run ? { opacity: 0, x: -6 } : false} animate={{ opacity: 1, x: 0 }} transition={{ delay: k * 0.25 }}>
             <Icon name="i-check-circle-fill" className="ico h-4 w-4 text-good" />
             {g}
-          </motion.li>
+          </m.li>
         ))}
       </ul>
       <Press onClick={() => setRun((v) => v + 1)} className="c-pill mt-4 bg-sheet-3 text-ink">
@@ -240,9 +240,9 @@ function PriceCard({ s }: { s: CollageStrings }) {
       <p className="mt-5 flex items-baseline gap-2">
         <NumberFlow value={yearly ? s.yearPrice : s.monthPrice} className="whitespace-nowrap text-[2.125rem] font-medium leading-none tracking-[-0.03em]" />
         <AnimatePresence mode="wait" initial={false}>
-          <motion.span key={String(yearly)} className="text-small text-ink-3" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.2 }}>
+          <m.span key={String(yearly)} className="text-small text-ink-3" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.2 }}>
             {yearly ? s.perYear : s.perMonth}
-          </motion.span>
+          </m.span>
         </AnimatePresence>
       </p>
     </TiltCard>

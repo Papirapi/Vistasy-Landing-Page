@@ -101,7 +101,8 @@ export function initMotion(): () => void {
         const n = words.length;
         const apply = (p: number) =>
           words.forEach((w, i) => {
-            w.style.opacity = String(0.4 + 0.6 * Math.min(1, Math.max(0, p * n - i)));
+            // floor 0.76: unread words still meet AA contrast on the ground (0.4 failed the audit)
+            w.style.opacity = String(0.76 + 0.24 * Math.min(1, Math.max(0, p * n - i)));
           });
         let read = 0;
         const advance = (p: number) => {
