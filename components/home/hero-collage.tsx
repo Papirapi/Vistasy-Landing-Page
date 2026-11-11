@@ -68,7 +68,9 @@ function ProductCard({ p, s }: { p: CollageProduct; s: CollageStrings }) {
         <Press aria-pressed={saved} aria-label={saved ? s.saved : s.save} onClick={() => setSaved((v) => !v)} className="absolute left-[14%] top-[16%] grid h-10 w-10 place-items-center rounded-full text-flag">
           <Icon name={saved ? "i-check-circle-fill" : "i-plus"} className={cn("ico h-5 w-5", saved ? "text-good" : "text-ink-3")} />
         </Press>
-        <Image src={p.img} alt="" width={120} height={120} className="h-[46%] w-auto object-contain" />
+        <span className="label-img aspect-[3/4] !h-[46%] !w-auto rounded-[12px]">
+          <Image src={p.img} alt="" width={96} height={128} sizes="96px" />
+        </span>
         <span className="max-w-full truncate text-center text-micro font-medium">{p.name}</span>
         <AnimatePresence mode="wait" initial={false}>
           {checked ? (
@@ -316,7 +318,9 @@ function ProductDeck({ products, s, label, nextLabel }: { products: CollageProdu
       revealed: on,
       content: (
         <div className="flex h-full flex-col items-center justify-center px-5 pt-6 pb-5 text-center">
-          <Image src={p.img} alt="" width={120} height={120} draggable={false} className="pointer-events-none h-[88px] w-auto select-none object-contain" />
+          <span className="label-img pointer-events-none !h-[104px] !w-[78px] select-none rounded-[12px]">
+            <Image src={p.img} alt="" width={78} height={104} sizes="78px" draggable={false} />
+          </span>
           <span className="mt-3 max-w-full truncate text-small font-medium">{p.name}</span>
           <span className="text-micro text-ink-3">{p.meta}</span>
           <span className="mt-3 flex min-h-11 items-center gap-2">
@@ -408,7 +412,9 @@ function Peek({ img }: { img: string }) {
   return (
     <div className="scallop-wrap">
       <div className="scallop grid aspect-square place-items-center p-[22%]">
-        <Image src={img} alt="" width={120} height={120} className="h-auto w-[70%] object-contain" />
+        <span className="label-img aspect-[3/4] !h-auto !w-[62%] rounded-[12px]">
+          <Image src={img} alt="" width={96} height={128} sizes="96px" />
+        </span>
       </div>
     </div>
   );

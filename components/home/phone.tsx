@@ -147,8 +147,8 @@ export function Phone({ person, readings, label, check, s }: { person: { src: st
             </m.div>
           ) : (
             <m.div key="product" className="absolute inset-0 grid place-items-center" initial={{ opacity: 0, scale: 1.04 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.35 }}>
-              <div className="relative grid h-[46%] w-[62%] place-items-center rounded-[28px] bg-white/80 shadow-[var(--e2)]">
-                <Image src={check.img} alt="" width={150} height={150} className="h-[70%] w-auto object-contain" />
+              <div className="relative h-[46%] w-[62%] overflow-hidden rounded-[28px] bg-[#ece6dd] shadow-[var(--e2)]">
+                <Image src={check.img} alt="" fill sizes="160px" className="object-cover" />
                 <span className="scan-frame !inset-[8%] !h-auto !w-auto" aria-hidden="true" />
               </div>
             </m.div>

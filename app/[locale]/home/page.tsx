@@ -34,10 +34,10 @@ export async function generateMetadata({ params }: Params) {
 const CONCERNS = [
   // sample values: each is the median of three reads, and lo/hi are the lowest and highest read;
   // x/y place the region dot on the hero photo (percent of the photo box)
-  { key: "texture", value: 51, lo: 49, hi: 54, x: 49, y: 20, img: "/products/glycolic-7-exfoliating-toner.png" },
-  { key: "photodamage", value: 44, lo: 42, hi: 47, x: 55, y: 9, img: "/products/daily-defence-spf-50-fluid.png" },
-  { key: "blemishes", value: 38, lo: 36, hi: 41, x: 54, y: 25, img: "/products/azelaic-acid-10-booster.png" },
-  { key: "darkCircles", value: 33, lo: 31, hi: 34, x: 61, y: 16, img: "/products/caffeine-eye-serum.png" },
+  { key: "texture", value: 51, lo: 49, hi: 54, x: 49, y: 20, img: "/products/glycolic-7-exfoliating-toner.jpg" },
+  { key: "photodamage", value: 44, lo: 42, hi: 47, x: 55, y: 9, img: "/products/daily-defence-spf-50-fluid.jpg" },
+  { key: "blemishes", value: 38, lo: 36, hi: 41, x: 54, y: 25, img: "/products/azelaic-acid-10-booster.jpg" },
+  { key: "darkCircles", value: 33, lo: 31, hi: 34, x: 61, y: 16, img: "/products/caffeine-eye-serum.jpg" },
 ] as const;
 
 // one read, in the order the app runs it (scrollytelling steps)
@@ -57,9 +57,9 @@ const TRUST = [
 
 // The product check opens on the case that shows why it matters (critique round 2).
 const CHECKS = [
-  { key: "a", img: "/products/gentle-gel-cleanser.png", kind: "caution" },
-  { key: "b", img: "/products/azelaic-acid-10-booster.png", kind: "fits" },
-  { key: "c", img: "/products/barrier-repair-cream.png", kind: "neutral" },
+  { key: "a", img: "/products/gentle-gel-cleanser.jpg", kind: "caution" },
+  { key: "b", img: "/products/azelaic-acid-10-booster.jpg", kind: "fits" },
+  { key: "c", img: "/products/barrier-repair-cream.jpg", kind: "neutral" },
 ] as const;
 
 const RULES = [

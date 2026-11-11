@@ -121,7 +121,7 @@ export function WidgetStage({ s, sample }: { s: WidgetStageStrings; sample: Widg
             </div>
             <div className="rt-sf-body">
               <span className="rt-ws-shot">
-                <Image src="/products/azelaic-acid-10-booster.png" alt="" width={220} height={220} priority sizes="(min-width: 1024px) 140px, 30vw" />
+                <Image src="/products/azelaic-acid-10-booster.jpg" alt="" width={220} height={220} priority sizes="(min-width: 1024px) 140px, 30vw" />
               </span>
               <div className="min-w-0">
                 <p className="rt-sf-small text-ink-3">{s.brand}</p>

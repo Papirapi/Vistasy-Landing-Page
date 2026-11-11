@@ -26,9 +26,9 @@ const SAMPLE = { value: 38, lo: 36, hi: 41 };
 
 // Three product pages, three verdicts. It opens on the caution: the widget is not a sales tool.
 const CHECKS = [
-  { key: "a", img: "/products/gentle-gel-cleanser.png", kind: "caution" },
-  { key: "b", img: "/products/azelaic-acid-10-booster.png", kind: "fits" },
-  { key: "c", img: "/products/barrier-repair-cream.png", kind: "neutral" },
+  { key: "a", img: "/products/gentle-gel-cleanser.jpg", kind: "caution" },
+  { key: "b", img: "/products/azelaic-acid-10-booster.jpg", kind: "fits" },
+  { key: "c", img: "/products/barrier-repair-cream.jpg", kind: "neutral" },
 ] as const;
 
 const RANK_STEPS = ["s1", "s2", "s3", "s4"] as const;
@@ -66,7 +66,7 @@ export default async function Retailers({ params }: Params) {
     brand: home("label.brand"),
     name: r("name"),
     meta: r("meta"),
-    img: "/products/daily-defence-spf-50-fluid.png",
+    img: "/products/daily-defence-spf-50-fluid.jpg",
     fields: [{ active: r("active"), holds: r("holds"), needs: r("needs"), tag: r("tag") }],
     direction: r("direction"),
     foot: home("label.foot"),

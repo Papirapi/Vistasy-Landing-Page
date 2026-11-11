@@ -118,7 +118,7 @@ export default async function HowItWorks({ params }: Params) {
             brand: h("label.brand"),
             name: lp("name"),
             meta: lp("meta"),
-            img: "/products/azelaic-acid-10-booster.png",
+            img: "/products/azelaic-acid-10-booster.jpg",
             // the sample dose sits on the edge of the supported range: "may be enough" reads neutral, as on the home page
             fields: [{ active: lp("active"), holds: lp("holds"), needs: lp("needs"), tag: lp("tag"), tagKind: "neutral" }],
             direction: lp("direction"),
@@ -133,7 +133,7 @@ export default async function HowItWorks({ params }: Params) {
         <div className="s1 p-4">
           <div className="flex items-center gap-4">
             <span className="label-img relative h-16 w-16 flex-none">
-              <Image src="/products/gentle-gel-cleanser.png" alt="" width={64} height={64} />
+              <Image src="/products/gentle-gel-cleanser.jpg" alt="" width={64} height={64} />
               <span className="how-scan" aria-hidden="true" />
             </span>
             <span className="min-w-0">
