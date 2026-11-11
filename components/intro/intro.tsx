@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-// The opening (after spykercars.com, the owner's reference): a clean curtain, the VISTASY mark draws itself as
-// a scan locking onto a face, the letters rise, then the curtain lifts from the bottom while the logo flies into
+// The opening (after spykercars.com, the owner's reference): a clean curtain, the VISTASY mark sweeps in left to
+// right the way its stroke is drawn, the letters rise, then the curtain lifts from the bottom while the logo flies into
 // the header and the hero rises into place. The drawing is CSS from the first paint; this only plays the exit,
 // with the Web Animations API (no library on every page). It plays once per visit, on the home page, never under
 // reduced motion: the boot script in the layout decides before the first paint (html.intro-on) and removes it
@@ -80,18 +80,9 @@ export function Intro() {
       <div className="intro-curtain" />
       <div className="intro-logo">
         <span className="intro-mark">
-          {/* drawn: the four scan corners lock on, a scan passes, the face is found */}
-          <svg viewBox="0 0 256 256" className="intro-draw">
-            <path className="c c1" pathLength={1} d="M40 76V40h36" />
-            <path className="c c2" pathLength={1} d="M180 40h36v36" />
-            <path className="c c3" pathLength={1} d="M216 180v36h-36" />
-            <path className="c c4" pathLength={1} d="M76 216H40v-36" />
-            <circle className="ring" pathLength={1} cx="128" cy="128" r="64" transform="rotate(-90 128 128)" />
-          </svg>
-          <span className="intro-scan" />
-          {/* then the mark itself, the same one the header carries */}
-          <svg viewBox="0 0 256 256" className="intro-fill">
-            <use href="/app/icons.svg#i-scan-smiley-fill" />
+          {/* the mark the header carries, revealed by a wipe that follows its stroke, left to right */}
+          <svg viewBox="0 0 378.34 219.47" className="intro-fill">
+            <use href="/app/icons.svg#i-vistasy" />
           </svg>
         </span>
         <span className="intro-word">

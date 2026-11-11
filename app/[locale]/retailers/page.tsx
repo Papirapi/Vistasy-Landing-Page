@@ -35,7 +35,7 @@ const RANK_STEPS = ["s1", "s2", "s3", "s4"] as const;
 
 const STORE_STEPS = [
   { key: "s1", icon: "i-shopping-bag" },
-  { key: "s2", icon: "i-user-focus" },
+  { key: "s2", icon: "i-person-check" },
   { key: "s3", icon: "i-seal-check" },
   { key: "s4", icon: "i-calendar-blank" },
   { key: "s5", icon: "i-chart-line" },

@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Params) {
 // Everything the site and the owner's published methodology say about data, in one findable place
 // (critique rounds 2 and 3). Facts only; it is a plain summary, not the legal privacy policy.
 const ROWS = [
-  { key: "before", icon: "i-user-focus" },
+  { key: "before", icon: "i-person-check" },
   { key: "where", icon: "i-globe-hemisphere-west" },
   { key: "control", icon: "i-trash" },
   { key: "email", icon: "i-envelope-simple" },

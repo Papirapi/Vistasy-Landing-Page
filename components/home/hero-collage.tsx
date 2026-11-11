@@ -419,7 +419,7 @@ function FreeBadge({ s }: { s: CollageStrings }) {
     <div className="scallop-wrap">
       <div className="scallop badge-lav flex aspect-square flex-col items-center justify-center gap-3 p-[18%] text-center">
         <span className="grid h-12 w-12 place-items-center rounded-full bg-shell text-on-shell" aria-hidden="true">
-          <Icon name="i-scan-smiley-fill" className="ico h-6 w-6" />
+          <Icon name="i-vistasy" className="ico h-[14px] w-[24px]" />
         </span>
         <span className="text-title leading-tight">{s.free}</span>
         <ContactReveal href="/pricing">{s.freeLink}</ContactReveal>

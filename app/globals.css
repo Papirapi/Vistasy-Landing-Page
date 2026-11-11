@@ -546,7 +546,7 @@ a { text-underline-offset: 3px; text-decoration-thickness: 1px; }
   .dark :is(.eyebrow, .fact-chip) { background: var(--sheet-2); }
   .eyebrow { padding: 0 14px 0 5px; }
   .eyebrow .eb-ic { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 999px; background: var(--shell); color: var(--on-shell); }
-  .eyebrow .eb-ic .ico { width: 13px; height: 13px; }
+  .eyebrow .eb-ic .ico { width: 14px; height: 8px; }
   .fact-chip { padding: 0 12px 0 10px; }
   .fact-chip .ico { width: 15px; height: 15px; color: var(--good); }
   /* the primary pill carries its icon in a circle (Havenly's button anatomy); the arrow nudges on hover */
@@ -1124,7 +1124,7 @@ html:not(.js) .scrolly-panel { position: relative; opacity: 1; transform: none; 
 @keyframes cam-drift { from { transform: translate(-14%, -10%); } to { transform: translate(16%, 12%); } }
 @media (prefers-reduced-motion: reduce) { .cam-backdrop::after { animation: none; } }
 
-/* ── the opening (after spykercars.com): the curtain, the mark drawing itself as a scan, the letters rising;
+/* ── the opening (after spykercars.com): the curtain, the mark sweeping in, the letters rising;
    then (components/intro/intro.tsx) the curtain lifts and the logo flies into the header. Shown only under
    html.intro-on, which the boot script sets before the first paint and always removes within 5s. The logo is
    the header's wordmark at --k times its size (same proportions), so it lands on it exactly. ── */
@@ -1136,27 +1136,14 @@ html.intro-hold [data-intro] *, html.intro-hold [data-intro] *::before, html.int
 .intro-curtain { position: absolute; inset: 0; background: var(--ground); }
 .intro-logo { --k: 3; position: relative; display: inline-flex; align-items: center; gap: calc(9px * var(--k)); font: 600 calc(0.9375rem * var(--k)) / 1 var(--font-sans); letter-spacing: 0.18em; color: var(--ink); transform-origin: 0 0; will-change: transform; }
 @media (max-width: 639.98px) { .intro-logo { --k: 2; } }
-.intro-mark { position: relative; flex: none; width: calc(22px * var(--k)); height: calc(22px * var(--k)); color: var(--cross-ink); }
+/* the mark at the header's proportions (26 x 15), so the fly-in lands on it exactly */
+.intro-mark { position: relative; flex: none; width: calc(26px * var(--k)); height: calc(15px * var(--k)); color: var(--cross-ink); }
 .intro-mark svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.intro-draw :is(path, circle) { fill: none; stroke: currentColor; stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
-.intro-fill { fill: currentColor; opacity: 0; }
-.intro-scan { position: absolute; left: 20%; right: 20%; top: 20%; height: 4%; border-radius: 99px; opacity: 0;
-  background: linear-gradient(90deg, transparent, var(--cross) 20%, var(--cross) 80%, transparent); box-shadow: 0 0 calc(6px * var(--k)) color-mix(in srgb, var(--cross) 70%, transparent); }
+.intro-fill { fill: currentColor; clip-path: inset(0 100% 0 0); }
 .intro-word { display: inline-flex; }
 .intro-l { display: inline-block; overflow: hidden; padding-bottom: 0.08em; margin-bottom: -0.08em; }
 .intro-l > span { display: inline-block; transform: translateY(115%); }
-html.intro-on .intro-draw .c { animation: intro-draw 0.5s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
-html.intro-on .intro-draw .c1 { animation-delay: 0.1s; }
-html.intro-on .intro-draw .c2 { animation-delay: 0.17s; }
-html.intro-on .intro-draw .c3 { animation-delay: 0.24s; }
-html.intro-on .intro-draw .c4 { animation-delay: 0.31s; }
-html.intro-on .intro-draw .ring { animation: intro-draw 0.55s cubic-bezier(0.65, 0, 0.35, 1) 0.6s forwards; }
-html.intro-on .intro-scan { animation: intro-scan 0.75s cubic-bezier(0.65, 0, 0.35, 1) 0.4s both; }
-html.intro-on .intro-draw { animation: intro-out 0.3s ease 1.12s forwards; }
-html.intro-on .intro-fill { animation: intro-in 0.3s ease 1.08s forwards; }
+html.intro-on .intro-fill { animation: intro-wipe 0.95s cubic-bezier(0.65, 0, 0.35, 1) 0.15s forwards; }
 html.intro-on .intro-l > span { animation: intro-rise 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards; animation-delay: calc(0.72s + var(--i) * 45ms); }
-@keyframes intro-draw { to { stroke-dashoffset: 0; } }
+@keyframes intro-wipe { to { clip-path: inset(0 0 0 0); } }
 @keyframes intro-rise { to { transform: none; } }
-@keyframes intro-in { to { opacity: 1; } }
-@keyframes intro-out { to { opacity: 0; } }
-@keyframes intro-scan { 0% { opacity: 0; transform: translateY(0); } 15%, 80% { opacity: 1; } 100% { opacity: 0; transform: translateY(1450%); } }

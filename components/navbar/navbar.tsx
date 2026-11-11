@@ -24,7 +24,7 @@ function spare(row: HTMLElement | null) {
 function Wordmark({ onClick }: { onClick?: () => void }) {
   return (
     <Link href="/home" className="wordmark" onClick={onClick}>
-      <Icon name="i-scan-smiley-fill" className="ico h-[22px] w-[22px] text-cross-ink" />
+      <Icon name="i-vistasy" className="ico h-[15px] w-[26px] text-cross-ink" />
       <span className="wordmark-text">VISTASY</span>
     </Link>
   );

@@ -43,13 +43,13 @@ const CONCERNS = [
 // one read, in the order the app runs it (scrollytelling steps)
 const STEPS = [
   { key: "selfie", icon: "i-camera" },
-  { key: "readings", icon: "i-scan-smiley" },
+  { key: "readings", icon: "i-read" },
   { key: "routine", icon: "i-list-checks" },
   { key: "check", icon: "i-barcode" },
 ] as const;
 
 const TRUST = [
-  { key: "consent", icon: "i-user-focus" },
+  { key: "consent", icon: "i-person-check" },
   { key: "keep", icon: "i-clock-counter-clockwise" },
   { key: "where", icon: "i-globe-hemisphere-west" },
   { key: "delete", icon: "i-trash" },
@@ -134,7 +134,7 @@ export default async function Home({ params }: Params) {
               <div className="c-card p-7 sm:p-8">
                 <p className="eyebrow" data-hero-fade="">
                   <span className="eb-ic" aria-hidden="true">
-                    <Icon name="i-scan-smiley-fill" className="ico" />
+                    <Icon name="i-vistasy" className="ico" />
                   </span>
                   {t("hero.eyebrow")}
                 </p>

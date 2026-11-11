@@ -118,7 +118,7 @@ export function Phone({ person, readings, label, check, s }: { person: { src: st
               </span>
             ),
             quality: <IslandStatus icon="i-check-circle-fill" tone="text-[var(--cam-good)]" text={s.quality} />,
-            title: <IslandStatus icon="i-scan-smiley-fill" tone="text-white" text={s.title} />,
+            title: <IslandStatus icon="i-read" tone="text-white" text={s.title} />,
             agree: <IslandStatus icon="i-seal-check-fill" tone="text-[var(--cam-cross)]" text={s.agree} />,
           }}
         />

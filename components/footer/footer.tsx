@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="wrap grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr] lg:gap-10">
         <div className="max-w-[22rem]">
           <Link href="/home" aria-label={t("goHome")} className="wordmark">
-            <Icon name="i-scan-smiley-fill" className="ico h-[22px] w-[22px] text-cross-ink" />
+            <Icon name="i-vistasy" className="ico h-[15px] w-[26px] text-cross-ink" />
             VISTASY
           </Link>
           <p className="mt-5 text-small text-ink-2">{t("tagline")}</p>
