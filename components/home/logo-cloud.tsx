@@ -4,9 +4,10 @@ import { Marquee } from "@/components/kit/marquee";
 const LOGOS = [
   { src: "/partners/cdc-logo.svg", alt: "Caisse des Dépôts et Consignations" },
   { src: "/partners/giz-logo.svg", alt: "GIZ, Deutsche Gesellschaft für Internationale Zusammenarbeit" },
-  { src: "/partners/nabda-logo.svg", alt: "Nabda" },
   { src: "/partners/smartcapital-logo.svg", alt: "Smart Capital" },
   { src: "/partners/theworldbank-logo.svg", alt: "The World Bank" },
+  { src: "/partners/aws-logo.svg", alt: "Amazon Web Services" },
+  { src: "/partners/microsoft-logo.svg", alt: "Microsoft" },
 ];
 
 // The partner marks on a slow marquee (Magic UI marquee anatomy); still and centred under reduced motion.
