@@ -7,7 +7,7 @@ import { RankFlow } from "@/components/diagrams/rank-flow";
 import { VerdictDemo, type CheckItem } from "@/components/home/verdict-demo";
 import { Readings } from "@/components/meter";
 import { Faq } from "@/components/faq";
-import { FaqJsonLd } from "@/components/seo/json-ld";
+import { FaqJsonLd, PageJsonLd } from "@/components/seo/json-ld";
 import { Icon } from "@/components/icon";
 import { HighlightPhrase } from "@/components/craftwork/highlighter";
 import { WidgetStage } from "@/components/retailers/widget-stage";
@@ -88,6 +88,7 @@ export default async function Retailers({ params }: Params) {
 
   return (
     <>
+      <PageJsonLd locale={locale} metaKey="retailers" path="/retailers" />
       {/* 1. Hero: the outcome, the pilot and the risk reversed, beside the widget staged on the shopper's product page */}
       <section aria-labelledby="ret-h" data-intro="">
         <div className="wrap grid items-center gap-x-16 gap-y-16 pt-8 pb-[var(--space-tight)] md:pt-14 lg:min-h-[calc(100dvh-var(--nav-h))] lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:py-6">

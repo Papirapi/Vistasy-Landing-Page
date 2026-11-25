@@ -16,7 +16,7 @@ import { VerdictDemo, type CheckItem } from "@/components/home/verdict-demo";
 import LogoCloud from "@/components/home/logo-cloud";
 import { InviteForm } from "@/components/invite-form";
 import { Faq } from "@/components/faq";
-import { FaqJsonLd, OrganizationJsonLd, WebSiteJsonLd } from "@/components/seo/json-ld";
+import { AppJsonLd, FaqJsonLd } from "@/components/seo/json-ld";
 import { Split } from "@/components/split";
 import { Icon } from "@/components/icon";
 import { Readings } from "@/components/meter";
@@ -119,8 +119,7 @@ export default async function Home({ params }: Params) {
 
   return (
     <>
-      <OrganizationJsonLd locale={locale} />
-      <WebSiteJsonLd locale={locale} />
+      <AppJsonLd locale={locale} />
 
       {/* 1 + 2. The hero and the read, as one scene: the app on a phone in the middle of interactive cards
           (the reference the owner chose), then the same phone travels the whole page with the reader, to the

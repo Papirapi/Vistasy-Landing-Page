@@ -105,11 +105,21 @@ export function DottedMap<M extends Marker = Marker>({
 
   const svg = (
     <svg viewBox={`0 0 ${width} ${height}`} className={cn("text-ink-4", className)} style={{ width: "100%", height: "100%", ...style }} {...svgProps}>
-      {points.map((point, index) => {
-        const rowIndex = yToRowIndex.get(point.y) ?? 0;
-        const offsetX = stagger && rowIndex % 2 === 1 ? xStep / 2 : 0;
-        return <circle cx={point.x + offsetX} cy={point.y} r={dotRadius} fill={dotColor} key={`${point.x}-${point.y}-${index}`} />;
-      })}
+      {/* VISTASY: every dot in one path (a zero-length segment with a round cap, as wide as the dot) instead
+          of thousands of <circle> elements, which made the page's HTML close to 1 MB. Same look, one node. */}
+      <path
+        d={points
+          .map((point) => {
+            const rowIndex = yToRowIndex.get(point.y) ?? 0;
+            const offsetX = stagger && rowIndex % 2 === 1 ? xStep / 2 : 0;
+            return `M${+(point.x + offsetX).toFixed(2)} ${+point.y.toFixed(2)}h0`;
+          })
+          .join("")}
+        fill="none"
+        stroke={dotColor}
+        strokeWidth={dotRadius * 2}
+        strokeLinecap="round"
+      />
 
       {renderRoute?.(placed)}
 

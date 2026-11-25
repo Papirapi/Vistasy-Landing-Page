@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { Split } from "@/components/split";
 import { LEGAL } from "@/constants/legal";
 import { LEGAL_DOCS, type LegalKey } from "@/content/legal";
+import { PageJsonLd } from "@/components/seo/json-ld";
 
 const PATHS: Record<LegalKey, string> = { terms: "/terms", privacy: "/privacy", refund: "/refund-policy" };
 export const legalPath = (key: LegalKey) => PATHS[key];
@@ -40,6 +41,7 @@ export async function LegalPage({ docKey, locale }: { docKey: LegalKey; locale: 
 
   return (
     <article aria-labelledby="legal-h">
+      <PageJsonLd locale={locale} metaKey={docKey} path={PATHS[docKey]} />
       <div className="wrap pt-10 pb-[var(--space-section)] md:pt-16">
         <header data-intro="" className="max-w-[44rem]">
           <Split id="legal-h" as="h1" intro text={doc.title} className="text-display" />

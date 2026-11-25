@@ -12,6 +12,7 @@ import { MotionRoot } from "@/components/motion/motion-root";
 import { LazyMotionProvider } from "@/components/motion/lazy-motion";
 import ScrollProgress from "@/components/craftwork/scroll-progress";
 import { Intro } from "@/components/intro/intro";
+import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/seo/json-ld";
 import "../globals.css";
 
 // Host Grotesk (text and display) + Spline Sans Mono (measured values only); both SIL OFL,
@@ -23,8 +24,21 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   // the tab reads VISTASY first on every page; the home tab is the name alone (lib/meta.ts)
   title: { default: "VISTASY", template: "VISTASY · %s" },
-  openGraph: { type: "website", siteName: "VISTASY", images: ["/og-image.png"] },
-  twitter: { card: "summary_large_image" },
+  applicationName: "VISTASY",
+  authors: [{ name: "VISTASY", url: SITE_URL }],
+  creator: "VISTASY",
+  publisher: "VISTASY",
+  category: "Beauty & skincare",
+  // full snippets and large image previews in Google results
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
+  // Search Console and Bing Webmaster Tools ownership: set the tokens in the Vercel project's environment
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION } : undefined,
+  },
+  formatDetection: { telephone: false, address: false, email: false },
+  openGraph: { type: "website", siteName: "VISTASY", images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "VISTASY" }] },
+  twitter: { card: "summary_large_image", images: ["/og-image.png"] },
 };
 
 export const viewport: Viewport = {
@@ -77,6 +91,9 @@ export default async function LocaleLayout({ children, params }: { children: Rea
             <a href="#main" className="skip">
               {t("skip")}
             </a>
+            {/* who publishes the site, on every page (schema.org Organization and WebSite) */}
+            <OrganizationJsonLd locale={locale} />
+            <WebSiteJsonLd locale={locale} />
             <NavBar />
             {/* the opening, above the header (shown only when the boot script chose to play it) */}
             <Intro />

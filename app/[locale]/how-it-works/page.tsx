@@ -1,7 +1,8 @@
 import Image from "next/image";
+import { HowToJsonLd, PageJsonLd } from "@/components/seo/json-ld";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { pageMeta } from "@/lib/meta";
-import { APP_URL } from "@/constants/navbar-items-list";
+import { APP_URL, SITE_URL } from "@/constants/navbar-items-list";
 import { Split } from "@/components/split";
 import { DispensingLabel } from "@/components/label";
 import { Readings } from "@/components/meter";
@@ -171,6 +172,13 @@ export default async function HowItWorks({ params }: Params) {
 
   return (
     <>
+      <PageJsonLd locale={locale} metaKey="howItWorks" path="/how-it-works" />
+      <HowToJsonLd
+        name={t("diagram.title")}
+        description={t("lede")}
+        url={`${SITE_URL}/${locale}/how-it-works`}
+        steps={STAGES.map((s) => ({ name: t(`steps.${s.key}.title`), text: t(`steps.${s.key}.text`) }))}
+      />
       {/* 1. Hero: the whole journey at a glance, as an elevated object on its stage. Its wires draw in the order
              the app runs the stages (components/how/journey-draw.tsx); the plane drifts back, the card lifts. */}
       <section aria-labelledby="hiw-h" data-intro="">

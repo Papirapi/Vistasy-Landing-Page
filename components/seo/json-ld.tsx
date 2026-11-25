@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { CONTACT_EMAIL, SITE_URL as SITE } from "@/constants/navbar-items-list";
+import { APP_URL, CONTACT_EMAIL, SITE_URL as SITE } from "@/constants/navbar-items-list";
 
 // schema.org structured data, rendered on the server (no "use client").
 // Organization and WebSite belong on the home page (or once in the layout); FaqJsonLd goes next to
@@ -33,9 +33,14 @@ export async function OrganizationJsonLd({ locale }: { locale: string }) {
         "@id": ORG_ID,
         name: "VISTASY",
         url: SITE,
-        logo: `${SITE}/icon0.svg`,
+        // a square raster logo: Google's logo guidelines ask for at least 112 x 112 px
+        logo: { "@type": "ImageObject", url: `${SITE}/web-app-manifest-512x512.png`, width: 512, height: 512 },
+        image: `${SITE}/og-image.png`,
         email: CONTACT_EMAIL,
         description: t("tagline"),
+        slogan: t("tagline"),
+        knowsAbout: ["skin analysis", "skincare", "cosmetic ingredients", "INCI ingredient lists", "skincare routines"],
+        contactPoint: { "@type": "ContactPoint", contactType: "customer support", email: CONTACT_EMAIL, availableLanguage: ["English", "French"] },
         address: {
           "@type": "PostalAddress",
           streetAddress: STREET[locale] ?? STREET.en,
@@ -61,6 +66,94 @@ export async function WebSiteJsonLd({ locale }: { locale: string }) {
         inLanguage: locale,
         description: t("description"),
         publisher: { "@id": ORG_ID },
+      }}
+    />
+  );
+}
+
+// "4.99 €", "4,99 €", "39 €" -> 4.99, 4.99, 39; anything else (a range, "On request") -> undefined
+function euros(s: string): number | undefined {
+  const m = s.replace(/ /g, " ").match(/^(\d+)(?:[.,](\d{1,2}))?\s*€$/);
+  return m ? Number(`${m[1]}.${m[2] ?? "0"}`) : undefined;
+}
+
+// The product itself, with its free and paid offers read from the same copy the pricing page shows, so the
+// markup can never disagree with the page. Goes on the home and pricing pages.
+export async function AppJsonLd({ locale }: { locale: string }) {
+  const p = await getTranslations({ locale, namespace: "PricingPage" });
+  const home = await getTranslations({ locale, namespace: "HomePage" });
+  const meta = await getTranslations({ locale, namespace: "Metadata.home" });
+  const offer = (name: string, price: number | undefined, unit?: "MON" | "ANN") =>
+    price === undefined
+      ? null
+      : {
+          "@type": "Offer",
+          name,
+          price: price.toFixed(2),
+          priceCurrency: "EUR",
+          url: `${SITE}/${locale}/pricing`,
+          ...(unit ? { priceSpecification: { "@type": "UnitPriceSpecification", price: price.toFixed(2), priceCurrency: "EUR", unitCode: unit, referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: unit } } } : {}),
+        };
+  const offers = [
+    offer(p("people.free.name"), euros(p("people.free.price"))),
+    offer(`${p("people.premium.name")} · ${home("hero.cards.monthly")}`, euros(p("people.premium.priceMonthly")), "MON"),
+    offer(`${p("people.premium.name")} · ${home("hero.cards.yearly")}`, euros(home("hero.cards.yearPrice")), "ANN"),
+  ].filter(Boolean);
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "@id": `${SITE}/#app`,
+        name: "VISTASY",
+        url: APP_URL,
+        description: meta("description"),
+        applicationCategory: "LifestyleApplication",
+        operatingSystem: "Web",
+        browserRequirements: "Requires a camera for the skin scan",
+        inLanguage: ["en", "fr"],
+        image: `${SITE}/og-image.png`,
+        publisher: { "@id": ORG_ID },
+        offers,
+      }}
+    />
+  );
+}
+
+// Breadcrumbs and the page itself, on every page but the home page. Names are the pages' own titles.
+export async function PageJsonLd({ locale, metaKey, path, type = "WebPage" }: { locale: string; metaKey: string; path: string; type?: string }) {
+  const t = await getTranslations({ locale, namespace: `Metadata.${metaKey}` });
+  const url = `${SITE}/${locale}${path}`;
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@graph": [
+          { "@type": type, "@id": `${url}#webpage`, url, name: t("title"), description: t("description"), inLanguage: locale, isPartOf: { "@id": WEBSITE_ID }, publisher: { "@id": ORG_ID } },
+          {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "VISTASY", item: `${SITE}/${locale}/home` },
+              { "@type": "ListItem", position: 2, name: t("title"), item: url },
+            ],
+          },
+        ],
+      }}
+    />
+  );
+}
+
+// The journey as steps, in the order the page's diagram shows them (how-it-works).
+export function HowToJsonLd({ name, description, steps, url }: { name: string; description: string; steps: { name: string; text: string }[]; url: string }) {
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name,
+        description,
+        url,
+        step: steps.map((s, i) => ({ "@type": "HowToStep", position: i + 1, name: s.name, text: s.text })),
       }}
     />
   );

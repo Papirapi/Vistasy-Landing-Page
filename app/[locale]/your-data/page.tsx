@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { PageJsonLd } from "@/components/seo/json-ld";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { pageMeta } from "@/lib/meta";
 import { APP_URL, CONTACT_EMAIL } from "@/constants/navbar-items-list";
@@ -129,6 +130,7 @@ export default async function YourData({ params }: Params) {
   const t = await getTranslations("DataPage");
   return (
     <section aria-labelledby="data-h">
+      <PageJsonLd locale={locale} metaKey="yourData" path="/your-data" />
       <style href="vistasy-data-motion" precedence="default">
         {MOTION}
       </style>

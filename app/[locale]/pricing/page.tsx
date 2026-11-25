@@ -3,7 +3,7 @@ import { pageMeta } from "@/lib/meta";
 import { Split } from "@/components/split";
 import { Pricing, type Amount, type Billing, type Plan } from "@/components/pricing/pricing";
 import { Faq } from "@/components/faq";
-import { FaqJsonLd } from "@/components/seo/json-ld";
+import { FaqJsonLd, PageJsonLd, AppJsonLd } from "@/components/seo/json-ld";
 import { inviteStrings } from "@/lib/invite-strings";
 
 // Page motion on the kit's tokens (the kit is app/globals.css; this only stages it). It ships inside the
@@ -72,6 +72,8 @@ export default async function PricingPage({ params }: Params) {
 
   return (
     <section aria-labelledby="pricing-h">
+      <PageJsonLd locale={locale} metaKey="pricing" path="/pricing" />
+      <AppJsonLd locale={locale} />
       <style href="vistasy-pricing-motion" precedence="default">
         {MOTION}
       </style>

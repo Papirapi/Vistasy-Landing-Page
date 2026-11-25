@@ -15,6 +15,15 @@ const HEADERS: Record<string, string> = {
 
 export async function middleware(request: NextRequest) {
   const response = await nextIntlMiddleware(request);
+  // "/" goes straight to the visitor's language home in one hop (it used to bounce "/" -> "/home" -> "/en/home")
+  const location = response.headers.get("location");
+  if (location) {
+    const to = new URL(location, request.url);
+    if (/^\/(en|fr)\/?$/.test(to.pathname)) {
+      to.pathname = `${to.pathname.replace(/\/$/, "")}/home`;
+      response.headers.set("location", to.toString());
+    }
+  }
   for (const [k, v] of Object.entries(HEADERS)) response.headers.set(k, v);
   return response;
 }

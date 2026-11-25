@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { PageJsonLd } from "@/components/seo/json-ld";
 import { pageMeta } from "@/lib/meta";
 import { CONTACT_EMAIL } from "@/constants/navbar-items-list";
 import { Split } from "@/components/split";
@@ -37,6 +38,7 @@ export default async function Contact({ params }: Params) {
   const f = await getTranslations("Footer");
   return (
     <section aria-labelledby="contact-h">
+      <PageJsonLd locale={locale} metaKey="contact" path="/contact" type="ContactPage" />
       <style href="vistasy-contact-motion" precedence="default">
         {MOTION}
       </style>
