@@ -162,7 +162,9 @@ function Vertical({ id, locale, title, desc, zones, nodes, loop, legend }: Props
       {zoneDefs.map((z) => (
         <g key={z.label}>
           <line x1={280} x2={280} y1={z.from} y2={z.to} className="zone-rule" />
-          <text x={288} y={z.from + 10} className="t-mono">
+          {/* along the rule, reading downward: across, "BEFORE YOU START" ran past the right edge of the 358-wide phone
+              diagram; each zone is tall enough for its label in English and French */}
+          <text transform={`translate(290 ${z.from}) rotate(90)`} className="t-mono">
             {z.label.toLocaleUpperCase(locale)}
           </text>
         </g>
