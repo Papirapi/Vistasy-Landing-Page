@@ -1,0 +1,60 @@
+{
+  "_readme": "Mirror of the Paddle catalog. For each price: copy its Paddle product ID (pro_...) and price ID (pri_...), set amount in major units (4.99, not 499) exactly as in Paddle, then run `pnpm check:prices` to confirm every place the site shows that price says the same. Enterprise is quoted per customer and has no catalog price. shownIn lists the message keys (messages/en.json and fr.json) where the price appears on the site.",
+  "currency": "EUR",
+  "prices": [
+    {
+      "key": "premium-monthly",
+      "product": "Premium",
+      "paddleProductId": "",
+      "paddlePriceId": "",
+      "amount": null,
+      "interval": "month",
+      "shownIn": ["PricingPage.people.premium.priceMonthly", "PricingPage.yearlyHint", "PricingPage.lede", "Metadata.pricing.description", "HomePage.faq.items.q7.a"]
+    },
+    {
+      "key": "premium-yearly",
+      "product": "Premium",
+      "paddleProductId": "",
+      "paddlePriceId": "",
+      "amount": null,
+      "interval": "year",
+      "shownIn": ["PricingPage.monthlyHint", "HomePage.hero.cards.yearPrice"]
+    },
+    {
+      "key": "retail-starter-monthly",
+      "product": "Retail Starter",
+      "paddleProductId": "",
+      "paddlePriceId": "",
+      "amount": null,
+      "interval": "month",
+      "shownIn": ["PricingPage.retailers.starter.price"]
+    },
+    {
+      "key": "retail-starter-extra-scan",
+      "product": "Retail Starter, scans above the allowance",
+      "paddleProductId": "",
+      "paddlePriceId": "",
+      "amount": null,
+      "interval": null,
+      "shownIn": ["PricingPage.retailers.starter.scans"]
+    },
+    {
+      "key": "retail-growth-monthly",
+      "product": "Retail Growth",
+      "paddleProductId": "",
+      "paddlePriceId": "",
+      "amount": null,
+      "interval": "month",
+      "shownIn": ["PricingPage.retailers.growth.price"]
+    },
+    {
+      "key": "retail-growth-extra-scan",
+      "product": "Retail Growth, scans above the allowance",
+      "paddleProductId": "",
+      "paddlePriceId": "",
+      "amount": null,
+      "interval": null,
+      "shownIn": ["PricingPage.retailers.growth.scans"]
+    }
+  ]
+}

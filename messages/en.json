@@ -23,6 +23,18 @@
     "yourData": {
       "title": "Your data",
       "description": "Where your photo is stored, who reads it, how long it is kept and how to delete it, in plain words."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "description": "The terms for using the VISTASY website, app and paid plans, sold through our reseller Paddle."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "What VISTASY collects, why, who processes it, how long it is kept and your rights."
+    },
+    "refund": {
+      "title": "Refund Policy",
+      "description": "A full refund within 14 days of any payment, and how to ask for it."
     }
   },
   "NavBar": {
@@ -56,7 +68,11 @@
     "yourData": "Your data",
     "address": "012 Street of Canada, Building B, 4th Floor, E1 Tunis, Tunisia 1002",
     "hours": "Monday to Friday, 9:00\u00a0to\u00a017:00",
-    "copyright": "All rights reserved"
+    "copyright": "All rights reserved",
+    "legal": "Legal",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "refund": "Refund Policy"
   },
   "InviteForm": {
     "label": "E-mail for your invite",
@@ -305,44 +321,44 @@
   },
   "HowItWorksPage": {
     "title": "How it works",
-    "lede": "Seven stages, in the order the app runs them, from the first selfie to a product you can trust.",
+    "lede": "Seven simple steps, from your first selfie to products that suit you.",
     "diagram": {
       "title": "The VISTASY journey",
-      "label": "Seven stages in three phases. Before: consent, selfie, questions. The read: thirteen readings, then a routine. After: the product check and progress. Progress loops back to a new selfie every 4\u00a0to\u00a012\u00a0weeks.",
-      "before": "Before",
-      "read": "The read",
+      "label": "Seven steps in three parts. Before you start: you agree, take a selfie in daylight and answer a few questions about your skin. Your results: thirteen things about your skin are checked, then you get a routine. After: check any product and see your progress. Every one to three months, you scan again.",
+      "before": "Before you start",
+      "read": "Your results",
       "after": "After",
-      "loop": "4 TO 12 WEEKS",
-      "legendStep": "next stage",
-      "legendLoop": "repeat scan",
+      "loop": "SCAN AGAIN IN 1 TO 3 MONTHS",
+      "legendStep": "then",
+      "legendLoop": "scan again",
       "nodes": {
         "consent": {
-          "t": "Consent",
-          "s": "18+, photo rules"
+          "t": "You agree",
+          "s": "18 or over"
         },
         "selfie": {
-          "t": "Selfie",
-          "s": "quality gate"
+          "t": "Take a selfie",
+          "s": "in daylight"
         },
         "questions": {
           "t": "Questions",
-          "s": "your skin type"
+          "s": "about your skin"
         },
         "readings": {
-          "t": "13 readings",
-          "s": "scored 3 times"
+          "t": "Skin check",
+          "s": "13 things checked"
         },
         "routine": {
-          "t": "Routine",
-          "s": "graded evidence"
+          "t": "Your routine",
+          "s": "what to use, when"
         },
         "check": {
           "t": "Product check",
-          "s": "fits or caution"
+          "s": "does it suit you?"
         },
         "progress": {
-          "t": "Progress",
-          "s": "noise taken out"
+          "t": "Your progress",
+          "s": "what has changed"
         }
       }
     },
@@ -740,5 +756,10 @@
     "title": "This page does not exist.",
     "text": "The link may be old, or the address mistyped.",
     "home": "Go to the home page"
+  },
+  "Legal": {
+    "updated": "Last updated {date}",
+    "related": "Other policies",
+    "yourData": "Your data, in plain words"
   }
 }

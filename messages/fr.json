@@ -23,6 +23,18 @@
     "yourData": {
       "title": "Vos données",
       "description": "Où votre photo est stockée, qui la lit, combien de temps elle est gardée et comment la supprimer, en termes simples."
+    },
+    "terms": {
+      "title": "Conditions d'utilisation",
+      "description": "Les conditions d'utilisation du site, de l'application et des formules payantes VISTASY, vendues par notre revendeur Paddle."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "description": "Ce que VISTASY collecte, pourquoi, qui le traite, combien de temps et vos droits."
+    },
+    "refund": {
+      "title": "Politique de remboursement",
+      "description": "Un remboursement intégral dans les 14 jours suivant tout paiement, et comment le demander."
     }
   },
   "NavBar": {
@@ -56,7 +68,11 @@
     "yourData": "Vos données",
     "address": "012 Rue du Canada, Bâtiment B, 4e étage, E1 Tunis, Tunisie 1002",
     "hours": "Du lundi au vendredi, de 9\u00a0h à 17\u00a0h",
-    "copyright": "Tous droits réservés"
+    "copyright": "Tous droits réservés",
+    "legal": "Mentions légales",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité",
+    "refund": "Politique de remboursement"
   },
   "InviteForm": {
     "label": "E-mail pour votre invitation",
@@ -305,44 +321,44 @@
   },
   "HowItWorksPage": {
     "title": "Comment ça marche",
-    "lede": "Sept étapes, dans l'ordre où l'application les déroule, du premier selfie à un produit auquel vous pouvez faire confiance.",
+    "lede": "Sept étapes simples, de votre premier selfie aux produits qui vous conviennent.",
     "diagram": {
       "title": "Le parcours VISTASY",
-      "label": "Sept étapes en trois phases. Avant\u00a0: consentement, selfie, questions. La lecture\u00a0: treize lectures, puis une routine. Après\u00a0: la vérification de produit et les progrès. Les progrès ramènent à un nouveau selfie toutes les 4\u00a0à\u00a012\u00a0semaines.",
-      "before": "Avant",
-      "read": "La lecture",
-      "after": "Après",
-      "loop": "4 À 12 SEMAINES",
-      "legendStep": "étape suivante",
+      "label": "Sept étapes en trois temps. Pour commencer : vous donnez votre accord, prenez un selfie en plein jour et répondez à quelques questions sur votre peau. Vos résultats : treize points de votre peau sont vérifiés, puis vous recevez une routine. Ensuite : vérifiez n'importe quel produit et suivez vos progrès. Tous les un à trois mois, vous refaites un scan.",
+      "before": "Pour commencer",
+      "read": "Vos résultats",
+      "after": "Ensuite",
+      "loop": "NOUVEAU SCAN TOUS LES 1 À 3 MOIS",
+      "legendStep": "puis",
       "legendLoop": "nouveau scan",
       "nodes": {
         "consent": {
-          "t": "Consentement",
-          "s": "18+, vos règles"
+          "t": "Votre accord",
+          "s": "18 ans ou plus"
         },
         "selfie": {
-          "t": "Selfie",
-          "s": "contrôle qualité"
+          "t": "Un selfie",
+          "s": "en plein jour"
         },
         "questions": {
           "t": "Questions",
-          "s": "type de peau"
+          "s": "sur votre peau"
         },
         "readings": {
-          "t": "13 lectures",
-          "s": "notées 3 fois"
+          "t": "Votre peau",
+          "s": "13 points vérifiés"
         },
         "routine": {
-          "t": "Routine",
-          "s": "preuves graduées"
+          "t": "Votre routine",
+          "s": "quoi et quand"
         },
         "check": {
-          "t": "Vérification",
-          "s": "convient ou non"
+          "t": "Un produit",
+          "s": "vous va-t-il ?"
         },
         "progress": {
-          "t": "Progrès",
-          "s": "bruit retiré"
+          "t": "Vos progrès",
+          "s": "ce qui a changé"
         }
       }
     },
@@ -740,5 +756,10 @@
     "title": "Cette page n'existe pas.",
     "text": "Le lien est peut-être ancien, ou l'adresse mal saisie.",
     "home": "Aller à l'accueil"
+  },
+  "Legal": {
+    "updated": "Dernière mise à jour : {date}",
+    "related": "Autres politiques",
+    "yourData": "Vos données, en clair"
   }
 }

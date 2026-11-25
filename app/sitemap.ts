@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { SITE_URL as BASE } from "@/constants/navbar-items-list";
 
-const PATHS = ["/home", "/how-it-works", "/retailers", "/pricing", "/contact", "/your-data"];
+const PATHS = ["/home", "/how-it-works", "/retailers", "/pricing", "/contact", "/your-data", "/terms", "/privacy", "/refund-policy"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return PATHS.flatMap((p) =>

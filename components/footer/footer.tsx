@@ -52,10 +52,16 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-rule">
-        <div className="wrap flex flex-col gap-2 py-6 text-micro text-ink-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="wrap flex flex-col gap-3 py-6 text-micro text-ink-3 md:flex-row md:items-center md:justify-between">
           <p>
             © <span className="tnum">{year}</span> VISTASY. {t("copyright")}.
           </p>
+          {/* the three policies Paddle requires to be public, reachable from every page */}
+          <nav aria-label={t("legal")} className="flex flex-wrap gap-x-5 gap-y-1">
+            <Link href="/terms" className="hover:text-ink">{t("terms")}</Link>
+            <Link href="/privacy" className="hover:text-ink">{t("privacy")}</Link>
+            <Link href="/refund-policy" className="hover:text-ink">{t("refund")}</Link>
+          </nav>
           <p>{t("note")}</p>
         </div>
       </div>

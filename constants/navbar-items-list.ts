@@ -8,4 +8,4 @@ export const NavBarItems = [
 /** the marketing site's canonical origin (metadata, sitemap, robots, structured data) */
 export const SITE_URL = "https://www.vistasy.clinic";
 export const APP_URL = "https://my.vistasy.clinic";
-export const CONTACT_EMAIL = "ceo@vistasy.clinic";
+export const CONTACT_EMAIL = "contact@vistasy.clinic";
