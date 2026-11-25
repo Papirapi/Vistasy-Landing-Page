@@ -14,7 +14,7 @@
     },
     "pricing": {
       "title": "Pricing",
-      "description": "Reading your skin is free. Premium tracks your progress for 4.99\u00a0€ a month. Retail plans can start as a six to eight week pilot."
+      "description": "Your first scan's overview, the product check and the Perfume Finder are free. Premium, everything VISTASY does, is $29.99 a month, $74.99 for 12 weeks or $239 a year."
     },
     "contact": {
       "title": "Contact",
@@ -88,7 +88,7 @@
     "hero": {
       "title": "Know what your skin needs.",
       "lede": "One daylight selfie gives you thirteen skin readings, a routine chosen by ingredient evidence, and a verdict on any product before you buy it. Never ranked by brand.",
-      "note": "Free, not a trial. Your photo can be deleted right after it is scored.",
+      "note": "Start free, not a trial: your overall result and top three concerns. Your photo can be deleted right after it is scored.",
       "eyebrow": "Invite-only preview",
       "chips": {
         "free": "Free, not a trial",
@@ -107,7 +107,7 @@
         "next": "Next reading",
         "monthly": "Monthly",
         "yearly": "Yearly",
-        "yearPrice": "39 €",
+        "yearPrice": "$239",
         "perYear": "a year",
         "ask": "Ask Sarah",
         "consent": "Your photo",
@@ -281,7 +281,7 @@
         },
         "q7": {
           "q": "What does it cost?",
-          "a": "The readings, the routine and the product check are free. Premium adds progress with photo comparison for 4.99\u00a0€ a month, or 39\u00a0€ a year."
+          "a": "Your first scan's overall result and top three concerns, the product check and the basic Perfume Finder are free. Premium, with weekly check-ins, your full routine, the Style Lab and Perfume Signature, is $29.99 a month, $74.99 for 12\u00a0weeks then $59.99, or $239 a year. Prices vary by country."
         },
         "q8": {
           "q": "Who can use VISTASY?",
@@ -292,7 +292,7 @@
     "close": {
       "title": "Your skin, read in daylight.",
       "text": "Leave your e-mail and we will send a sign-in link when your turn comes.",
-      "note": "Free, not a trial. Delete your photos at any time."
+      "note": "Start free, not a trial. Delete your photos at any time."
     },
     "retailers": {
       "title": "Selling skincare? The same read works in your store.",
@@ -575,35 +575,35 @@
   },
   "PricingPage": {
     "title": "What it costs.",
-    "lede": "The readings, the routine and the product check are free, not a trial. Premium tracks your progress for 4.99\u00a0€ a month. Retail plans can start as a pilot.",
+    "lede": "Your first scan's overview, the product check and the basic Perfume Finder are free. Premium is everything VISTASY does. Retail plans can start as a pilot.",
     "tabs": {
       "label": "Plans for",
       "people": "People",
       "retailers": "Retailers"
     },
     "perMonth": "a month",
-    "monthlyHint": "Or 39\u00a0€ a year, 35% less than monthly",
+    "monthlyHint": "Or 12 weeks for $74.99, then $59.99 every 12 weeks",
     "people": {
       "free": {
         "name": "Free",
-        "price": "0\u00a0€",
-        "text": "Know what your skin needs, and what fits it.",
-        "i1": "Thirteen readings, each scored three times",
-        "i2": "A routine by ingredient evidence",
-        "i3": "Product check by barcode or label photo",
-        "i4": "Sarah, an AI assistant that answers from your read"
+        "price": "$0",
+        "text": "Start with what your skin needs most.",
+        "i1": "Your overall result and top three concerns",
+        "i2": "Product check by barcode or label photo, always",
+        "i3": "The Perfume Finder: three perfumes, and why",
+        "i4": "3 Style Lab previews on your own photo"
       },
       "premium": {
         "name": "Premium",
-        "priceMonthly": "4.99\u00a0€",
-        "text": "See whether your routine is working.",
-        "i1": "Progress with photo comparison",
-        "i2": "Reminders and check-ins",
-        "i3": "An adaptive routine",
-        "i4": "Everything in Free"
+        "priceMonthly": "$29.99",
+        "text": "Everything VISTASY does, every week.",
+        "i1": "Every reading, a weekly check-in and a monthly trend",
+        "i2": "Your full routine with doses, adapting as your skin changes",
+        "i3": "40 Style Lab previews a month and Perfume Signature",
+        "i4": "Sarah, reminders and photo comparison"
       },
-      "note": "Invite-only while in preview.",
-      "inviteTitle": "Start with the free read",
+      "note": "Also once: a full report $9.99, 20 Style Lab previews $9.99 or 50 for $19.99, 3 Perfume Finder Signature sessions $4.99. Prices vary by country.",
+      "inviteTitle": "Start with the free overview",
       "inviteText": "VISTASY is invite-only while in preview. We send a sign-in link when your turn comes."
     },
     "retailers": {
@@ -666,9 +666,9 @@
     },
     "billing": {
       "label": "Billing cycle",
-      "save": "35% less"
+      "save": "33% less"
     },
-    "yearlyHint": "Or 4.99 € a month"
+    "yearlyHint": "$20 a month, billed yearly. Or $29.99 a month"
   },
   "ContactPage": {
     "title": "Request an invite, or book a pilot.",

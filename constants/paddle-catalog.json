@@ -1,24 +1,114 @@
 {
-  "_readme": "Mirror of the Paddle catalog. For each price: copy its Paddle product ID (pro_...) and price ID (pri_...), set amount in major units (4.99, not 499) exactly as in Paddle, then run `pnpm check:prices` to confirm every place the site shows that price says the same. Enterprise is quoted per customer and has no catalog price. shownIn lists the message keys (messages/en.json and fr.json) where the price appears on the site.",
-  "currency": "EUR",
+  "_readme": "Mirror of the Paddle catalogue (the app repo's scripts/paddle_catalogue.py creates it and writes the ids to scripts/paddle_ids.<env>.json). For each price: paste its Paddle product ID (pro_...) and price ID (pri_...), keep amount and currency exactly as in Paddle, then run `pnpm check:prices` to confirm every place the site shows that price says the same. sku matches custom_data.sku in Paddle. Prices for other countries are Paddle overrides and are not shown on the site. Enterprise is quoted per customer and has no catalogue price.",
+  "currency": "USD",
   "prices": [
     {
       "key": "premium-monthly",
       "product": "Premium",
+      "sku": "premium_monthly",
       "paddleProductId": "",
       "paddlePriceId": "",
-      "amount": null,
+      "amount": 29.99,
+      "currency": "USD",
       "interval": "month",
-      "shownIn": ["PricingPage.people.premium.priceMonthly", "PricingPage.yearlyHint", "PricingPage.lede", "Metadata.pricing.description", "HomePage.faq.items.q7.a"]
+      "shownIn": [
+        "PricingPage.people.premium.priceMonthly",
+        "PricingPage.yearlyHint",
+        "Metadata.pricing.description",
+        "HomePage.faq.items.q7.a"
+      ]
+    },
+    {
+      "key": "premium-12w",
+      "product": "Premium",
+      "sku": "premium_12w",
+      "paddleProductId": "",
+      "paddlePriceId": "",
+      "amount": 59.99,
+      "currency": "USD",
+      "interval": "12 weeks",
+      "shownIn": [
+        "PricingPage.monthlyHint",
+        "HomePage.faq.items.q7.a"
+      ]
+    },
+    {
+      "key": "premium-12w-start",
+      "product": "Premium, first 12 weeks (added once)",
+      "sku": "premium_12w_start",
+      "paddleProductId": "",
+      "paddlePriceId": "",
+      "amount": 15.0,
+      "currency": "USD",
+      "interval": null,
+      "shownIn": []
     },
     {
       "key": "premium-yearly",
       "product": "Premium",
+      "sku": "premium_yearly",
       "paddleProductId": "",
       "paddlePriceId": "",
-      "amount": null,
+      "amount": 239,
+      "currency": "USD",
       "interval": "year",
-      "shownIn": ["PricingPage.monthlyHint", "HomePage.hero.cards.yearPrice"]
+      "shownIn": [
+        "HomePage.hero.cards.yearPrice",
+        "Metadata.pricing.description",
+        "HomePage.faq.items.q7.a"
+      ]
+    },
+    {
+      "key": "report",
+      "product": "Skin report",
+      "sku": "report",
+      "paddleProductId": "",
+      "paddlePriceId": "",
+      "amount": 9.99,
+      "currency": "USD",
+      "interval": null,
+      "shownIn": [
+        "PricingPage.people.note"
+      ]
+    },
+    {
+      "key": "previews-20",
+      "product": "Style Lab previews",
+      "sku": "previews_20",
+      "paddleProductId": "",
+      "paddlePriceId": "",
+      "amount": 9.99,
+      "currency": "USD",
+      "interval": null,
+      "shownIn": [
+        "PricingPage.people.note"
+      ]
+    },
+    {
+      "key": "previews-50",
+      "product": "Style Lab previews",
+      "sku": "previews_50",
+      "paddleProductId": "",
+      "paddlePriceId": "",
+      "amount": 19.99,
+      "currency": "USD",
+      "interval": null,
+      "shownIn": [
+        "PricingPage.people.note"
+      ]
+    },
+    {
+      "key": "perfume-3",
+      "product": "Perfume Finder Signature",
+      "sku": "perfume_3",
+      "paddleProductId": "",
+      "paddlePriceId": "",
+      "amount": 4.99,
+      "currency": "USD",
+      "interval": null,
+      "shownIn": [
+        "PricingPage.people.note"
+      ]
     },
     {
       "key": "retail-starter-monthly",
@@ -27,7 +117,10 @@
       "paddlePriceId": "",
       "amount": null,
       "interval": "month",
-      "shownIn": ["PricingPage.retailers.starter.price"]
+      "shownIn": [
+        "PricingPage.retailers.starter.price"
+      ],
+      "currency": "EUR"
     },
     {
       "key": "retail-starter-extra-scan",
@@ -36,7 +129,10 @@
       "paddlePriceId": "",
       "amount": null,
       "interval": null,
-      "shownIn": ["PricingPage.retailers.starter.scans"]
+      "shownIn": [
+        "PricingPage.retailers.starter.scans"
+      ],
+      "currency": "EUR"
     },
     {
       "key": "retail-growth-monthly",
@@ -45,7 +141,10 @@
       "paddlePriceId": "",
       "amount": null,
       "interval": "month",
-      "shownIn": ["PricingPage.retailers.growth.price"]
+      "shownIn": [
+        "PricingPage.retailers.growth.price"
+      ],
+      "currency": "EUR"
     },
     {
       "key": "retail-growth-extra-scan",
@@ -54,7 +153,10 @@
       "paddlePriceId": "",
       "amount": null,
       "interval": null,
-      "shownIn": ["PricingPage.retailers.growth.scans"]
+      "shownIn": [
+        "PricingPage.retailers.growth.scans"
+      ],
+      "currency": "EUR"
     }
   ]
 }

@@ -58,9 +58,10 @@ const en: Record<LegalKey, LegalDoc> = {
       {
         h: "6. Plans, prices and payment",
         body: [
-          "Reading your skin, the routine and the product check are free. Paid plans and their prices are shown on our Pricing page.",
+          "The overall result and top three concerns of your first scan, the product check and the basic Perfume Finder are free. Premium and one-off purchases (a full report, Style Lab previews, Perfume Finder Signature sessions) are shown with their prices on our Pricing page. Prices can differ by country.",
           "Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns. When you buy, Paddle's Buyer Terms also apply, and the price you pay, including any applicable taxes, is shown at checkout.",
-          "Subscriptions renew automatically at the end of each billing period, monthly or yearly, until you cancel. You can cancel at any time; your plan stays active until the end of the period you have paid for. If a price changes, we tell you before your next renewal, and you can cancel before it applies.",
+          "Premium renews automatically at the end of each billing period, every month, every 12 weeks or every year, until you cancel. The first 12-week period costs more than the ones after it; both prices are shown before you pay. You can cancel at any time; Premium stays active until the end of the period you have paid for. If a price changes, we tell you before your next renewal, and you can cancel before it applies.",
+          "One-off purchases are paid once. A report opens the full results of one scan. Style Lab previews and Perfume Finder Signature sessions you buy stay on your account and do not expire while your account exists.",
           "Refunds are covered by our Refund Policy.",
         ],
       },
@@ -223,38 +224,44 @@ const en: Record<LegalKey, LegalDoc> = {
     lede: "When you can get your money back, and how.",
     sections: [
       {
-        h: "1. 14-day refund",
+        h: "1. 14 days on your first payment",
         body: [
-          "If you are not happy with a paid plan, you can ask for a full refund within 14 days of any payment, the first one or a renewal, monthly or yearly, without giving a reason.",
+          "If you are not happy with Premium, you can ask for a full refund within 14 days of your first payment for it, monthly, every 12 weeks or yearly, without giving a reason.",
         ],
       },
       {
-        h: "2. After 14 days",
+        h: "2. Renewals",
         body: [
-          "After 14 days, the payment for the current period is not refunded. You can cancel at any time to stop the next renewal, and your plan stays active until the end of the period you have paid for.",
+          "Renewals are not refunded. You can cancel at any time to stop the next renewal, and Premium stays active until the end of the period you have paid for.",
         ],
       },
       {
-        h: "3. Always refunded",
+        h: "3. One-off purchases",
+        body: [
+          "Style Lab previews and Perfume Finder Signature sessions can be refunded within 14 days of purchase while unused. A report opens a scan's full results as soon as it is bought, so it is not refunded once opened. Used previews and sessions are not refunded.",
+        ],
+      },
+      {
+        h: "4. Always refunded",
         body: [
           "Duplicate charges, charges made after you cancelled, and billing errors are always refunded in full, whenever you notice them. If we stop a paid feature, we refund the period you have paid for and cannot use.",
         ],
       },
       {
-        h: "4. Retail plans",
+        h: "5. Retail plans",
         body: [
           "Pilots are free, so there is nothing to refund. Retail subscriptions bought online follow this policy. Usage charged after the fact, such as scans above your plan's allowance, is refunded only in case of a billing error. If you have a separate agreement with us, its terms apply.",
         ],
       },
       {
-        h: "5. How to ask",
+        h: "6. How to ask",
         body: [
           "Our order process is conducted by our online reseller Paddle.com, which is the Merchant of Record and handles refunds. Reply to your Paddle receipt, use paddle.net to find your purchase, or write to {email} with the e-mail address you paid with.",
           "Approved refunds go back to your original payment method. They usually appear within 5 to 10 business days, depending on your bank.",
         ],
       },
       {
-        h: "6. Your legal rights",
+        h: "7. Your legal rights",
         body: ["This policy does not limit any right you have under consumer law in the country where you live."],
       },
     ],
@@ -312,9 +319,10 @@ const fr: Record<LegalKey, LegalDoc> = {
       {
         h: "6. Formules, prix et paiement",
         body: [
-          "La lecture de votre peau, la routine et la vérification de produits sont gratuites. Les formules payantes et leurs prix figurent sur notre page Tarifs.",
+          "Le résultat global et les trois préoccupations principales de votre premier scan, la vérification de produits et le Perfume Finder de base sont gratuits. Premium et les achats à l'unité (un rapport complet, des aperçus Style Lab, des séances Perfume Finder Signature) figurent avec leurs prix sur notre page Tarifs. Les prix peuvent varier selon le pays.",
           "Notre processus de commande est assuré par notre revendeur en ligne Paddle.com. Paddle.com est le Merchant of Record (vendeur officiel) de toutes nos commandes. Paddle traite toutes les demandes du service client et gère les remboursements. Lors d'un achat, les Conditions acheteur de Paddle s'appliquent également, et le prix payé, taxes applicables comprises, est indiqué au moment du paiement.",
-          "Les abonnements se renouvellent automatiquement à la fin de chaque période, mensuelle ou annuelle, jusqu'à leur résiliation. Vous pouvez résilier à tout moment ; votre formule reste active jusqu'à la fin de la période payée. Si un prix change, nous vous prévenons avant le prochain renouvellement et vous pouvez résilier avant qu'il ne s'applique.",
+          "Premium se renouvelle automatiquement à la fin de chaque période, chaque mois, toutes les 12 semaines ou chaque année, jusqu'à sa résiliation. La première période de 12 semaines coûte plus cher que les suivantes ; les deux prix sont indiqués avant le paiement. Vous pouvez résilier à tout moment ; Premium reste actif jusqu'à la fin de la période payée. Si un prix change, nous vous prévenons avant le prochain renouvellement et vous pouvez résilier avant qu'il ne s'applique.",
+          "Les achats à l'unité se paient une fois. Un rapport ouvre les résultats complets d'un scan. Les aperçus Style Lab et les séances Perfume Finder Signature achetés restent sur votre compte et n'expirent pas tant que votre compte existe.",
           "Les remboursements sont régis par notre Politique de remboursement.",
         ],
       },
@@ -477,38 +485,44 @@ const fr: Record<LegalKey, LegalDoc> = {
     lede: "Quand vous pouvez être remboursé, et comment.",
     sections: [
       {
-        h: "1. Remboursement sous 14 jours",
+        h: "1. 14 jours sur votre premier paiement",
         body: [
-          "Si une formule payante ne vous convient pas, vous pouvez demander un remboursement intégral dans les 14 jours suivant tout paiement, le premier ou un renouvellement, mensuel ou annuel, sans avoir à vous justifier.",
+          "Si Premium ne vous convient pas, vous pouvez demander un remboursement intégral dans les 14 jours suivant votre premier paiement, mensuel, toutes les 12 semaines ou annuel, sans avoir à vous justifier.",
         ],
       },
       {
-        h: "2. Après 14 jours",
+        h: "2. Renouvellements",
         body: [
-          "Après 14 jours, le paiement de la période en cours n'est pas remboursé. Vous pouvez résilier à tout moment pour arrêter le prochain renouvellement, et votre formule reste active jusqu'à la fin de la période payée.",
+          "Les renouvellements ne sont pas remboursés. Vous pouvez résilier à tout moment pour arrêter le prochain renouvellement, et Premium reste actif jusqu'à la fin de la période payée.",
         ],
       },
       {
-        h: "3. Toujours remboursé",
+        h: "3. Achats à l'unité",
+        body: [
+          "Les aperçus Style Lab et les séances Perfume Finder Signature peuvent être remboursés dans les 14 jours suivant l'achat tant qu'ils ne sont pas utilisés. Un rapport ouvre les résultats complets d'un scan dès son achat ; il n'est donc pas remboursé une fois ouvert. Les aperçus et séances utilisés ne sont pas remboursés.",
+        ],
+      },
+      {
+        h: "4. Toujours remboursé",
         body: [
           "Les doubles prélèvements, les prélèvements effectués après votre résiliation et les erreurs de facturation sont toujours remboursés intégralement, quel que soit le moment où vous les constatez. Si nous arrêtons une fonctionnalité payante, nous remboursons la période payée que vous ne pourrez pas utiliser.",
         ],
       },
       {
-        h: "4. Formules enseignes",
+        h: "5. Formules enseignes",
         body: [
           "Les pilotes sont gratuits, il n'y a donc rien à rembourser. Les abonnements enseignes souscrits en ligne suivent cette politique. L'usage facturé a posteriori, comme les scans au-delà du volume inclus, n'est remboursé qu'en cas d'erreur de facturation. Si vous avez un contrat distinct avec nous, ses conditions s'appliquent.",
         ],
       },
       {
-        h: "5. Comment demander",
+        h: "6. Comment demander",
         body: [
           "Notre processus de commande est assuré par notre revendeur en ligne Paddle.com, qui est le Merchant of Record et gère les remboursements. Répondez à votre reçu Paddle, retrouvez votre achat sur paddle.net, ou écrivez à {email} avec l'adresse e-mail utilisée pour payer.",
           "Les remboursements acceptés sont versés sur votre moyen de paiement d'origine. Ils apparaissent généralement sous 5 à 10 jours ouvrés, selon votre banque.",
         ],
       },
       {
-        h: "6. Vos droits légaux",
+        h: "7. Vos droits légaux",
         body: ["Cette politique ne limite aucun droit dont vous disposez selon le droit de la consommation de votre pays de résidence."],
       },
     ],
