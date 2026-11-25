@@ -267,7 +267,13 @@ export function initMotion(): () => void {
             if (st.panel !== undefined) marks.push({ at: () => (st.flight.start + st.flight.end) / 2, panel: Math.min(st.panel, panels.length - 1) });
           });
 
-          const inOut = gsap.parseEase("power2.inOut");
+          let rest = 0;
+          const moving = () => {
+            inner.style.willChange = "transform";
+            window.clearTimeout(rest);
+            rest = window.setTimeout(() => (inner.style.willChange = "auto"), 160);
+          };
+          const inOut = gsap.parseEase("sine.inOut");
           const place = (y: number) => {
             const h0 = home();
             let from = h0;
@@ -281,9 +287,10 @@ export function initMotion(): () => void {
               const to = st.pose();
               if (y < b) {
                 const t = inOut((y - a) / (b - a));
-                // a turn: half a turn out to edge-on, the screen changes, half a turn back in; a glide leans a little
-                spin = st.turn ? (t < 0.5 ? 180 * t : 180 * t - 180) : -14 * Math.sin(Math.PI * t);
-                breath = 0.05 * Math.sin(Math.PI * t);
+                // a gentle tilt out and back while the screens cross-fade (the panels' own opacity transition);
+                // it used to turn edge-on, which was abrupt and stretched a flat picture of the phone
+                spin = (st.turn ? 16 : -8) * Math.sin(Math.PI * t);
+                breath = 0.035 * Math.sin(Math.PI * t);
                 pose = { cx: from.cx + (to.cx - from.cx) * t, cy: from.cy + (to.cy - from.cy) * t, s: from.s + (to.s - from.s) * t };
                 break;
               }
@@ -292,7 +299,10 @@ export function initMotion(): () => void {
             let screen = 0;
             for (const m of marks) if (y >= m.at()) screen = m.panel;
             show(screen);
-            gsap.set(inner, { x: pose.cx - h0.cx, y: pose.cy - h0.cy, scale: pose.s * (1 - breath), rotationY: spin, transformPerspective: spin ? 1800 : 0 });
+            // a GPU layer only while it moves: at rest the phone is plain 2D and the browser redraws it sharp at its
+            // real size, instead of stretching the picture it cached at another scale (the blur on the photo)
+            moving();
+            gsap.set(inner, { x: pose.cx - h0.cx, y: pose.cy - h0.cy, scale: pose.s * (1 - breath), rotationY: spin, transformPerspective: spin ? 1800 : 0, force3D: false });
           };
           // one driver from the top of the page to the landing; its progress is the smoothed scroll position
           const drive = (self: ScrollTrigger) => place(self.start + (self.end - self.start) * self.progress);
@@ -302,6 +312,8 @@ export function initMotion(): () => void {
             gsap.to(col, { y: -60 - k * 40, scale: 0.92, opacity: 0, ease: "none", scrollTrigger: { trigger: scope, start: `top ${top}`, end: () => `+=${window.innerHeight * 0.45}`, scrub: 0.6 } })
           );
           cleanups.push(() => {
+            window.clearTimeout(rest);
+            inner.style.willChange = "";
             gsap.set(inner, { clearProps: "transform" });
             on = -1;
             show(0);

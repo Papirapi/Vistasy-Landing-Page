@@ -83,7 +83,7 @@ export default async function HowItWorks({ params }: Params) {
     ),
     selfie: (
       <div className="photo how-photo relative aspect-[625/753] w-full max-w-[290px] shadow-[var(--edge),var(--e1)]">
-        <Image src="/hero-section/young-woman-taking-selfie.webp" alt={t("steps.selfie.imageAlt")} fill sizes="(min-width: 1024px) 290px, 76vw" />
+        <Image src="/hero-section/young-woman-taking-selfie.webp" alt={t("steps.selfie.imageAlt")} fill quality={90} sizes="(min-width: 1024px) 290px, 76vw" />
         <span className="how-face" aria-hidden="true" />
         <span className="how-scan" aria-hidden="true" />
         <span className="how-hint v-tag absolute bottom-3 left-3 max-w-[calc(100%-1.5rem)] whitespace-normal bg-sheet text-ink shadow-[var(--edge),var(--e1)]">

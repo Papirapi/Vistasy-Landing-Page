@@ -139,7 +139,7 @@ export function Phone({ person, readings, label, check, s }: { person: { src: st
           {mode === "selfie" ? (
             <m.div key="selfie" className="absolute inset-0" initial={{ opacity: 0, scale: 1.04 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.35 }}>
               <div className="absolute bottom-[-6%] left-1/2 h-[92%] -translate-x-[42%]" style={{ aspectRatio: "625 / 753" }} data-hero-photo="">
-                <Image src={person.src} alt={person.alt} fill priority sizes="360px" className="object-contain object-bottom" />
+                <Image src={person.src} alt={person.alt} fill priority quality={90} sizes="600px" className="object-contain object-bottom" />
                 <span className="scan-frame" aria-hidden="true">
                   <RadarSweep theme="accent" size="74%" active={seen && hero.inView} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                 </span>

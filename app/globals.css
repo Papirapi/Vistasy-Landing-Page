@@ -1098,7 +1098,7 @@ html:not(.js) .scrolly-panel { position: relative; opacity: 1; transform: none; 
 @media (min-width: 1024px) {
   /* the pinned box stays where the phone started; only the phone itself (inner) takes clicks */
   html.follow-on .follow-phone { pointer-events: none; }
-  html.follow-on [data-follow-inner] { pointer-events: auto; will-change: transform; }
+  html.follow-on [data-follow-inner] { pointer-events: auto; }
   html.follow-on .lane-mark { display: block; position: absolute; top: 0; bottom: 0; pointer-events: none; }
   html.follow-on .lane-mark.half { right: var(--gutter); width: calc(50% - var(--gutter)); }
   html.follow-on .lane-r { padding-right: calc(var(--gutter) + var(--lane) + var(--lane-gap)); }
