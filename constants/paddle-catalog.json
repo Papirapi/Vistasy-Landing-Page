@@ -1,5 +1,5 @@
 {
-  "_readme": "Mirror of the Paddle catalogue (the app repo's scripts/paddle_catalogue.py creates it and writes the ids to scripts/paddle_ids.<env>.json). For each price: paste its Paddle product ID (pro_...) and price ID (pri_...), keep amount and currency exactly as in Paddle, then run `pnpm check:prices` to confirm every place the site shows that price says the same. sku matches custom_data.sku in Paddle. Prices for other countries are Paddle overrides and are not shown on the site. Enterprise is quoted per customer and has no catalogue price.",
+  "_readme": "Mirror of the Paddle catalogue (the app repo's scripts/paddle_catalogue.py creates it and writes the ids to scripts/paddle_ids.<env>.json). For each price: paste its Paddle product ID (pro_...) and price ID (pri_...), keep amount and currency exactly as in Paddle, then run `pnpm check:prices` to confirm every place the site shows that price says the same. sku matches custom_data.sku in Paddle. Prices for other countries are Paddle overrides and are not shown on the site. Retail plans are not sold through Paddle: they are invoiced directly after a pilot, so they are not here.",
   "currency": "USD",
   "prices": [
     {
@@ -109,54 +109,6 @@
       "shownIn": [
         "PricingPage.people.note"
       ]
-    },
-    {
-      "key": "retail-starter-monthly",
-      "product": "Retail Starter",
-      "paddleProductId": "",
-      "paddlePriceId": "",
-      "amount": null,
-      "interval": "month",
-      "shownIn": [
-        "PricingPage.retailers.starter.price"
-      ],
-      "currency": "EUR"
-    },
-    {
-      "key": "retail-starter-extra-scan",
-      "product": "Retail Starter, scans above the allowance",
-      "paddleProductId": "",
-      "paddlePriceId": "",
-      "amount": null,
-      "interval": null,
-      "shownIn": [
-        "PricingPage.retailers.starter.scans"
-      ],
-      "currency": "EUR"
-    },
-    {
-      "key": "retail-growth-monthly",
-      "product": "Retail Growth",
-      "paddleProductId": "",
-      "paddlePriceId": "",
-      "amount": null,
-      "interval": "month",
-      "shownIn": [
-        "PricingPage.retailers.growth.price"
-      ],
-      "currency": "EUR"
-    },
-    {
-      "key": "retail-growth-extra-scan",
-      "product": "Retail Growth, scans above the allowance",
-      "paddleProductId": "",
-      "paddlePriceId": "",
-      "amount": null,
-      "interval": null,
-      "shownIn": [
-        "PricingPage.retailers.growth.scans"
-      ],
-      "currency": "EUR"
     }
   ]
 }

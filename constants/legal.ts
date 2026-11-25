@@ -4,8 +4,8 @@
 import { CONTACT_EMAIL } from "@/constants/navbar-items-list";
 
 export const LEGAL = {
-  /** registered legal name of the company that sells VISTASY (TODO: replace with the registered name) */
-  entity: "VISTASY",
+  /** registered legal name of the company that sells VISTASY, as on its registration (Paddle checks it) */
+  entity: "VISTASY SARL",
   address: "012 Street of Canada, Building B, 4th Floor, E1 Tunis, Tunisia 1002",
   email: CONTACT_EMAIL,
   /** last change to any of the three policies, ISO date */

@@ -68,7 +68,7 @@ const en: Record<LegalKey, LegalDoc> = {
       {
         h: "7. Retailers and businesses",
         body: [
-          "Retail plans, pilots and API access may be covered by a separate agreement or order form. Where one exists, it takes precedence over these terms for that business.",
+          "Retail plans, pilots and API access are not sold online. They are agreed after a pilot, in a separate agreement or order form, and invoiced directly by VISTASY SARL. That agreement takes precedence over these terms for that business.",
           "Ranking is never for sale: a retailer's catalogue only marks what is in stock and never changes the order of recommendations.",
         ],
       },
@@ -250,7 +250,7 @@ const en: Record<LegalKey, LegalDoc> = {
       {
         h: "5. Retail plans",
         body: [
-          "Pilots are free, so there is nothing to refund. Retail subscriptions bought online follow this policy. Usage charged after the fact, such as scans above your plan's allowance, is refunded only in case of a billing error. If you have a separate agreement with us, its terms apply.",
+          "Pilots are free, so there is nothing to refund. Retail plans are not sold online: they are invoiced directly under the agreement signed with us, and refunds follow that agreement. Usage charged after the fact, such as scans above your plan's allowance, is refunded only in case of a billing error.",
         ],
       },
       {
@@ -329,7 +329,7 @@ const fr: Record<LegalKey, LegalDoc> = {
       {
         h: "7. Enseignes et entreprises",
         body: [
-          "Les formules enseignes, les pilotes et l'accès à l'API peuvent faire l'objet d'un contrat ou d'un bon de commande distinct. Lorsqu'il existe, il prévaut sur ces conditions pour l'entreprise concernée.",
+          "Les formules enseignes, les pilotes et l'accès à l'API ne sont pas vendus en ligne. Ils sont convenus après un pilote, dans un contrat ou un bon de commande distinct, et facturés directement par VISTASY SARL. Ce contrat prévaut sur ces conditions pour l'entreprise concernée.",
           "Le classement n'est jamais à vendre : le catalogue d'une enseigne indique seulement ce qui est en stock et ne modifie jamais l'ordre des recommandations.",
         ],
       },
@@ -511,7 +511,7 @@ const fr: Record<LegalKey, LegalDoc> = {
       {
         h: "5. Formules enseignes",
         body: [
-          "Les pilotes sont gratuits, il n'y a donc rien à rembourser. Les abonnements enseignes souscrits en ligne suivent cette politique. L'usage facturé a posteriori, comme les scans au-delà du volume inclus, n'est remboursé qu'en cas d'erreur de facturation. Si vous avez un contrat distinct avec nous, ses conditions s'appliquent.",
+          "Les pilotes sont gratuits, il n'y a donc rien à rembourser. Les formules enseignes ne sont pas vendues en ligne : elles sont facturées directement selon le contrat signé avec nous, et les remboursements suivent ce contrat. L'usage facturé a posteriori, comme les scans au-delà du volume inclus, n'est remboursé qu'en cas d'erreur de facturation.",
         ],
       },
       {
