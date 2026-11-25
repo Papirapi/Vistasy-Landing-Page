@@ -38,6 +38,9 @@ export default function Footer() {
             <li><Link href="/your-data" className={a}>{t("yourData")}</Link></li>
             <li><a href={`${APP_URL}/independence.html`} className={a}>{t("independence")}</a></li>
             <li><a href={`${APP_URL}/methodology.html`} className={a}>{t("methodology")}</a></li>
+            <li><Link href="/terms" className={a}>{t("terms")}</Link></li>
+            <li><Link href="/privacy" className={a}>{t("privacy")}</Link></li>
+            <li><Link href="/refund-policy" className={a}>{t("refund")}</Link></li>
             <li><Link href="/retailers" className={a}>{n("retailers")}</Link></li>
           </ul>
         </nav>
