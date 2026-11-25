@@ -247,7 +247,7 @@
     "independence": {
       "title": "Classé par ingrédients et par preuves. Jamais par marque.",
       "intro": "Quatre règles gardent chaque recommandation centrée sur votre peau, et rien d'autre.",
-      "i1": "Le classement n'est jamais à vendre. Les marques ne peuvent pas nous payer, et il n'y a ni publicité ni liens affiliés.",
+      "i1": "Le classement n'est jamais à vendre. Les marques ne peuvent pas nous payer et il n'y a pas de publicité. Certains liens vers des boutiques peuvent nous rapporter une commission ; elle ne décide jamais de ce que nous recommandons.",
       "i2": "Le catalogue d'un magasin s'applique après le classement, seulement pour montrer ce qui est en stock. Le personnel ne peut pas réordonner les résultats.",
       "i3": "Une mise en garde, un conflit ou une note de preuve ne peut être ni retiré ni adouci sur demande.",
       "linkHow": "Comment nous restons indépendants",
@@ -652,7 +652,7 @@
         },
         "q2": {
           "q": "Gagnez-vous quelque chose sur mes achats\u00a0?",
-          "a": "Non. Pas de publicité ni de liens affiliés, et quand un produit renvoie vers une boutique, ce lien ne nous rapporte rien."
+          "a": "Parfois. Certains liens vers des boutiques nous rapportent une petite commission quand vous achetez, sans surcoût pour vous. C'est toujours indiqué, et cela ne change jamais les produits que nous recommandons : le classement est fait avant le choix de la boutique."
         },
         "q3": {
           "q": "Que paie une formule enseigne\u00a0?",

@@ -203,6 +203,7 @@ const en: Record<LegalKey, LegalDoc> = {
         h: "10. Cookies and browser storage",
         body: [
           "This website uses no advertising or analytics cookies. It stores a few preferences in your browser: your light or dark theme, whether the opening animation has played in this tab, and whether you have already asked for an invite. The app stores your sign-in session on your device.",
+          "When you tap a link to a shop, that shop or its affiliate network may set its own cookies on its own website, to know that you came from VISTASY and credit us a commission if you buy. Those cookies are governed by the shop's own privacy policy. We receive no personal data from them, only whether a sale was made.",
         ],
       },
       {
@@ -456,6 +457,7 @@ const fr: Record<LegalKey, LegalDoc> = {
         h: "10. Cookies et stockage du navigateur",
         body: [
           "Ce site n'utilise aucun cookie publicitaire ou de mesure d'audience. Il enregistre quelques préférences dans votre navigateur : votre thème clair ou sombre, si l'animation d'ouverture a déjà été jouée dans cet onglet, et si vous avez déjà demandé une invitation. L'application enregistre votre session de connexion sur votre appareil.",
+          "Quand vous touchez un lien vers une boutique, cette boutique ou son réseau d'affiliation peut déposer ses propres cookies sur son propre site, pour savoir que vous venez de VISTASY et nous attribuer une commission si vous achetez. Ces cookies relèvent de la politique de confidentialité de la boutique. Nous n'en recevons aucune donnée personnelle, seulement l'information qu'une vente a eu lieu.",
         ],
       },
       {

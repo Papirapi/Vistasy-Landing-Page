@@ -247,7 +247,7 @@
     "independence": {
       "title": "Ranked by ingredients and evidence. Never by brand.",
       "intro": "Four rules keep every recommendation about your skin, and nothing else.",
-      "i1": "Ranking is never for sale. Brands cannot pay us, and there are no ads or affiliate links.",
+      "i1": "Ranking is never for sale. Brands cannot pay us and there are no ads. Some shop links may earn us a commission; it never decides what we recommend.",
       "i2": "A store's catalogue is applied after ranking, only to show what is in stock. Staff cannot reorder results.",
       "i3": "A caution, a conflict or an evidence grade cannot be removed or softened on request.",
       "linkHow": "How we stay independent",
@@ -652,7 +652,7 @@
         },
         "q2": {
           "q": "Do you earn anything from what I buy?",
-          "a": "No. There are no ads and no affiliate links, and when a product links to a shop, the link earns us nothing."
+          "a": "Sometimes. Some shop links earn us a small commission when you buy, at no extra cost to you. It is always marked, and it never changes which products we recommend: the ranking is done before any shop is chosen."
         },
         "q3": {
           "q": "What does a retail plan pay for?",
