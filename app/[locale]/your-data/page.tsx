@@ -36,7 +36,7 @@ const ROWS = [
   { key: "where", icon: "i-globe-hemisphere-west" },
   { key: "control", icon: "i-trash" },
   { key: "email", icon: "i-envelope-simple" },
-  { key: "medical", icon: "i-first-aid" },
+  { key: "medical", icon: "i-read" },
   { key: "sarah", icon: "i-chat-teardrop-text" },
   { key: "retailers", icon: "i-shopping-bag" },
 ] as const;

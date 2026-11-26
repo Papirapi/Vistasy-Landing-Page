@@ -29,7 +29,7 @@ const facts = () => [
   `- What it is: ${plain(md.home.description)}`,
   `- Who it is for: adults (18+) who want to understand their skin and choose skincare by ingredients, and skincare retailers who want the same read on their product pages, in store or through an API.`,
   `- Independence: products are ranked by ingredients and evidence, never by brand. Ranking is never for sale, brands pay nothing, and there are no ads. Some shop links may earn a commission, always disclosed, and it never affects the ranking.`,
-  `- Not medical: VISTASY gives cosmetic guidance, not a medical diagnosis, and suggests seeing a dermatologist when a reading calls for it.`,
+  `- Cosmetic only: scores describe how skin looks, to help people choose skincare. Not medical advice.`,
   `- Privacy: photos are stored in Frankfurt, Germany; the user chooses 30 days or deletion right after scoring; personal data is never sold.`,
   `- Price: ${plain(en.PricingPage.lede)}`,
   `- Availability: invite-only preview, in English and French. App: ${APP_URL}`,

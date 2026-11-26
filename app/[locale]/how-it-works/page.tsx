@@ -294,7 +294,7 @@ export default async function HowItWorks({ params }: Params) {
                 title: d("rows.medical.title"),
                 content: (
                   <>
-                    <Icon name="i-first-aid" className="ico h-7 w-7 text-ink-2" />
+                    <Icon name="i-read" className="ico h-7 w-7 text-ink-2" />
                     <p className="text-title mt-5 max-w-[30ch]">{t("safety.referral")}</p>
                     <div aria-hidden="true" className="mt-auto pt-7">
                       <p className="text-small font-medium">{h("sheet.concerns.blemishes")}</p>
