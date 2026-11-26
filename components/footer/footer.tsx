@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { APP_URL, CONTACT_EMAIL } from "@/constants/navbar-items-list";
+import { LEGAL } from "@/constants/legal";
 import { Icon } from "@/components/icon";
 
 // A footer shaped by the real links (craftwork): product, trust, company, a way to reach us.
@@ -57,7 +58,8 @@ export default function Footer() {
       <div className="border-t border-rule">
         <div className="wrap flex flex-col gap-3 py-6 text-micro text-ink-3 md:flex-row md:items-center md:justify-between">
           <p>
-            © <span className="tnum">{year}</span> VISTASY. {t("copyright")}.
+            {/* the registered seller, as on the legal pages: Paddle compares it with the account */}
+            © <span className="tnum">{year}</span> {LEGAL.entity}. {t("copyright")}.
           </p>
           {/* the three policies Paddle requires to be public, reachable from every page */}
           <nav aria-label={t("legal")} className="flex flex-wrap gap-x-5 gap-y-1">
