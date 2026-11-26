@@ -68,7 +68,7 @@ const en: Record<LegalKey, LegalDoc> = {
       {
         h: "7. Retailers and businesses",
         body: [
-          "Retail plans, pilots and API access are not sold online. They are agreed after a pilot, in a separate agreement or order form, and invoiced directly by VISTASY SARL. That agreement takes precedence over these terms for that business.",
+          "Retail plans, pilots and API access are not sold online. They are agreed after a pilot, in a separate agreement or order form, and invoiced directly by VISTASY. That agreement takes precedence over these terms for that business.",
           "Ranking is never for sale: a retailer's catalogue only marks what is in stock and never changes the order of recommendations.",
         ],
       },
@@ -329,7 +329,7 @@ const fr: Record<LegalKey, LegalDoc> = {
       {
         h: "7. Enseignes et entreprises",
         body: [
-          "Les formules enseignes, les pilotes et l'accès à l'API ne sont pas vendus en ligne. Ils sont convenus après un pilote, dans un contrat ou un bon de commande distinct, et facturés directement par VISTASY SARL. Ce contrat prévaut sur ces conditions pour l'entreprise concernée.",
+          "Les formules enseignes, les pilotes et l'accès à l'API ne sont pas vendus en ligne. Ils sont convenus après un pilote, dans un contrat ou un bon de commande distinct, et facturés directement par VISTASY. Ce contrat prévaut sur ces conditions pour l'entreprise concernée.",
           "Le classement n'est jamais à vendre : le catalogue d'une enseigne indique seulement ce qui est en stock et ne modifie jamais l'ordre des recommandations.",
         ],
       },
