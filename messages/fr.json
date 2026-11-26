@@ -5,7 +5,7 @@
       "description": "Un selfie à la lumière du jour devient seize lectures de la peau, une routine choisie selon les preuves par ingrédient et un verdict sur n'importe quel produit. Jamais classé par marque."
     },
     "howItWorks": {
-      "title": "Comment fonctionne l'analyse de peau",
+      "title": "Comment fonctionne VISTASY",
       "description": "Du selfie à la lumière du jour à une routine que vous pouvez suivre\u00a0: consentement, contrôle de qualité, seize lectures, preuves par ingrédient, vérification de produit et progrès."
     },
     "retailers": {
@@ -58,7 +58,7 @@
   "Footer": {
     "goHome": "Accueil VISTASY",
     "tagline": "Une lecture claire de votre peau, et des produits classés selon les preuves, jamais selon la marque.",
-    "note": "Un conseil cosmétique, pas un diagnostic médical.",
+    "note": "Un conseil cosmétique pour choisir vos soins. Pas un avis médical.",
     "product": "Produit",
     "trust": "Confiance",
     "visit": "Nous trouver",
@@ -268,8 +268,8 @@
       "more": "Autre chose\u00a0? Écrivez à",
       "items": {
         "q1": {
-          "q": "Est-ce un diagnostic médical\u00a0?",
-          "a": "Non. VISTASY donne un conseil cosmétique. Une lecture d'imperfections de 70 ou plus suggère de consulter un dermatologue, et l'application le dit."
+          "q": "Que lit VISTASY sur ma peau\u00a0?",
+          "a": "L'apparence de votre peau\u00a0: brillance, pores visibles, texture, ridules et teint, sous forme de notes simples qui vous aident à choisir vos soins. Si quelque chose vous inquiète, consultez un professionnel."
         },
         "q5": {
           "q": "À quelle fréquence refaire un scan\u00a0?",
@@ -277,7 +277,7 @@
         },
         "q6": {
           "q": "Puis-je poser des questions sur mes résultats\u00a0?",
-          "a": "Oui. Sarah, l'assistante intégrée, dit qu'elle est une IA, ne répond qu'à partir de votre propre analyse, de votre routine et de vos notes d'ingrédients, et vous dit quand elle n'a pas de données."
+          "a": "Oui. Posez vos questions à Sarah sur les ingrédients et votre routine. Elle dit qu'elle est une IA, n'utilise que vos propres résultats, votre routine et nos notes d'ingrédients, et vous dit quand elle n'a pas de données."
         },
         "q7": {
           "q": "Combien ça coûte\u00a0?",
@@ -321,7 +321,7 @@
   },
   "HowItWorksPage": {
     "title": "Comment ça marche",
-    "lede": "Sept étapes simples, de votre premier selfie aux produits qui vous conviennent.",
+    "lede": "VISTASY est un logiciel de beauté. Un selfie donne une lecture cosmétique de l'apparence de votre peau, et votre routine est classée par ingrédients, jamais par marque. Sept étapes simples, de votre premier selfie aux produits qui vous conviennent.",
     "diagram": {
       "title": "Le parcours VISTASY",
       "label": "Sept étapes en trois temps. Pour commencer : vous donnez votre accord, prenez un selfie en plein jour et répondez à quelques questions sur votre peau. Vos résultats : seize points de votre peau sont vérifiés, puis vous recevez une routine. Ensuite : vérifiez n'importe quel produit et suivez vos progrès. Tous les un à trois mois, vous refaites un scan.",
@@ -411,11 +411,11 @@
     },
     "sample": "Valeurs d'exemple",
     "safety": {
-      "title": "Un conseil cosmétique, pas un diagnostic médical.",
-      "referral": "Une lecture d'imperfections de 70 ou plus suggère de consulter un dermatologue, et l'application le dit.",
+      "title": "Conçu pour choisir vos soins.",
+      "referral": "Quand la lecture d'imperfections est élevée (70 ou plus), l'application suggère de consulter un professionnel de la peau.",
       "where": "Les photos sont stockées à Francfort et lues par Google Gemini et par nos modèles d'image à Londres.",
       "delete": "Vous pouvez supprimer vos photos, ou votre compte entier, à tout moment.",
-      "sarah": "Sarah, l'assistante intégrée, dit qu'elle est une IA et ne répond qu'à partir de votre propre analyse, de votre routine et de vos notes d'ingrédients.",
+      "sarah": "Sarah répond à vos questions sur les ingrédients et votre routine. Elle dit qu'elle est une IA et n'utilise que vos propres résultats et nos notes d'ingrédients.",
       "link": "Lire la méthodologie"
     },
     "close": {
@@ -725,11 +725,11 @@
         "text": "Un scan, ou votre compte entier et ses photos, depuis l'application, à tout moment. Les notes et votre routine sont conservées pour suivre vos progrès."
       },
       "medical": {
-        "title": "Pas un diagnostic médical",
-        "text": "Les notes sont des observations cosmétiques, pas des constats médicaux, et nous ne nommons aucune maladie. Une lecture d'imperfections de 70 ou plus suggère de consulter un dermatologue, et l'application le dit."
+        "title": "Des notes cosmétiques uniquement",
+        "text": "Les notes décrivent l'apparence de la peau, pour vous aider à choisir vos soins. Quand la lecture d'imperfections est élevée (70 ou plus), l'application suggère de consulter un professionnel de la peau."
       },
       "sarah": {
-        "title": "Sarah, l'assistante IA",
+        "title": "Sarah, l'aide sur les ingrédients",
         "text": "Sarah dit qu'elle est une IA et ne répond qu'à partir de votre propre analyse, de votre routine et de vos notes d'ingrédients. Elle ne peut inventer ni produits ni études, et vous dit quand elle n'a pas de données."
       },
       "retailers": {

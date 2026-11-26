@@ -5,7 +5,7 @@
       "description": "One selfie in daylight becomes sixteen skin readings, a routine chosen by ingredient evidence, and a verdict on any product. Never ranked by brand."
     },
     "howItWorks": {
-      "title": "How the skin analysis works",
+      "title": "How VISTASY works",
       "description": "From a selfie in daylight to a routine you can follow: consent, the quality gate, sixteen readings, ingredient evidence, the product check and progress."
     },
     "retailers": {
@@ -58,7 +58,7 @@
   "Footer": {
     "goHome": "VISTASY home",
     "tagline": "A clear read of your skin, and products ranked by evidence, never by brand.",
-    "note": "Cosmetic guidance, not a medical diagnosis.",
+    "note": "Cosmetic guidance for choosing skincare. Not medical advice.",
     "product": "Product",
     "trust": "Trust",
     "visit": "Visit us",
@@ -268,8 +268,8 @@
       "more": "Something else? Write to",
       "items": {
         "q1": {
-          "q": "Is this a medical diagnosis?",
-          "a": "No. VISTASY gives cosmetic guidance. A blemish reading of 70 or more suggests seeing a dermatologist, and the app says so."
+          "q": "What does VISTASY read on my skin?",
+          "a": "How your skin looks: shine, visible pores, texture, fine lines and tone, as simple scores that help you choose skincare. If something about your skin worries you, see a professional."
         },
         "q5": {
           "q": "How often should I scan again?",
@@ -277,7 +277,7 @@
         },
         "q6": {
           "q": "Can I ask questions about my results?",
-          "a": "Yes. Sarah, the in-app assistant, says she is an AI, only answers from your own analysis, routine and ingredient notes, and tells you when she has no data."
+          "a": "Yes. Ask Sarah about ingredients and your routine. She says she is an AI, only uses your own results, your routine and our ingredient notes, and tells you when she has no data."
         },
         "q7": {
           "q": "What does it cost?",
@@ -321,7 +321,7 @@
   },
   "HowItWorksPage": {
     "title": "How it works",
-    "lede": "Seven simple steps, from your first selfie to products that suit you.",
+    "lede": "VISTASY is beauty software. A selfie gives a cosmetic reading of how your skin looks, and your routine is ranked by ingredients, never by brand. Seven simple steps, from your first selfie to products that suit you.",
     "diagram": {
       "title": "The VISTASY journey",
       "label": "Seven steps in three parts. Before you start: you agree, take a selfie in daylight and answer a few questions about your skin. Your results: sixteen things about your skin are checked, then you get a routine. After: check any product and see your progress. Every one to three months, you scan again.",
@@ -411,11 +411,11 @@
     },
     "sample": "Sample values",
     "safety": {
-      "title": "Cosmetic guidance, not a medical diagnosis.",
-      "referral": "A blemish reading of 70 or more suggests seeing a dermatologist, and the app says so.",
+      "title": "Made for choosing skincare.",
+      "referral": "When the blemish reading is high (70 or more), the app suggests seeing a skin professional.",
       "where": "Photos are stored in Frankfurt and read by Google Gemini and by our image models in London.",
       "delete": "You can delete your photos, or your whole account, at any time.",
-      "sarah": "Sarah, the in-app assistant, says she is an AI and only answers from your own analysis, routine and ingredient notes.",
+      "sarah": "Sarah answers your questions about ingredients and your routine. She says she is an AI and only uses your own results and our ingredient notes.",
       "link": "Read the methodology"
     },
     "close": {
@@ -725,11 +725,11 @@
         "text": "A single scan, or your whole account and its photos, from the app at any time. Scores and your routine are kept so you can track progress."
       },
       "medical": {
-        "title": "Not a medical diagnosis",
-        "text": "Scores are cosmetic observations, not medical findings, and we do not name diseases. A blemish reading of 70 or more suggests seeing a dermatologist, and the app says so."
+        "title": "Cosmetic scores only",
+        "text": "Scores describe how skin looks, to help you choose skincare. When the blemish reading is high (70 or more), the app suggests seeing a skin professional."
       },
       "sarah": {
-        "title": "Sarah, the AI assistant",
+        "title": "Sarah, ingredient help",
         "text": "Sarah says she is an AI and only answers from your own analysis, routine and ingredient notes. She cannot invent products or studies, and tells you when she has no data."
       },
       "retailers": {
