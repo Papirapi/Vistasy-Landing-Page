@@ -2,11 +2,11 @@
   "Metadata": {
     "home": {
       "title": "Analyse de peau gratuite à partir d'un selfie",
-      "description": "Un selfie à la lumière du jour devient treize lectures de la peau, une routine choisie selon les preuves par ingrédient et un verdict sur n'importe quel produit. Jamais classé par marque."
+      "description": "Un selfie à la lumière du jour devient seize lectures de la peau, une routine choisie selon les preuves par ingrédient et un verdict sur n'importe quel produit. Jamais classé par marque."
     },
     "howItWorks": {
       "title": "Comment fonctionne l'analyse de peau",
-      "description": "Du selfie à la lumière du jour à une routine que vous pouvez suivre\u00a0: consentement, contrôle de qualité, treize lectures, preuves par ingrédient, vérification de produit et progrès."
+      "description": "Du selfie à la lumière du jour à une routine que vous pouvez suivre\u00a0: consentement, contrôle de qualité, seize lectures, preuves par ingrédient, vérification de produit et progrès."
     },
     "retailers": {
       "title": "Analyse de peau pour les enseignes",
@@ -87,7 +87,7 @@
   "HomePage": {
     "hero": {
       "title": "Ce dont votre peau a besoin.",
-      "lede": "Un selfie à la lumière du jour vous donne treize lectures de la peau, une routine choisie selon les preuves par ingrédient, et un verdict sur n'importe quel produit avant de l'acheter. Jamais classé par marque.",
+      "lede": "Un selfie à la lumière du jour vous donne seize lectures de la peau, une routine choisie selon les preuves par ingrédient, et un verdict sur n'importe quel produit avant de l'acheter. Jamais classé par marque.",
       "note": "Commencez gratuitement, sans période d'essai : votre résultat global et vos trois préoccupations principales. Votre photo peut être supprimée dès qu'elle est analysée.",
       "eyebrow": "Avant-première sur invitation",
       "chips": {
@@ -127,7 +127,7 @@
       "hint": "Choisissez une lecture pour voir le produit qu'elle appelle.",
       "of100": "/100",
       "agree": "Lectures concordantes",
-      "shown": "4 lectures sur 13 affichées. Valeurs d'exemple.",
+      "shown": "4 lectures sur 16 affichées. Valeurs d'exemple.",
       "showing": "Produit affiché pour",
       "faceAlt": "Selfie d'exemple utilisé pour cette lecture",
       "concerns": {
@@ -200,8 +200,8 @@
           "text": "Une photo à la lumière du jour, dont l'éclairage, la pose et la netteté sont vérifiés avant la lecture. Environ 30\u00a0secondes."
         },
         "readings": {
-          "title": "Treize lectures",
-          "text": "Treize préoccupations, chacune notée trois fois, pour savoir quelle confiance accorder à chacune."
+          "title": "Seize lectures",
+          "text": "Seize préoccupations, chacune notée trois fois, pour savoir quelle confiance accorder à chacune."
         },
         "routine": {
           "title": "Une routine selon les preuves",
@@ -324,7 +324,7 @@
     "lede": "Sept étapes simples, de votre premier selfie aux produits qui vous conviennent.",
     "diagram": {
       "title": "Le parcours VISTASY",
-      "label": "Sept étapes en trois temps. Pour commencer : vous donnez votre accord, prenez un selfie en plein jour et répondez à quelques questions sur votre peau. Vos résultats : treize points de votre peau sont vérifiés, puis vous recevez une routine. Ensuite : vérifiez n'importe quel produit et suivez vos progrès. Tous les un à trois mois, vous refaites un scan.",
+      "label": "Sept étapes en trois temps. Pour commencer : vous donnez votre accord, prenez un selfie en plein jour et répondez à quelques questions sur votre peau. Vos résultats : seize points de votre peau sont vérifiés, puis vous recevez une routine. Ensuite : vérifiez n'importe quel produit et suivez vos progrès. Tous les un à trois mois, vous refaites un scan.",
       "before": "Pour commencer",
       "read": "Vos résultats",
       "after": "Ensuite",
@@ -346,7 +346,7 @@
         },
         "readings": {
           "t": "Votre peau",
-          "s": "13 points vérifiés"
+          "s": "16 points vérifiés"
         },
         "routine": {
           "t": "Votre routine",

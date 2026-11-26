@@ -2,11 +2,11 @@
   "Metadata": {
     "home": {
       "title": "Free skin analysis from one selfie",
-      "description": "One selfie in daylight becomes thirteen skin readings, a routine chosen by ingredient evidence, and a verdict on any product. Never ranked by brand."
+      "description": "One selfie in daylight becomes sixteen skin readings, a routine chosen by ingredient evidence, and a verdict on any product. Never ranked by brand."
     },
     "howItWorks": {
       "title": "How the skin analysis works",
-      "description": "From a selfie in daylight to a routine you can follow: consent, the quality gate, thirteen readings, ingredient evidence, the product check and progress."
+      "description": "From a selfie in daylight to a routine you can follow: consent, the quality gate, sixteen readings, ingredient evidence, the product check and progress."
     },
     "retailers": {
       "title": "Skin analysis for skincare retailers",
@@ -87,7 +87,7 @@
   "HomePage": {
     "hero": {
       "title": "Know what your skin needs.",
-      "lede": "One daylight selfie gives you thirteen skin readings, a routine chosen by ingredient evidence, and a verdict on any product before you buy it. Never ranked by brand.",
+      "lede": "One daylight selfie gives you sixteen skin readings, a routine chosen by ingredient evidence, and a verdict on any product before you buy it. Never ranked by brand.",
       "note": "Start free, not a trial: your overall result and top three concerns. Your photo can be deleted right after it is scored.",
       "eyebrow": "Invite-only preview",
       "chips": {
@@ -127,7 +127,7 @@
       "hint": "Choose a reading to see the product it calls for.",
       "of100": "/100",
       "agree": "Readings agree",
-      "shown": "4 of 13 readings shown. Sample values.",
+      "shown": "4 of 16 readings shown. Sample values.",
       "showing": "Showing the product for",
       "faceAlt": "Sample selfie used for this read",
       "concerns": {
@@ -200,8 +200,8 @@
           "text": "One photo in even daylight, checked for light, pose and focus before it is read. About 30\u00a0seconds."
         },
         "readings": {
-          "title": "Thirteen readings",
-          "text": "Thirteen concerns, each scored three times, so you can see how far to trust each one."
+          "title": "Sixteen readings",
+          "text": "Sixteen concerns, each scored three times, so you can see how far to trust each one."
         },
         "routine": {
           "title": "A routine by evidence",
@@ -324,7 +324,7 @@
     "lede": "Seven simple steps, from your first selfie to products that suit you.",
     "diagram": {
       "title": "The VISTASY journey",
-      "label": "Seven steps in three parts. Before you start: you agree, take a selfie in daylight and answer a few questions about your skin. Your results: thirteen things about your skin are checked, then you get a routine. After: check any product and see your progress. Every one to three months, you scan again.",
+      "label": "Seven steps in three parts. Before you start: you agree, take a selfie in daylight and answer a few questions about your skin. Your results: sixteen things about your skin are checked, then you get a routine. After: check any product and see your progress. Every one to three months, you scan again.",
       "before": "Before you start",
       "read": "Your results",
       "after": "After",
@@ -346,7 +346,7 @@
         },
         "readings": {
           "t": "Skin check",
-          "s": "13 things checked"
+          "s": "16 things checked"
         },
         "routine": {
           "t": "Your routine",
